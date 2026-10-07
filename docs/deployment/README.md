@@ -6,17 +6,27 @@ Deployment runbooks, environment setup, Cloudflare notes, network configuration,
 
 Hush's main branch is configured for Cloudflare Workers, but a main-branch push is not by itself a
 deployment. The staging workflow waits for CI on the exact commit and deploys only when the beta
-release-gate summary is successful. At commit `b4103a35`, CI still failed unit checks for the new
-light palette and public root route, so staging was gated off. No public Hush demo URL is currently
-verified. Follow the current [GitHub Actions runs](https://github.com/Stellar-hush/hush/actions)
-before sharing a hosted URL.
+release-gate summary is successful. The latest reviewed main commit, `7ea2db2`, passed formatting,
+lint, reproducible-build, type, OpenAPI, configuration, contract, and security/dependency checks.
+Its client unit suite reported **3,641 passed and 1 failed**: `--status-warning` did not reach WCAG
+AA contrast on `--preview-active`. This release gate failed, so staging was not deployed. The
+contrast token has since been darkened; the next CI run is the verification record. See the
+[failed CI run](https://github.com/Stellar-hush/hush/actions/runs/37697634018) and check the
+[current Actions runs](https://github.com/Stellar-hush/hush/actions) before sharing an endpoint.
+No verified public Hush demo URL is currently published.
 
 The web application is server-rendered through the Cloudflare Vite integration. Preview and
 staging require configured Cloudflare account credentials, environment secrets, resource IDs,
 testnet contract configuration, and health checks. The repository currently has no Cloudflare
-staging credentials configured. A local Worker dry-run succeeds, but an isolated temporary Cloudflare
-deploy has not been created because Cloudflare requires an account owner to accept its Terms of
-Service first. Never publish a placeholder origin as a demo.
+staging credentials configured, and the local Wrangler CLI is not authenticated. A local Worker
+dry-run succeeds. An isolated temporary Cloudflare deploy has not been created: Cloudflare requires
+the account holder to accept its Terms of Service in the interactive Wrangler prompt, and the
+account holder must make that agreement directly. Once accepted, run
+`bun run build && bun x wrangler deploy --temporary --config wrangler.review.jsonc` to create a
+short-lived review preview. The committed manifest has no KV, R2, secrets, or custom domain; it
+packages the app Worker and static assets only. It is an isolated showcase, not a production mail
+service or configured testnet integration. Claim the deployment using Cloudflare's printed claim
+URL within the time limit shown by Wrangler, then verify the URL before publishing it.
 
 The deployed service, Worker, bindings, buckets, environment variables, custom domains, and some
 runbook examples still carry legacy `stealth` identifiers. They are kept to avoid breaking existing

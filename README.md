@@ -2,6 +2,17 @@
 
 > **Your inbox. Your rules. Proof for every delivery.**
 
+[![CI](https://github.com/Stellar-hush/hush/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Stellar-hush/hush/actions/workflows/ci.yml)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+| Review item       | Current status                                                                                                                                                                     |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| License           | MIT; see [`LICENSE`](LICENSE)                                                                                                                                                      |
+| Development       | Local application and testnet development paths; beta software                                                                                                                     |
+| Hosted experience | No verified public Hush demo URL yet; the screenshot-like panel below is an illustration                                                                                           |
+| CI / deployment   | Check the [latest CI run](https://github.com/Stellar-hush/hush/actions/workflows/ci.yml) and [deployment notes](docs/deployment/README.md); CI success and deployment are separate |
+| Contributions     | Public issues and pull requests are welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md)                                                                                              |
+
 Hush is an open-source beta for private email built around Stellar identity and programmable inbox access. Mailbox owners can decide how unfamiliar senders reach them: allow a verified identity, request approval, require postage, or block the sender. Encrypted message content stays off-chain; Stellar is used for identity and verifiable protocol actions.
 
 **Project status:** beta. The application, API, relay, protocol, and Soroban contracts are in this repository. Local development and testnet paths are available. Production readiness and a public hosted demo are separate deployment milestones; check the [deployment status](docs/deployment/README.md) before relying on any endpoint.

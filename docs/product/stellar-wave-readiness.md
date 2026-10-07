@@ -40,7 +40,7 @@ On-chain actions are public and can reveal account relationships, timing, paymen
 
 ## Current review and deployment status
 
-The repository has an MIT license and is public under the Hush organization. The main branch’s current CI and staging workflows are the source of truth for build and deployment status. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records the current verified state and the release gates.
+The repository has an MIT license and is public under the Hush organization. The latest reviewed main commit (`7ea2db2`) passed contract checks and the security/dependency review, but one client unit test failed: the light-theme warning token missed WCAG AA contrast on a preview surface. Staging was correctly gated off. The color has since been adjusted; the next CI run must verify the correction. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records current evidence and release gates.
 
 The staging pipeline only deploys after CI for the exact commit succeeds and the release-gate summary marks it releasable. Cloudflare resources, secrets, old federation domains, and persisted state are still tied to legacy identifiers. A Hush-branded URL must not be advertised until DNS, bindings, secrets, health checks, and the deployed app are verified together.
 
@@ -98,7 +98,7 @@ The current [Drips maintainer guide](https://docs.drips.network/wave/maintainers
 Before applying, maintainers should:
 
 1. Confirm the organization has the authority and account access to manage the public repository and install the Drips app.
-2. Publish a verified hosted demo or clearly state that reviewers must run the app locally.
+2. Publish a verified hosted demo or clearly state that reviewers must run the app locally. A temporary showcase can use the committed [`wrangler.review.jsonc`](../../wrangler.review.jsonc), but it requires the account holder to accept Cloudflare's Terms and is not a working production mail service.
 3. Ensure the README, license, contributor guide, security documentation, and deployment status agree with one another.
 4. Curate current, unblocked, testable issues and identify maintainers who can respond during the Wave.
 5. Check the [program page](https://www.drips.network/wave/stellar) and [current terms](https://docs.drips.network/wave/terms-and-rules/) for current timing and participation rules.

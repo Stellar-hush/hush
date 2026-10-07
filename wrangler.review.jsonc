@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hush-review",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": {
+    "directory": "dist/client",
+    "binding": "ASSETS",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}
