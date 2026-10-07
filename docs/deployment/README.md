@@ -6,14 +6,17 @@ Deployment runbooks, environment setup, Cloudflare notes, network configuration,
 
 Hush's main branch is configured for Cloudflare Workers, but a main-branch push is not by itself a
 deployment. The staging workflow waits for CI on the exact commit and deploys only when the beta
-release-gate summary is successful. The last verified deployment attempt was gated off after CI
-failed formatting and the Soroban postage Wasm hash check; no public Hush demo URL was verified by
-that run. Follow the current [GitHub Actions runs](https://github.com/Stellar-hush/hush/actions)
+release-gate summary is successful. At commit `b4103a35`, CI still failed unit checks for the new
+light palette and public root route, so staging was gated off. No public Hush demo URL is currently
+verified. Follow the current [GitHub Actions runs](https://github.com/Stellar-hush/hush/actions)
 before sharing a hosted URL.
 
 The web application is server-rendered through the Cloudflare Vite integration. Preview and
 staging require configured Cloudflare account credentials, environment secrets, resource IDs,
-testnet contract configuration, and health checks. Never publish a placeholder origin as a demo.
+testnet contract configuration, and health checks. The repository currently has no Cloudflare
+staging credentials configured. A local Worker dry-run succeeds, but an isolated temporary Cloudflare
+deploy has not been created because Cloudflare requires an account owner to accept its Terms of
+Service first. Never publish a placeholder origin as a demo.
 
 The deployed service, Worker, bindings, buckets, environment variables, custom domains, and some
 runbook examples still carry legacy `stealth` identifiers. They are kept to avoid breaking existing

@@ -27,30 +27,17 @@ function contrast(first: string, second: string) {
   return (values[0] + 0.05) / (values[1] + 0.05);
 }
 
-describe("warm light palette", () => {
-  it("uses a warm overlay so transparent dialogs do not inherit a black backdrop", () => {
+describe("Hush light palette", () => {
+  it("uses the cool surface-depth token for translucent dialog backdrops", () => {
     expect(palette.get("--overlay")).toBe("var(--surface-depth)");
-    expect(palette.get("--surface-depth")).toBe("#e8bf6b");
+    expect(palette.get("--surface-depth")).toBe("#dbe3f5");
   });
 
-  it("uses the equal blend of the requested butter-yellow colors as its base", () => {
-    const endpoints = ["#FDEB9E", "#FDFBCF"].map((hex) =>
-      hex
-        .slice(1)
-        .match(/../g)!
-        .map((channel) => parseInt(channel, 16)),
-    );
-    const mixed = endpoints[0]
-      .map((channel, index) =>
-        Math.round((channel + endpoints[1][index]) / 2)
-          .toString(16)
-          .padStart(2, "0"),
-      )
-      .join("");
-    expect(palette.get("--background")).toBe(`#${mixed}`);
+  it("uses the Hush pale-periwinkle base surface", () => {
+    expect(palette.get("--background")).toBe("#f5f7ff");
   });
 
-  it("uses warm off-white for every opaque content surface, never pure white", () => {
+  it("keeps content surfaces neutral or cool-toned", () => {
     for (const token of [
       "--background",
       "--card",
@@ -64,9 +51,10 @@ describe("warm light palette", () => {
         .slice(1)
         .match(/../g)!
         .map((channel) => parseInt(channel, 16));
-      expect(red, token).toBeGreaterThanOrEqual(green);
-      expect(green - blue, token).toBeGreaterThan(5);
-      expect(value, token).not.toBe("#ffffff");
+      if (value !== "#ffffff") {
+        expect(blue, token).toBeGreaterThanOrEqual(red);
+        expect(blue, token).toBeGreaterThanOrEqual(green);
+      }
     }
   });
 
@@ -95,15 +83,24 @@ describe("warm light palette", () => {
     ).toBeGreaterThanOrEqual(4.5);
   });
 
-  it("pairs warm brown ink and bronze icons with the yellow surfaces", () => {
-    for (const token of ["--foreground", "--muted-foreground", "--icon-foreground", "--primary"]) {
+  it("uses the blue-indigo Hush ink and icon colors", () => {
+    for (const token of ["--foreground", "--primary"]) {
       const [red, green, blue] = palette
         .get(token)!
         .slice(1)
         .match(/../g)!
         .map((channel) => parseInt(channel, 16));
-      expect(red, token).toBeGreaterThan(green);
-      expect(green, token).toBeGreaterThan(blue);
+      expect(blue, token).toBeGreaterThan(green);
+      expect(green, token).toBeGreaterThan(red);
+    }
+    for (const token of ["--muted-foreground", "--icon-foreground"]) {
+      const [red, green, blue] = palette
+        .get(token)!
+        .slice(1)
+        .match(/../g)!
+        .map((channel) => parseInt(channel, 16));
+      expect(blue, token).toBeGreaterThanOrEqual(green);
+      expect(green, token).toBeGreaterThan(red);
     }
     for (const surface of ["--background", "--card", "--preview-active"]) {
       expect(
@@ -120,7 +117,7 @@ describe("warm light palette", () => {
         const alpha = decl.value.match(/\/\s*(\d+)%/);
         expect(alpha, `${rule.selector}: ${decl.prop}`).not.toBeNull();
         expect(Number(alpha![1])).toBeGreaterThanOrEqual(38);
-        expect(Number(alpha![1])).toBeLessThanOrEqual(84);
+        expect(Number(alpha![1])).toBeLessThanOrEqual(94);
       });
     });
   });

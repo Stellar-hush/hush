@@ -413,13 +413,13 @@ describe("resolveRouteGuard — duplicate/retry safety", () => {
 
   it("only ever emits return-to values that pass open-redirect validation", () => {
     const hostilePaths = [
-      "/",
       "/mail/123?tab=preview",
       "//evil.example",
       "/\\evil.example",
       "/%2f%2fevil.example",
       "/\n",
     ];
+    expect(resolveRouteGuard({ state: "anonymous", pathname: "/" })).toEqual({ kind: "render" });
     for (const path of hostilePaths) {
       const decision = resolveRouteGuard({ state: "anonymous", pathname: path }) as Extract<
         GuardDecision,

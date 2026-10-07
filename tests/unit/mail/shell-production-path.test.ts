@@ -16,12 +16,14 @@ describe("mail shell production path (BETA-053)", () => {
   it("exports the composed MailApp from the mail feature", () => {
     expect(typeof MailApp).toBe("function");
   });
-  it("keeps the root route as a thin development-aware composition entrypoint", () => {
+  it("serves the public Hush showcase and composes the authenticated mail app", () => {
     const route = read("src/routes/index.tsx");
     expect(route).toContain('createFileRoute("/")');
     expect(route).toContain("useBootstrap");
-    expect(route).toContain("import.meta.env.DEV");
-    expect(route).toContain("<MailApp isDemoMode={useDemo} />");
+    expect(route).toContain('import { HushShowcase } from "@/components/landing/HushShowcase"');
+    expect(route).toContain('branch === "active"');
+    expect(route).toContain("<MailApp />");
+    expect(route).toContain("<HushShowcase />");
     expect(route).not.toContain("useState");
     expect(route).not.toContain("useMailbox");
     expect(route.split("\n").length).toBeLessThan(45);
