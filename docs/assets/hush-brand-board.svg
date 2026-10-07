@@ -1,0 +1,218 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1440"
+  height="1020"
+  viewBox="0 0 1440 1020"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Hush product and visual identity overview</title>
+  <desc id="description">
+    An accurate Hush brand board showing the current logo, palette, typography, and a conceptual
+    explanation of recipient policy, encrypted off-chain mail, and optional Stellar protocol
+    evidence.
+  </desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1327" />
+      <stop offset="1" stop-color="#080d1c" />
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7485ff" />
+      <stop offset="1" stop-color="#53e0d0" />
+    </linearGradient>
+    <style>
+      .ui {
+        font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      .display {
+        font-family: "Space Grotesk", Inter, sans-serif;
+      }
+      .reader {
+        font-family: Newsreader, Georgia, serif;
+      }
+      .mono {
+        font-family: "SFMono-Regular", Consolas, monospace;
+      }
+      .label {
+        fill: #aebaff;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 2.3px;
+      }
+      .title {
+        fill: #f1f4ff;
+        font-size: 29px;
+        font-weight: 650;
+      }
+      .body {
+        fill: #a4b2d3;
+        font-size: 17px;
+      }
+      .small {
+        fill: #8190b3;
+        font-size: 14px;
+      }
+      .card {
+        fill: #10182b;
+        stroke: #29395d;
+        stroke-width: 1.5;
+      }
+      .line {
+        stroke: #3a4e78;
+        stroke-width: 2;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <rect width="1440" height="1020" rx="28" fill="url(#background)" />
+  <circle cx="1270" cy="120" r="250" fill="#536cff" opacity=".07" />
+  <circle cx="90" cy="850" r="280" fill="#53e0d0" opacity=".035" />
+
+  <!-- Brand mark and positioning -->
+  <rect class="card" x="48" y="44" width="1344" height="250" rx="22" />
+  <g transform="translate(88 94)">
+    <path d="M0 10 94 0v108L0 158z" fill="#7485ff" />
+    <path d="m114 0 94 10v148l-94-50z" fill="#53e0d0" />
+    <path d="m94 22 20-11v89l-20 13z" fill="#aebaff" opacity=".82" />
+  </g>
+  <text
+    class="display"
+    x="330"
+    y="157"
+    fill="#f1f4ff"
+    font-size="74"
+    font-weight="600"
+    letter-spacing="12"
+  >
+    HUSH
+  </text>
+  <text
+    class="ui"
+    x="334"
+    y="198"
+    fill="#aebaff"
+    font-size="16"
+    font-weight="650"
+    letter-spacing="4"
+  >
+    PRIVATE, PROGRAMMABLE MAIL ON STELLAR
+  </text>
+  <text class="ui body" x="334" y="238">
+    Recipient-controlled inbox access, encrypted message content, and verifiable protocol actions.
+  </text>
+  <line x1="910" y1="78" x2="910" y2="259" stroke="#29395d" />
+  <text class="label" x="950" y="103">PRODUCT STATUS</text>
+  <text class="display" x="950" y="151" fill="#53e0d0" font-size="25" font-weight="600">
+    OPEN-SOURCE BETA
+  </text>
+  <text class="ui body" x="950" y="187">Implementation availability depends on</text>
+  <text class="ui body" x="950" y="213">runtime configuration and active adapters.</text>
+  <text class="ui small" x="950" y="249">
+    Concept overview — not a screenshot of a hosted service.
+  </text>
+
+  <!-- Palette -->
+  <rect class="card" x="48" y="320" width="650" height="305" rx="22" />
+  <text class="label" x="80" y="365">CORE COLOR TOKENS</text>
+  <g class="ui" font-size="14">
+    <rect x="80" y="392" width="104" height="104" rx="15" fill="#080d1c" stroke="#526183" />
+    <text x="80" y="527" fill="#f1f4ff" font-weight="650">Midnight</text>
+    <text class="mono small" x="80" y="552">#080D1C</text>
+
+    <rect x="202" y="392" width="104" height="104" rx="15" fill="#7485ff" />
+    <text x="202" y="527" fill="#f1f4ff" font-weight="650">Electric blue</text>
+    <text class="mono small" x="202" y="552">#7485FF</text>
+
+    <rect x="324" y="392" width="104" height="104" rx="15" fill="#53e0d0" />
+    <text x="324" y="527" fill="#f1f4ff" font-weight="650">Luminous cyan</text>
+    <text class="mono small" x="324" y="552">#53E0D0</text>
+
+    <rect x="446" y="392" width="104" height="104" rx="15" fill="#aebaff" />
+    <text x="446" y="527" fill="#f1f4ff" font-weight="650">Periwinkle</text>
+    <text class="mono small" x="446" y="552">#AEBAFF</text>
+
+    <rect x="568" y="392" width="96" height="104" rx="15" fill="#f1f4ff" />
+    <text x="568" y="527" fill="#f1f4ff" font-weight="650">Cloud white</text>
+    <text class="mono small" x="568" y="552">#F1F4FF</text>
+  </g>
+  <text class="ui small" x="80" y="594">
+    Values match the dark theme tokens in the application.
+  </text>
+
+  <!-- Typography -->
+  <rect class="card" x="724" y="320" width="668" height="305" rx="22" />
+  <text class="label" x="756" y="365">TYPE SYSTEM</text>
+  <line x1="1051" y1="391" x2="1051" y2="592" stroke="#29395d" />
+  <text class="ui" x="756" y="435" fill="#f1f4ff" font-size="47" font-weight="650">Aa</text>
+  <text class="ui" x="756" y="474" fill="#f1f4ff" font-size="20" font-weight="650">Inter</text>
+  <text class="ui body" x="756" y="503">Interface and controls</text>
+  <text class="ui small" x="756" y="546">Clear · Familiar · Readable</text>
+  <text class="display" x="1082" y="435" fill="#aebaff" font-size="47" font-weight="600">Aa</text>
+  <text class="display" x="1082" y="474" fill="#f1f4ff" font-size="20" font-weight="600">
+    Space Grotesk
+  </text>
+  <text class="ui body" x="1082" y="503">Product headings and previews</text>
+  <text class="reader" x="1082" y="553" fill="#53e0d0" font-size="22">
+    Newsreader for message reading
+  </text>
+
+  <!-- Product model -->
+  <rect class="card" x="48" y="651" width="1344" height="319" rx="22" />
+  <text class="label" x="80" y="698">HOW HUSH MODELS A MESSAGE</text>
+  <text class="ui small" x="80" y="725">
+    Conceptual flow. Live behavior depends on the selected adapters and environment.
+  </text>
+
+  <g class="ui">
+    <rect x="80" y="765" width="244" height="132" rx="16" fill="#0b1222" stroke="#3a4e78" />
+    <text x="104" y="801" fill="#53e0d0" font-size="14" font-weight="700" letter-spacing="1.5">
+      01 · RECIPIENT
+    </text>
+    <text x="104" y="836" fill="#f1f4ff" font-size="20" font-weight="650">Sets inbox policy</text>
+    <text class="body" x="104" y="866" font-size="15">Allow · review · require postage</text>
+
+    <path class="line" d="M324 831h54m-12-10 12 10-12 10" />
+
+    <rect x="394" y="765" width="244" height="132" rx="16" fill="#0b1222" stroke="#3a4e78" />
+    <text x="418" y="801" fill="#7485ff" font-size="14" font-weight="700" letter-spacing="1.5">
+      02 · SENDER
+    </text>
+    <text x="418" y="836" fill="#f1f4ff" font-size="20" font-weight="650">Meets the rule</text>
+    <text class="body" x="418" y="866" font-size="15">Identity and admission checks</text>
+
+    <path class="line" d="M638 831h54m-12-10 12 10-12 10" />
+
+    <rect x="708" y="765" width="290" height="132" rx="16" fill="#0b1222" stroke="#3a4e78" />
+    <text x="732" y="801" fill="#aebaff" font-size="14" font-weight="700" letter-spacing="1.5">
+      03 · PRIVATE PAYLOAD
+    </text>
+    <text x="732" y="836" fill="#f1f4ff" font-size="20" font-weight="650">Encrypted off-chain</text>
+    <text class="body" x="732" y="866" font-size="15">Message body is not placed on-ledger</text>
+
+    <path class="line" d="M998 831h54m-12-10 12 10-12 10" />
+
+    <rect x="1068" y="765" width="292" height="132" rx="16" fill="#0b1222" stroke="#3a4e78" />
+    <text x="1092" y="801" fill="#53e0d0" font-size="14" font-weight="700" letter-spacing="1.5">
+      04 · STELLAR EVIDENCE
+    </text>
+    <text x="1092" y="836" fill="#f1f4ff" font-size="20" font-weight="650">
+      Optional protocol state
+    </text>
+    <text class="body" x="1092" y="866" font-size="15">Identity · postage · receipts</text>
+  </g>
+
+  <text class="ui small" x="80" y="938">
+    Public ledger activity can reveal metadata such as account relationships, timing, and payment
+    amounts.
+  </text>
+  <text class="mono" x="1315" y="938" fill="#8190b3" font-size="12" text-anchor="end">
+    HUSH / PRODUCT OVERVIEW
+  </text>
+</svg>

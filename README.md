@@ -17,9 +17,9 @@ Hush is an open-source beta for private email built around Stellar identity and 
 
 **Project status:** beta. The application, API, relay, protocol, and Soroban contracts are in this repository. Local development and testnet paths are available. Production readiness and a public hosted demo are separate deployment milestones; check the [deployment status](docs/deployment/README.md) before relying on any endpoint.
 
-![Hush brand direction board](docs/assets/hush-brand-board.png)
+![Hush product and visual identity overview](docs/assets/hush-brand-board.svg)
 
-_Brand direction board; the inbox panel is an illustration, not a screenshot of a hosted product._
+_Product and design overview. The message flow is conceptual and does not claim that a hosted mail service is available._
 
 ## Why Hush exists
 
