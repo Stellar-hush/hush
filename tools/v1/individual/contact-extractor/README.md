@@ -10,7 +10,7 @@ This repository folder contains the isolated workspace for the Contact Extractor
 
 ## Audience
 
-Individual Stealth users who want to extract contact details from email messages for personal organization and reference.
+Individual Hush users who want to extract contact details from email messages for personal organization and reference.
 
 ## Ownership Boundary
 

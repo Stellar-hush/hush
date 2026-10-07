@@ -126,12 +126,12 @@ const ACCOUNTS_FAKE: PresetAccount[] = [
 
 const MAIL_FIXTURES: PresetMail[] = [
   {
-    subject: "Welcome to Stealth",
+    subject: "Welcome to Hush",
     status: "delivered",
     folder: "inbox",
-    from: "Stealth Team",
+    from: "Hush Team",
     email: "welcome*stealth.demo",
-    body: "Hi there,\n\nYour Stealth mailbox is set up. You decide who can reach you: trusted contacts arrive instantly, everyone else follows the policy you choose.\n\nReply any time to start a conversation.\n\n— The Stealth demo team",
+    body: "Hi there,\n\nYour Hush mailbox is set up. You decide who can reach you: trusted contacts arrive instantly, everyone else follows the policy you choose.\n\nReply any time to start a conversation.\n\n— The Hush demo team",
     time: "9:42 AM",
     unread: true,
     starred: true,
@@ -216,7 +216,7 @@ const ATTACHMENTS_FAKE: PresetAttachment[] = [
     fileName: "roundtable_agenda.pdf",
     fileSize: "85 KB",
     fileType: "PDF Document",
-    messageSubject: "You're invited: Stealth demo roundtable",
+    messageSubject: "You're invited: Hush demo roundtable",
     sender: "events*stealth.demo",
   },
 ];
@@ -224,7 +224,7 @@ const ATTACHMENTS_FAKE: PresetAttachment[] = [
 const EVENTS_FAKE: PresetEvent[] = [
   {
     id: "evt-roundtable",
-    title: "Stealth demo roundtable",
+    title: "Hush demo roundtable",
     date: "2026-07-09",
     time: "3:00 PM",
     location: "Demo room",
@@ -828,7 +828,7 @@ export function DemoAdminDashboard({ className }: DemoAdminDashboardProps) {
           <div>
             <h2 className="text-sm font-semibold text-foreground">Demo Admin Dashboard</h2>
             <p className="text-xs text-muted-foreground">
-              Manage demo data for the Stealth inbox UI
+              Manage demo data for the Hush inbox UI
             </p>
           </div>
         </div>

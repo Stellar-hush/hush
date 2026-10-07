@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Stealth Mail API",
+    "title": "Hush Mail API",
     "version": "2.0.0",
     "description": "Development API for mailbox policy, Stellar postage proofs, and delivery receipts."
   },
@@ -1200,7 +1200,7 @@
           },
           "apiVersion": {
             "type": "string",
-            "description": "Stealth Mail API version."
+            "description": "Hush Mail API version."
           },
           "protocolVersion": {
             "type": "string",

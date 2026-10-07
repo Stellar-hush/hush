@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This roadmap defines a gradual interoperability path for Stealth to communicate with ordinary email while preserving native security guarantees and making bridged mail clearly distinguishable.
+This roadmap defines a gradual interoperability path for Hush to communicate with ordinary email while preserving native security guarantees and making bridged mail clearly distinguishable.
 
-Stealth must not require a full network migration at once. The roadmap covers:
+Hush must not require a full network migration at once. The roadmap covers:
 
 - inbound SMTP bridging
 - outbound replies
@@ -14,7 +14,7 @@ Stealth must not require a full network migration at once. The roadmap covers:
 
 ## Guiding principles
 
-- Native Stealth mail and bridged SMTP mail remain distinguishable.
+- Native Hush mail and bridged SMTP mail remain distinguishable.
 - Each phase documents capabilities, limitations, and failure modes.
 - Loops, spoofing, bounces, and unsubscribe behavior are explicitly addressed.
 - Milestones are gated by adoption and reliability.
@@ -23,15 +23,15 @@ Stealth must not require a full network migration at once. The roadmap covers:
 
 ### Capabilities
 
-- Stealth Bridge accepts inbound SMTP for configured domains/aliases.
+- Hush Bridge accepts inbound SMTP for configured domains/aliases.
 - Incoming messages are verified with standard SMTP checks (SPF/DKIM/DMARC) when available.
-- The bridge delivers messages into Stealth mailboxes as `SMTP Bridged` items.
+- The bridge delivers messages into Hush mailboxes as `SMTP Bridged` items.
 - The UI and metadata clearly label bridged mail as non-native and unsigned.
 
 ### Limitations
 
-- Bridged mail is not cryptographically signed by the Stealth network.
-- Message provenance is limited to SMTP/ DNS verification, so spoofing risks remain higher than native Stealth.
+- Bridged mail is not cryptographically signed by the Hush network.
+- Message provenance is limited to SMTP/ DNS verification, so spoofing risks remain higher than native Hush.
 - Postage/proof guarantees do not apply to bridged inbound mail.
 - Receipts and on-chain proof are unavailable for bridged inbound mail.
 
@@ -39,26 +39,26 @@ Stealth must not require a full network migration at once. The roadmap covers:
 
 - Bridged inbound mail is marked as `SMTP Bridged` in the provenance panel.
 - The subject preview or banner should surface the warning: `This message was bridged from SMTP and cannot be fully verified.`
-- Native Stealth mail retains a separate `Cryptographically Verified` status.
+- Native Hush mail retains a separate `Cryptographically Verified` status.
 
 ### Loops and forwarding
 
 - The bridge must detect and block SMTP routing loops by tagging messages it processed and rejecting repeated bridged copies.
 - Messages received over SMTP should not be auto-forwarded back through the same bridge path.
-- Forward-to-Stealth use cases must preserve the original `Received` chain and avoid re-bridging already bridged messages.
+- Forward-to-Hush use cases must preserve the original `Received` chain and avoid re-bridging already bridged messages.
 
 ### Spoofing and bounces
 
 - SPF/DKIM/DMARC verification is required where possible to reduce spoofing risk.
 - Messages failing verification may still be delivered with a higher-risk banner and lower trust label.
 - Bounce handling follows SMTP semantics: the bridge returns delivery failure notices to the original SMTP sender using the standard return-path.
-- Stealth must not generate bounce loops for bridged messages. A bounced bridged message should be handled by the originating SMTP server, not by the Stealth mailbox.
+- Hush must not generate bounce loops for bridged messages. A bounced bridged message should be handled by the originating SMTP server, not by the Hush mailbox.
 
 ### Unsubscribe
 
-- Stealth must preserve any standard SMTP unsubscribe headers (`List-Unsubscribe`, `List-Id`) in inbound bridged mail.
+- Hush must preserve any standard SMTP unsubscribe headers (`List-Unsubscribe`, `List-Id`) in inbound bridged mail.
 - The UI can mark these messages as unsubscribable when such headers exist.
-- Stealth should not assume native unsubscribe semantics for bridged mail; it must pass through existing SMTP unsubscribe mechanisms.
+- Hush should not assume native unsubscribe semantics for bridged mail; it must pass through existing SMTP unsubscribe mechanisms.
 
 ### Milestone
 
@@ -69,32 +69,32 @@ Stealth must not require a full network migration at once. The roadmap covers:
 
 ### Capabilities
 
-- Stealth users can reply to SMTP-origin messages through the bridge.
+- Hush users can reply to SMTP-origin messages through the bridge.
 - Replies are routed outward as ordinary email from a configurable `reply-from` bridge address or alias.
 - Threading is preserved via `In-Reply-To` and `References` headers.
-- Stealth may optionally emit a bridge-specific envelope address to preserve reply routing.
+- Hush may optionally emit a bridge-specific envelope address to preserve reply routing.
 
 ### Limitations
 
-- Outbound replies to SMTP recipients are ordinary SMTP messages and carry no native Stealth proof.
-- The sender identity may be expressed as a Stealth alias or bridge relay address, which may be less familiar to ordinary email recipients.
+- Outbound replies to SMTP recipients are ordinary SMTP messages and carry no native Hush proof.
+- The sender identity may be expressed as a Hush alias or bridge relay address, which may be less familiar to ordinary email recipients.
 - Reply authenticity is limited by SMTP headers and any configured DKIM signing on the outbound bridge.
 
 ### Distinguishability
 
-- Replies generated by the bridge should include a clear `From` or `Sender` hint that identifies the message as routed via Stealth Bridge.
-- The sender UI can display `Reply via Stealth Bridge` for any threaded response to inbound bridged mail.
+- Replies generated by the bridge should include a clear `From` or `Sender` hint that identifies the message as routed via Hush Bridge.
+- The sender UI can display `Reply via Hush Bridge` for any threaded response to inbound bridged mail.
 
 ### Loops and bounce treatment
 
 - Outbound replies must not be reflected back into the same bridge path as inbound SMTP mail.
-- Bounces from SMTP recipients go to the outbound bridge/return-path, not to the Stealth native account.
-- The bridge should expose bounce status to the Stealth user when possible, but not transform SMTP bounces into native Stealth bounce artifacts.
+- Bounces from SMTP recipients go to the outbound bridge/return-path, not to the Hush native account.
+- The bridge should expose bounce status to the Hush user when possible, but not transform SMTP bounces into native Hush bounce artifacts.
 
 ### Unsubscribe
 
 - If the outbound message is a reply to a mailing list or subscription email, standard SMTP unsubscribe headers should be preserved.
-- Stealth must not attempt to translate SMTP unsubscribe actions into native Stealth subscription state automatically.
+- Hush must not attempt to translate SMTP unsubscribe actions into native Hush subscription state automatically.
 
 ### Milestone
 
@@ -105,14 +105,14 @@ Stealth must not require a full network migration at once. The roadmap covers:
 
 ### Capabilities
 
-- Stealth supports alias addresses and forwarding rules for SMTP domains.
-- Aliases allow users to receive external email at addresses under their verified domain without exposing native Stealth addresses.
+- Hush supports alias addresses and forwarding rules for SMTP domains.
+- Aliases allow users to receive external email at addresses under their verified domain without exposing native Hush addresses.
 - Forwarding preserves original sender and subject metadata while maintaining bridge provenance.
 
 ### Limitations
 
-- Alias-to-Stealth forwarding still carries the same non-native trust model as other bridged inbound mail.
-- The destination mailbox must be able to distinguish the original recipient alias from a native Stealth identity.
+- Alias-to-Hush forwarding still carries the same non-native trust model as other bridged inbound mail.
+- The destination mailbox must be able to distinguish the original recipient alias from a native Hush identity.
 - Forwarded email may expose the original SMTP headers, which increases attack surface for spoofing if upstream forwarding is compromised.
 
 ### Distinguishability
@@ -123,7 +123,7 @@ Stealth must not require a full network migration at once. The roadmap covers:
 ### Loops and spam control
 
 - The bridge must detect forwarding loops when alias rules route mail back into the same domain or bridge chain.
-- Alias forwarding rules should allow explicit bypasses for native-to-native Stealth delivery to avoid accidental loopback.
+- Alias forwarding rules should allow explicit bypasses for native-to-native Hush delivery to avoid accidental loopback.
 
 ### Milestone
 
@@ -134,30 +134,30 @@ Stealth must not require a full network migration at once. The roadmap covers:
 
 ### Capabilities
 
-- Domain owners publish Stealth-specific DNS records to verify ownership and enable native Stealth routing.
-- Verified domains can receive native Stealth mail without SMTP bridging when both sender and recipient are Stealth-capable.
-- Native upgrade paths let domains gradually move from SMTP bridging to Stealth-native delivery.
+- Domain owners publish Hush-specific DNS records to verify ownership and enable native Hush routing.
+- Verified domains can receive native Hush mail without SMTP bridging when both sender and recipient are Hush-capable.
+- Native upgrade paths let domains gradually move from SMTP bridging to Hush-native delivery.
 
 ### Limitations
 
 - Domain verification requires DNS changes and cannot be assumed for all domains immediately.
-- A domain may safely support both native Stealth mail and SMTP-bridged mail simultaneously.
+- A domain may safely support both native Hush mail and SMTP-bridged mail simultaneously.
 - Native and bridged deliveries remain distinguishable to prevent users from assuming equal trust.
 
 ### Distinguishability
 
-- Verified native mail is labeled `Cryptographically Verified` or `Native Stealth`.
+- Verified native mail is labeled `Cryptographically Verified` or `Native Hush`.
 - Legacy bridged mail remains labeled `SMTP Bridged (Unsigned)` even when the same domain has a verified native path.
 
 ### Loop and spoofing controls
 
-- Native Stealth routing must enforce domain verification records and on-chain signatures before treating mail as native.
+- Native Hush routing must enforce domain verification records and on-chain signatures before treating mail as native.
 - If a message arrives through SMTP for a verified domain, the bridge should compare the path to native delivery and retain the bridged label unless fully native proof is present.
-- Spoofing defenses rely on the same strong identity checks used by all native Stealth mail.
+- Spoofing defenses rely on the same strong identity checks used by all native Hush mail.
 
 ### Milestone
 
-- Adoption gate: at least one domain publishes Stealth verification DNS and receives native mail.
+- Adoption gate: at least one domain publishes Hush verification DNS and receives native mail.
 - Reliability gate: native routing works at >= 99.9% with no false-native classification of bridged mail.
 
 ## Adoption and reliability gates
@@ -176,4 +176,4 @@ Each milestone must satisfy both:
 
 ## Success signal
 
-A design partner adopts one Stealth workflow while safely communicating with ordinary email users, with bridged mail clearly distinguished and native proofs retained for verified Stealth mail.
+A design partner adopts one Hush workflow while safely communicating with ordinary email users, with bridged mail clearly distinguished and native proofs retained for verified Hush mail.

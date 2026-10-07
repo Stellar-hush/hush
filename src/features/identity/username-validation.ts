@@ -3,9 +3,9 @@
 import { formatFederationAddress, formatMailAddress } from "./mail-domain";
 
 /**
- * BETA-003 (Issue #1910) — Canonical Stealth username validation and atomic reservation.
+ * BETA-003 (Issue #1910) — Canonical Hush username validation and atomic reservation.
  *
- * This module provides the full validation pipeline for Stealth usernames:
+ * This module provides the full validation pipeline for Hush usernames:
  * 1. Unicode NFKC normalization + case folding
  * 2. Reserved-word filtering
  * 3. Length and character-class enforcement
@@ -59,6 +59,7 @@ const RESERVED_WORDS = new Set([
   "webmaster",
   "daemon",
   "mailer-daemon",
+  "hush",
   "stealth",
   "stellar",
   "soroban",

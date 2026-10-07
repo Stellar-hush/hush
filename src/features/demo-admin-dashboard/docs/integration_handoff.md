@@ -1,6 +1,6 @@
 # Campaign Integration Handoff Guide
 
-This handoff document details the architecture of the **Campaign Draft Snapshot** feature and outlines the steps, code locations, and safety mitigations required to wire this demo campaign data into the live Stealth demo inbox UI in future stages.
+This handoff document details the architecture of the **Campaign Draft Snapshot** feature and outlines the steps, code locations, and safety mitigations required to wire this demo campaign data into the live Hush demo inbox UI in future stages.
 
 ---
 

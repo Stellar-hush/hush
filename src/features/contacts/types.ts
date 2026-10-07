@@ -4,7 +4,7 @@ import type { UnknownSenderPolicy } from "@/features/preferences";
 export type ImportedContact = {
   id: string; // stable local id for React keys / editing
   name: string;
-  address: string; // Stealth / Stellar address or federation address
+  address: string; // Hush / Stellar address or federation address
   trust: "allow" | "block" | "default";
   error: string | null; // validation error, null if valid
 };

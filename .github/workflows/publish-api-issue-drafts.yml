@@ -26,7 +26,7 @@ jobs:
         run: |
           node -e '
             const fs = require("fs");
-            const data = JSON.parse(fs.readFileSync("stealth-api-100-issue-drafts.json", "utf8"));
+            const data = JSON.parse(fs.readFileSync("stellar-hush-api-100-issue-drafts.json", "utf8"));
             if (!Array.isArray(data.issues) || data.issues.length !== 100) throw new Error(`Expected exactly 100 issues, found ${data.issues?.length ?? "none"}`);
             const titles = data.issues.map(issue => issue.title);
             if (new Set(titles).size !== titles.length) throw new Error("Duplicate titles exist in the draft JSON");
@@ -41,7 +41,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const data = JSON.parse(fs.readFileSync('stealth-api-100-issue-drafts.json', 'utf8'));
+            const data = JSON.parse(fs.readFileSync('stellar-hush-api-100-issue-drafts.json', 'utf8'));
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));

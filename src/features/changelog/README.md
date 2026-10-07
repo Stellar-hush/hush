@@ -1,6 +1,6 @@
 # Changelog Panel Feature Handoff
 
-This directory owns the user-facing Changelog Panel (`src/features/changelog/`) displayed within the Stealth Mail Settings modal (`What's new` tab). It provides plain-language release summaries grouped by version and category (UI, API, protocol, security), along with persistent read/unread state tracking.
+This directory owns the user-facing Changelog Panel (`src/features/changelog/`) displayed within the Hush Mail Settings modal (`What's new` tab). It provides plain-language release summaries grouped by version and category (UI, API, protocol, security), along with persistent read/unread state tracking.
 
 ## Files & Components
 
@@ -69,7 +69,7 @@ export interface ChangelogEntry {
 - **Demo Data Integrity**: Release entries in `data.ts` are static, fake demonstration notes representing release progress. Do NOT commit real user data, private keys, live wallet secrets, or customer email content.
 - **LocalStorage Resilience**: `getSeenVersion` and `setSeenVersion` catch and silently swallow `localStorage` access errors (e.g., when running inside restricted sandboxes or private browsing mode where quota storage throws `DOMException`).
 - **Privacy Assumptions**: The feature operates 100% client-side. No telemetry, user reading habits, or tracking identifiers are transmitted to external servers when reading release notes.
-- **Security Positioning**: Security-related release notes (category: `security`) highlight platform safety enhancements (audit logs, identity checks, 2FA) in plain language, supporting Stealth Mail's core positioning of privacy, speed, and sender control.
+- **Security Positioning**: Security-related release notes (category: `security`) highlight platform safety enhancements (audit logs, identity checks, 2FA) in plain language, supporting Hush Mail's core positioning of privacy, speed, and sender control.
 
 ---
 

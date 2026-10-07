@@ -32,8 +32,8 @@
     background: var(--gradient-ambient), var(--background);
   }
 
-  .silver-text {
-    background: var(--gradient-silver);
+  .brand-gradient-text {
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

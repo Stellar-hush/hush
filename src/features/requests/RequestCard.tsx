@@ -134,7 +134,7 @@ export function RequestCard({
                     className="h-full w-full object-cover"
                   />
                   {email.unread && (
-                    <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-silver ring-2 ring-background" />
+                    <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-brand-highlight ring-2 ring-background" />
                   )}
                 </div>
 

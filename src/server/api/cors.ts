@@ -18,7 +18,7 @@ const DEFAULT_ALLOWED_HEADERS = [
   "Content-Type",
   "X-Idempotency-Key",
   "X-Request-Id",
-  "X-Stealth-Address",
+  "X-Hush-Address",
 ] as const;
 
 export const LOCAL_DEV_ORIGINS = [

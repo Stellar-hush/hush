@@ -15,7 +15,7 @@ import {
 import { MemoryApiRepository } from "@/server/api/memory-repository";
 import type { User } from "@/server/api/domain";
 
-describe("BETA-003 (Issue #1910): Canonical Stealth username validation", () => {
+describe("BETA-003 (Issue #1910): Canonical Hush username validation", () => {
   // -----------------------------------------------------------------------
   // 1. Normalization
   // -----------------------------------------------------------------------
@@ -61,6 +61,7 @@ describe("BETA-003 (Issue #1910): Canonical Stealth username validation", () => 
     });
 
     it("rejects brand names", () => {
+      expect(isReservedWord("hush")).toBe(true);
       expect(isReservedWord("stealth")).toBe(true);
       expect(isReservedWord("stellar")).toBe(true);
     });

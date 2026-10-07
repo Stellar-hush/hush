@@ -6,7 +6,7 @@ import type { ChangelogEntry } from "./types";
  * ## Safety & Privacy Boundaries
  * - **Demo Data**: All entries below contain static, demonstration release notes.
  * - **Data Hygiene**: Do NOT add real user data, private keys, secrets, or live customer mail.
- * - **Positioning**: Content aligns with Stealth Mail's safety, speed, and sender-control values.
+ * - **Positioning**: Content aligns with Hush Mail's safety, speed, and sender-control values.
  */
 export const CHANGELOG_ENTRIES: ChangelogEntry[] = [
   {

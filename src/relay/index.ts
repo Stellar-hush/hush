@@ -166,7 +166,7 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Stealth relay listening on port ${PORT}`);
+  console.log(`Hush relay listening on port ${PORT}`);
 });
 
 function shutdown(): void {

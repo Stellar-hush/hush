@@ -344,7 +344,7 @@ export function runRepositoryContractTests(
       const sampleProfile = {
         userId: "usr_test_1",
         username: "alice_stealth",
-        displayName: "Alice Stealth",
+        displayName: "Alice Hush",
         avatarUrl: "https://stealth.mail/avatars/alice.png",
         bio: "Crypto privacy enthusiast",
         locale: "en-US",
@@ -393,7 +393,7 @@ export function runRepositoryContractTests(
           userId: "usr_test_1",
         });
         await expect(repo.getProfile("usr_test_1")).resolves.toMatchObject({
-          displayName: "Alice Stealth",
+          displayName: "Alice Hush",
         });
         await expect(repo.getCredential("usr_test_1")).resolves.toMatchObject({
           secretHash: "hash_super_secret_123",

@@ -1429,8 +1429,8 @@ export type KeyDirectoryRecord = z.infer<typeof keyDirectoryRecordSchema>;
 // Issue #1973 (BETA-066) — Live contacts CRUD, trust state, and safe import
 //
 // A contact is a durable, user-owned address-book entry. `address` holds the
-// raw identifier the user supplied (Stealth/Stellar G-address, local handle,
-// or federation address); `canonicalAddress` is the resolved Stealth identity
+// raw identifier the user supplied (Hush/Stellar G-address, local handle,
+// or federation address); `canonicalAddress` is the resolved Hush identity
 // once identity resolution succeeds (null while unresolved or invalid).
 // `trust` reuses the mailbox sender-rule vocabulary so contacts and policy
 // stay consistent, but a contact row is NEVER an implicit policy mutation.

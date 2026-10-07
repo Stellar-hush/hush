@@ -13,7 +13,7 @@ describe("validateImportAddress", () => {
     expect(validateImportAddress(G_ADDR)).toBeNull();
   });
 
-  it("accepts valid Stealth S-address", () => {
+  it("accepts valid Hush S-address", () => {
     expect(validateImportAddress(S_ADDR)).toBeNull();
   });
 

@@ -16,7 +16,7 @@ export function DemoAdminInboxExample() {
       <div className="space-y-2">
         <h1 className="text-3xl font-bold">Demo Admin Dashboard</h1>
         <p className="text-muted-foreground">
-          Manage and preview demo data for the Stealth mail system
+          Manage and preview demo data for the Hush mail system
         </p>
       </div>
 

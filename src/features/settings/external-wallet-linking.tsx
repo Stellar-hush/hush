@@ -393,7 +393,7 @@ export function ExternalWalletSettings({ ownerAddress }: { ownerAddress?: string
               <code className="text-foreground text-[10px]">
                 {activeSigner?.address.slice(0, 8)}...{activeSigner?.address.slice(-6)}
               </code>{" "}
-              is designated as the active message signer. If unlinked or unavailable, Stealth
+              is designated as the active message signer. If unlinked or unavailable, Hush
               automatically falls back to your Managed Wallet.
             </>
           )}

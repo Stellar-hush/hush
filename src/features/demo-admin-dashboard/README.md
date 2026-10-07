@@ -55,7 +55,7 @@ Safety and privacy notes:
 - Keep demo data deterministic so tests, snapshots, and maintainer reviews do not depend on the current date, network state, or external services.
 - Keep network access out of this feature unless a later issue defines a narrow demo-only integration.
 - Do not write to the production inbox, mail reader, calendar, sender-conversion, or protocol modules from this folder.
-- Keep copy aligned with Stealth Mail's safety, speed, and sender-control positioning; avoid claims that demo trust badges, hashes, signatures, or proofs are live verification.
+- Keep copy aligned with Hush Mail's safety, speed, and sender-control positioning; avoid claims that demo trust badges, hashes, signatures, or proofs are live verification.
 - Prefer adding links to existing local files and tests over describing an architecture that is not implemented.
 
 Lightweight QA checklist:

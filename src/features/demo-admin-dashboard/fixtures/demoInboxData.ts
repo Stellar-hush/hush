@@ -55,7 +55,7 @@ const DEMO_SENDERS: DemoSender[] = [
   },
   {
     address: "grace@notifications.stealth.demo",
-    name: "Stealth Notifications",
+    name: "Hush Notifications",
     isTrusted: true,
     relayNode: "system.stealth.demo",
   },
@@ -183,7 +183,7 @@ const DEMO_MESSAGES: DemoMessage[] = [
     subject: "Welcome to the Demo Environment",
     snippet: "This is a demonstration message showing the inbox preview functionality...",
     body: `
-      <p>Hello and welcome to the Stealth demo environment!</p>
+      <p>Hello and welcome to the Hush demo environment!</p>
       
       <p>This message demonstrates the inbox preview functionality with rich content support. 
       You can see how messages display in both list and reader views.</p>
@@ -202,7 +202,7 @@ const DEMO_MESSAGES: DemoMessage[] = [
       <p>Best regards,<br>
       The Demo Team</p>
     `,
-    sender: DEMO_SENDERS[6], // Stealth Notifications
+    sender: DEMO_SENDERS[6], // Hush Notifications
     recipients: ["demo@example.com"],
     date: "2026-06-20T08:30:00Z",
     isRead: false,

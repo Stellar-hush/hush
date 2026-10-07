@@ -14,7 +14,7 @@ import {
 const drafts: Draft[] = [
   {
     id: "draft-welcome",
-    subject: "Welcome to Stealth Mail",
+    subject: "Welcome to Hush Mail",
     body: "Deterministic welcome copy.",
     recipients: ["alex@example.com"],
   },

@@ -112,6 +112,9 @@ export function resolveRouteGuard(input: RouteGuardInput): GuardDecision {
 
     case "anonymous": {
       if (isPublicAuthPath(pathname)) return { kind: "render" };
+      // The public homepage is the product showcase. Account creation and
+      // sign-in remain explicit links from that page.
+      if (pathname === HOME_ROUTE) return { kind: "render" };
       // Demo mode is reachable only on its isolated route, only when the
       // explicit demo flag is present. The demo flag forces the bootstrap
       // response to resolve as `active`, so this branch is only reached for

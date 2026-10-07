@@ -13,14 +13,14 @@ export const defaultCampaignSnapshots: CampaignSnapshot[] = [
     drafts: [
       {
         id: "draft-welcome-1",
-        subject: "Welcome to Stealth!",
-        body: "Hi there!\n\nWelcome to Stealth, the secure messaging platform powered by Stellar.\n\nBest,\nStealth Team",
+        subject: "Welcome to Hush!",
+        body: "Hi there!\n\nWelcome to Hush, the secure messaging platform powered by Stellar.\n\nBest,\nHush Team",
         recipients: ["newuser@stealth.demo"],
       },
       {
         id: "draft-welcome-2",
         subject: "Setting up your Stellar Wallet",
-        body: "Hello!\n\nTo start receiving postage refunds, please set up your Stellar wallet address.\n\nCheers,\nStealth Team",
+        body: "Hello!\n\nTo start receiving postage refunds, please set up your Stellar wallet address.\n\nCheers,\nHush Team",
         recipients: ["newuser@stealth.demo"],
       },
     ],
@@ -38,7 +38,7 @@ export const defaultCampaignSnapshots: CampaignSnapshot[] = [
       {
         id: "draft-security-1",
         subject: "Action Required: Confirm backup passphrase",
-        body: "Hello,\n\nWe detected a login from a new device. Please make sure you have backed up your 24-word recovery phrase.\n\nSincerely,\nStealth Security",
+        body: "Hello,\n\nWe detected a login from a new device. Please make sure you have backed up your 24-word recovery phrase.\n\nSincerely,\nHush Security",
         recipients: ["sec-audit@stealth.demo"],
       },
     ],
@@ -55,8 +55,8 @@ export const defaultCampaignSnapshots: CampaignSnapshot[] = [
     drafts: [
       {
         id: "draft-news-1",
-        subject: "Stealth Digest - June 2026",
-        body: "Hello from the Stealth Team!\n\nThis month, we have successfully optimized our postage routing and added 2 new regional relays.\n\nRead more on our blog.",
+        subject: "Hush Digest - June 2026",
+        body: "Hello from the Hush Team!\n\nThis month, we have successfully optimized our postage routing and added 2 new regional relays.\n\nRead more on our blog.",
         recipients: ["subscribers@stealth.demo"],
       },
     ],

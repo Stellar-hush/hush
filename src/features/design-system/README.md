@@ -1,4 +1,4 @@
-# Stealth UI system
+# Hush UI system
 
 The design system is the shared visual and interaction layer for feature-owned UI.
 
@@ -38,7 +38,7 @@ contracts before changing primitives or tokens:
 - `styles/tokens.css`, `styles/surfaces.css`, `styles/interactions.css`, and `styles/fonts.css`
   provide the feature-owned CSS foundation that is imported once by [`src/styles.css`](../../styles.css).
 - Generic shadcn-style primitives live under [`src/components/ui`](../../components/ui); wrap or
-  compose them here only when the Stealth app needs a stable, product-specific primitive.
+  compose them here only when the Hush app needs a stable, product-specific primitive.
 
 Keep the data contracts narrow. UI primitives may receive labels, tones, variants, trust states,
 disabled/loading flags, and children from their callers, but they should not fetch mailbox data,
@@ -66,7 +66,7 @@ read payment state, inspect private keys, or infer sender identity on their own.
   relay, message, or payment is verified before the relevant feature data says so.
 - Keep motion and feedback respectful of `prefers-reduced-motion`; do not make warnings or errors
   harder to read through animation.
-- Keep shared copy aligned with Stealth Mail's safety, speed, and sender-control positioning.
+- Keep shared copy aligned with Hush Mail's safety, speed, and sender-control positioning.
 - Do not introduce a new V1/V2 tool folder or standalone product surface from this module.
 - Prefer linking to existing files in this folder, `src/components/ui`, or `src/styles.css` instead
   of documenting architecture that is not implemented.

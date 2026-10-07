@@ -11,7 +11,7 @@ import { buildImportPreview, type ParsedImportRow } from "./contact-import";
 // ---------------------------------------------------------------------------
 // Issue #1973 (BETA-066) — Live contacts service
 //
-// Resolves every contact to a Stealth identity, key-freshness, and sender
+// Resolves every contact to a Hush identity, key-freshness, and sender
 // trust state. Contact rows never mutate mailbox policy implicitly: the
 // "trust" field only records the *intent*; policy writes happen through the
 // explicit sender-rule endpoints (or the user's confirmed import).

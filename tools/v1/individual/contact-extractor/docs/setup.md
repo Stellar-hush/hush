@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Node.js 18+ or Bun 1.x
-- Access to the Stealth repository
+- Access to the Hush repository
 - Familiarity with the folder ownership boundary in `specs.md`
 
 ## Local Setup

@@ -2,7 +2,7 @@
 
 This module owns the existing mailbox list surface: thread rows, unread state,
 avatar treatment, timestamps, selection, and folder-specific rendering. Keep
-changes aligned with the current mailbox model and the Stealth Mail positioning
+changes aligned with the current mailbox model and the Hush Mail positioning
 around safety, speed, and sender control.
 
 For the bottom tab bar, sidebar collapse, topbar actions, and the responsive

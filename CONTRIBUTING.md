@@ -1,6 +1,10 @@
-# Contributing To Stealth Mail
+# Contributing To Hush Mail
 
-Stealth Mail handles identity, encrypted mail, managed testnet wallets, and on-chain protocol state. Changes must be reviewable, reproducible, and careful with user data.
+Hush Mail handles identity, encrypted mail, managed testnet wallets, and on-chain protocol state. Changes must be reviewable, reproducible, and careful with user data.
+
+## Product naming and legacy identifiers
+
+Use **Hush** for the product and `stellar-hush` for the package/project slug in new UI, docs, examples, and filenames. The repository owner/name, deployed resource names, federation domains, signed protocol strings, and persisted storage keys still contain the previous project name. Do not rename those in isolation: follow [the brand migration guide](docs/product/brand-migration.md) and preserve their compatibility until the relevant external or data migration is complete. When editing one of those interfaces, label the old identifier as legacy and document its replacement plan.
 
 ## Before Starting
 

@@ -237,7 +237,7 @@ describe("BETA-001 :: Beta Runtime Configuration Contract", () => {
 
       const matrix = formatConfigMatrix(config);
 
-      expect(matrix).toContain("=== Stealth Mail Beta Runtime Configuration Matrix ===");
+      expect(matrix).toContain("=== Hush Mail Beta Runtime Configuration Matrix ===");
       expect(matrix).toContain("[Network]");
       expect(matrix).toContain("[Storage]");
       expect(matrix).toContain("[Session & Security]");

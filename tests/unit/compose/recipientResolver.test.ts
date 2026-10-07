@@ -11,7 +11,7 @@ describe("recipientResolver", () => {
       const blocked = new Set<string>();
       const result = await resolveRecipient("invalid email@", blocked);
       expect(result.state).toBe("invalid");
-      expect(result.message).toContain("Enter a Stealth address");
+      expect(result.message).toContain("Enter a Hush address");
     });
 
     it("should block recipients in blocklist", async () => {
@@ -28,7 +28,7 @@ describe("recipientResolver", () => {
       expect(result.state).not.toBe("invalid");
     });
 
-    it("should accept valid Stealth S-addresses", async () => {
+    it("should accept valid Hush S-addresses", async () => {
       const blocked = new Set<string>();
       const validSAddress = "SBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA";
       const result = await resolveRecipient(validSAddress, blocked);

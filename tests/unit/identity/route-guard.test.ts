@@ -173,8 +173,8 @@ describe("resolveRouteGuard — five required states", () => {
     });
 
     it("are redirected to sign-in with a sanitized return-to for hostile paths", () => {
-      const decision = resolveRouteGuard({ state: "anonymous", pathname: "/", search: "" });
-      expect(decision).toEqual({ kind: "redirect", to: SIGN_IN_ROUTE, search: { next: "/" } });
+      const decision = resolveRouteGuard({ state: "anonymous", pathname: "/mail/123", search: "" });
+      expect(decision).toEqual({ kind: "redirect", to: SIGN_IN_ROUTE, search: { next: "/mail/123" } });
 
       // A hostile pathname must never propagate raw: the emitted return-to
       // always passes open-redirect validation (here it is sanitized to "/").
@@ -198,18 +198,18 @@ describe("resolveRouteGuard — five required states", () => {
     });
   });
 
-  describe("the production root never serves the app to anonymous visitors", () => {
-    it("redirects anonymous visitors away from the root in production", () => {
+  describe("the public root serves the product showcase", () => {
+    it("renders the root for anonymous visitors in production", () => {
       const decision = resolveRouteGuard({
         state: "anonymous",
         pathname: "/",
         isDev: false,
         demoFlag: false,
       });
-      expect(decision).toEqual({ kind: "redirect", to: SIGN_IN_ROUTE, search: { next: "/" } });
+      expect(decision).toEqual({ kind: "render" });
     });
 
-    it("opens the demo mailbox at the root in development", () => {
+    it("renders the public homepage in development", () => {
       const decision = resolveRouteGuard({
         state: "anonymous",
         pathname: "/",
@@ -219,10 +219,10 @@ describe("resolveRouteGuard — five required states", () => {
       expect(decision).toEqual({ kind: "render" });
     });
 
-    it("keeps authentication enforced during end-to-end automation", () => {
+    it("keeps protected routes gated during end-to-end automation", () => {
       expect(
         resolveRouteGuard({ state: "anonymous", pathname: "/", isDev: true, isE2E: true }),
-      ).toEqual({ kind: "redirect", to: SIGN_IN_ROUTE, search: { next: "/" } });
+      ).toEqual({ kind: "render" });
       expect(
         resolveRouteGuard({ state: "outage", pathname: "/", isDev: true, isE2E: true }),
       ).toEqual({ kind: "state-view", view: "outage" });

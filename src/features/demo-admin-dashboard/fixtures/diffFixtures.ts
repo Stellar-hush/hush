@@ -13,7 +13,7 @@ export const originalDatasetFixture: DemoDataset = {
       body: "This is a baseline welcome message.",
       sender: {
         address: "admin@stealth.demo",
-        name: "Stealth Admin",
+        name: "Hush Admin",
         isTrusted: true,
       },
       recipients: ["user@example.com"],
@@ -45,7 +45,7 @@ export const originalDatasetFixture: DemoDataset = {
   senders: [
     {
       address: "admin@stealth.demo",
-      name: "Stealth Admin",
+      name: "Hush Admin",
       isTrusted: true,
     },
     {
@@ -69,7 +69,7 @@ export const currentDatasetDraftFixture: DemoDataset = {
       body: "This is a baseline welcome message. Now with more info!", // Changed
       sender: {
         address: "admin@stealth.demo",
-        name: "Stealth Admin",
+        name: "Hush Admin",
         isTrusted: true,
       },
       recipients: ["user@example.com"],
@@ -102,7 +102,7 @@ export const currentDatasetDraftFixture: DemoDataset = {
   senders: [
     {
       address: "admin@stealth.demo",
-      name: "Stealth Admin",
+      name: "Hush Admin",
       isTrusted: true,
     },
     // colleague removed

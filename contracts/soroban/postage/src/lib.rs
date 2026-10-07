@@ -1,6 +1,6 @@
 //! # Postage Contract
 //!
-//! Manages sender-authorized token escrow for Stealth protocol messages.
+//! Manages sender-authorized token escrow for Hush protocol messages.
 //! Each message has a single `Postage` record whose status progresses through
 //! a well-defined lifecycle. Every state transition emits a `PostageEvent`
 //! that indexers and wallets can subscribe to for real-time ledger updates.
@@ -185,7 +185,7 @@ use lifecycle_guard::{
     PostageStatus as LifecyclePostageStatus,
 };
 
-/// The on-chain record for a single Stealth message escrow.
+/// The on-chain record for a single Hush message escrow.
 ///
 /// A `Postage` record is written to persistent storage on [`PostageContract::submit`]
 /// and updated in-place on every subsequent state transition. The record is
@@ -255,7 +255,7 @@ pub struct PostageEvent {
     /// `"submit"`, `"expire"`, `"settle"`, `"refund"`, `"dispute"`, `"reclaim"`.
     #[topic]
     pub action: Symbol,
-    /// 32-byte opaque identifier for the Stealth message.
+    /// 32-byte opaque identifier for the Hush message.
     #[topic]
     pub message_id: BytesN<32>,
     /// Full snapshot of the postage record after the transition.

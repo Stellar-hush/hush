@@ -422,7 +422,7 @@ export class StealthCoordinator extends DurableObjectBase {
       })),
       onChainLimitations: [
         "Stellar testnet transactions, account history, contract events, and published lifecycle commitments are immutable and are not erased.",
-        "This export contains ciphertext and references only; Stealth never exports plaintext message content or credentials.",
+        "This export contains ciphertext and references only; Hush never exports plaintext message content or credentials.",
       ],
     };
   }

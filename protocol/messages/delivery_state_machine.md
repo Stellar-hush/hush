@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-The Stealth protocol specifies a single normative off-chain message delivery state machine to unify message status representation across relay nodes, client UI, outbox storage, and receipt APIs.
+The Hush protocol specifies a single normative off-chain message delivery state machine to unify message status representation across relay nodes, client UI, outbox storage, and receipt APIs.
 
 Every message managed by the off-chain network moves through explicit, deterministic state transitions. Status representation is strictly governed by this state machine; client applications or services must not invent ad-hoc statuses.
 

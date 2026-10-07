@@ -14,7 +14,7 @@ Extract contact information from email messages and save it to a structured loca
 
 ## Non-goals
 
-- Integration with the main Stealth inbox or routing system
+- Integration with the main Hush inbox or routing system
 - On-chain Stellar contact storage or wallet functionality
 - Database schema changes or persistent storage outside the tool
 - Social graph, contact discovery, or network crawling

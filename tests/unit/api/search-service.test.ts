@@ -100,7 +100,7 @@ describe("Search Service (Issue #1972 / BETA-065)", () => {
 
     it("handles non-matching fields gracefully", () => {
       const fields = {
-        subject: "Welcome to Stealth Mail",
+        subject: "Welcome to Hush Mail",
       };
       const highlights = computeHighlights(fields, ["nonexistent"]);
       expect(highlights.length).toBe(0);

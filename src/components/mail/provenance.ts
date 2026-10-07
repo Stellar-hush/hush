@@ -140,7 +140,7 @@ export function getEmailProvenance(
       : "Stellar Account Indexer";
 
   const senderDetails = isSmtpBridge
-    ? "DNS verification passed (SPF/DKIM matching domain), but message is missing an on-chain cryptographic signature. Bridged to Stellar by Stealth Bridge Relay."
+    ? "DNS verification passed (SPF/DKIM matching domain), but message is missing an on-chain cryptographic signature. Bridged to Stellar by Hush Bridge Relay."
     : `Successfully resolved federated identity '${rawIdentity}' to public key ${resolvedKey} via Stellar Federation protocols. Cryptographic envelope signature verified.`;
 
   const senderIdentityInspector: ProvenanceItemDetails = {

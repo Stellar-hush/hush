@@ -49,7 +49,7 @@ export function PolicyReviewStep({
       <div className="space-y-1">
         <h2 className="text-base font-semibold text-foreground">Review your mailbox policy</h2>
         <p className="text-sm text-muted-foreground">
-          These settings will be written to the Stealth protocol. You can update them at any time
+          These settings will be written to the Hush protocol. You can update them at any time
           from Settings.
         </p>
       </div>
@@ -80,7 +80,7 @@ export function PolicyReviewStep({
       <div className="flex items-start gap-2 rounded-xl border border-surface-tint/10 bg-surface-tint/[0.02] p-3">
         <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-status-success dark:text-emerald-400" />
         <p className="text-xs text-muted-foreground">
-          Activating writes your policy to the Stealth server. No on-chain transaction fee is
+          Activating writes your policy to the Hush server. No on-chain transaction fee is
           charged at this point.
         </p>
       </div>

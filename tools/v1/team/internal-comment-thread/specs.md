@@ -23,7 +23,7 @@ Team-only internal annotations for shared inbox messages. Comments are never vis
 
 ## Architecture Overview
 
-The tool follows a layered pattern: UI components call hooks that delegate to services, which use a storage adapter (interface-based, swappable). The storage layer defaults to in-memory. The tool depends on the Stealth protocol for team identity and message reference but does not depend on the main application's routing, mail rendering engine, wallet core, or design system.
+The tool follows a layered pattern: UI components call hooks that delegate to services, which use a storage adapter (interface-based, swappable). The storage layer defaults to in-memory. The tool depends on the Hush protocol for team identity and message reference but does not depend on the main application's routing, mail rendering engine, wallet core, or design system.
 
 **Firm rule (non-negotiable):** No code path may ever include comment body text in any payload, header, log, or delivery that could reach an external sender address.
 
@@ -54,7 +54,7 @@ type CommentTarget = { kind: "message"; id: string } | { kind: "thread"; id: str
 interface InternalComment {
   id: string;
   target: CommentTarget;
-  author: string; // Stealth address of team member
+  author: string; // Hush address of team member
   body: string;
   createdAt: string;
   updatedAt?: string;

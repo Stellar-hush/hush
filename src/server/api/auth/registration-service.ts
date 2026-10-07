@@ -155,7 +155,7 @@ export async function registerWithPassword(
     origin: ip,
   });
 
-  // Stealth is a self-contained mail protocol: there is no external mailbox
+  // Hush is a self-contained mail protocol: there is no external mailbox
   // to confirm. Registration activates the account immediately.
 
   return {

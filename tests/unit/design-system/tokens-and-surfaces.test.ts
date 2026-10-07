@@ -52,9 +52,9 @@ describe("design-system surface utilities", () => {
     expect(surfaces).toContain("background: var(--glass-strong);");
   });
 
-  it("keeps ambient and silver text helpers available for marketing-safe chrome", () => {
+  it("keeps ambient and brand gradient text helpers available", () => {
     expect(surfaces).toContain(".ambient-bg");
-    expect(surfaces).toContain(".silver-text");
+    expect(surfaces).toContain(".brand-gradient-text");
   });
 
   it("does not reference undefined custom properties for glass backgrounds (edge case)", () => {

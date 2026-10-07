@@ -58,7 +58,7 @@ async function encryptAttachmentWithKey(
 describe("decryptAttachment (BETA-067)", () => {
   it("decrypts attachment bytes with a known key", async () => {
     const key = await generateKey();
-    const plaintext = new TextEncoder().encode("Hello, Stealth attachment!");
+    const plaintext = new TextEncoder().encode("Hello, Hush attachment!");
     const encrypted = await encryptAttachmentWithKey(key, plaintext);
 
     const result = await decryptAttachment(key, {
@@ -67,7 +67,7 @@ describe("decryptAttachment (BETA-067)", () => {
       mac: encrypted.mac,
     });
 
-    expect(new TextDecoder().decode(result.bytes)).toBe("Hello, Stealth attachment!");
+    expect(new TextDecoder().decode(result.bytes)).toBe("Hello, Hush attachment!");
     expect(result.contentHash).toMatch(/^[0-9a-f]{64}$/);
   });
 

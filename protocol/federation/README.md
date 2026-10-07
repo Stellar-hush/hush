@@ -1,14 +1,14 @@
-# Stealth & Stellar Federation Protocol (BETA-026)
+# Hush & Stellar Federation Protocol (BETA-026)
 
 ## 1. Overview
 
-Stealth recipient resolution provides a deterministic, single-service resolution mechanism for addressing recipients across multiple address formats:
+Hush recipient resolution provides a deterministic, single-service resolution mechanism for addressing recipients across multiple address formats:
 
-- **Stealth Email Handles**: `alice@stealth.me`, `alice@stealth.xyz`, `alice@stealth.mail`
-- **Stealth Federation Handles**: `alice*stealth.me`, `alice*stealth.xyz`
+- **Hush Email Handles**: `alice@stealth.me`, `alice@stealth.xyz`, `alice@stealth.mail`
+- **Hush Federation Handles**: `alice*stealth.me`, `alice*stealth.xyz`
 - **External Stellar Federation**: `alice*stellar.org`, `bob*lobstr.co` (SEP-0002)
 - **Direct Stellar Addresses**: `GBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA` (G-address)
-- **Direct Stealth Addresses**: `SBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA` (S-address)
+- **Direct Hush Addresses**: `SBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA` (S-address)
 
 ---
 

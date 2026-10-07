@@ -2,13 +2,13 @@
 
 Encrypted communication protocols often secure content while exposing behavioral metadata. The timing, sizing, frequency, and social graphing of messages can still identify correspondents and expose interaction patterns.
 
-This document defines the privacy policies, data protection rules, and retention boundaries for the Stealth protocol across all execution layers.
+This document defines the privacy policies, data protection rules, and retention boundaries for the Hush protocol across all execution layers.
 
 ---
 
 ## 1. Metadata Inventory
 
-The table below catalogs all metadata processed by Stealth, classified by visibility layer, and explicitly separates **Required** metadata (essential for system operation) from **Optional** metadata (used for telemetry, debugging, or enhanced user experience).
+The table below catalogs all metadata processed by Hush, classified by visibility layer, and explicitly separates **Required** metadata (essential for system operation) from **Optional** metadata (used for telemetry, debugging, or enhanced user experience).
 
 | Visibility Layer           | Metadata Field / Item                   | Class        | Purpose                                                                 | Privacy & Leakage Impact                                              |
 | :------------------------- | :-------------------------------------- | :----------- | :---------------------------------------------------------------------- | :-------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ The table below catalogs all metadata processed by Stealth, classified by visibi
 
 ## 2. Data Protection Rules
 
-To govern the lifecycle of metadata, Stealth enforces strict rules across all components:
+To govern the lifecycle of metadata, Hush enforces strict rules across all components:
 
 ### A. Minimization Rules
 
@@ -51,8 +51,8 @@ To govern the lifecycle of metadata, Stealth enforces strict rules across all co
 ### B. Pseudonymization & Identity Obfuscation
 
 - **Cryptographic Keys**: Users are identified globally by Stellar public keys (`Address` types) instead of email addresses.
-- **Stealth Addresses**: The client resolves human-readable federation handles (e.g., `user*domain.com`) entirely off-chain. This lookup is decoupled from message sending to ensure that the relationship between the human-readable handle and the on-chain destination public key is never published to the ledger.
-- **Ephemeral Keys**: Senders are encouraged to use one-time Stealth addresses to break correlation links between consecutive messages to the same recipient.
+- **Hush Addresses**: The client resolves human-readable federation handles (e.g., `user*domain.com`) entirely off-chain. This lookup is decoupled from message sending to ensure that the relationship between the human-readable handle and the on-chain destination public key is never published to the ledger.
+- **Ephemeral Keys**: Senders are encouraged to use one-time Hush addresses to break correlation links between consecutive messages to the same recipient.
 
 ### C. Padding Rules
 
@@ -114,12 +114,12 @@ This matrix identifies the retention limits for data classes, their code-level e
 
 ## 5. Product Claims & Residual Leakage
 
-Stealth ensures that all marketing and user-facing security claims are aligned with the technical reality of residual metadata leaks:
+Hush ensures that all marketing and user-facing security claims are aligned with the technical reality of residual metadata leaks:
 
 | User-Facing Claim                      | Technical Reality & Residual Leakage                                                                                                                                                                                                      | Mitigation Strategy                                                                                                                                                             |
 | :------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **"Messages stay private."**           | **Residual Leakage**: Timing correlation and traffic profiling. A network observer monitoring connection times can infer who is talking to whom if message submission matches read-receipt publication. Payload size can leak file types. | **Mitigation**: Payloads are padded to standard 4KB blocks. Clients inject random delays (0-5 minutes) for non-urgent events like read receipts to prevent timing correlations. |
-| **"Identity is pseudonymous."**        | **Residual Leakage**: Public key clustering. If a sender uses the same Stellar G-Address to mail multiple recipients, an observer can map the sender's social graph on the ledger.                                                        | **Mitigation**: Automated Stealth Address generation creates unique, one-time target public keys for each inbound thread, preventing graph linking.                             |
+| **"Identity is pseudonymous."**        | **Residual Leakage**: Public key clustering. If a sender uses the same Stellar G-Address to mail multiple recipients, an observer can map the sender's social graph on the ledger.                                                        | **Mitigation**: Automated Hush Address generation creates unique, one-time target public keys for each inbound thread, preventing graph linking.                             |
 | **"No plaintext addresses on-chain."** | **Residual Leakage**: Federation lookups. Querying the federation endpoint `alice*domain` over HTTP leaks searching behavior to DNS servers and directory hosts.                                                                          | **Mitigation**: The client caches federation records locally and batches lookup requests to prevent real-time search leakage during message drafting.                           |
 | **"Spam is priced via postage."**      | **Residual Leakage**: Payment links. If a single funding account distributes Stellar assets to multiple postage escrows, those escrows become linked to the funder.                                                                       | **Mitigation**: Integration with privacy pools or relay-sponsored postage payments to break direct on-chain funding links.                                                      |
 
@@ -127,14 +127,14 @@ Stealth ensures that all marketing and user-facing security claims are aligned w
 
 ## 6. Threat Review
 
-A threat modeling review was conducted to trace all identifiers used throughout the Stealth protocol and confirm that no undocumented stable identifier links a user's communication graph.
+A threat modeling review was conducted to trace all identifiers used throughout the Hush protocol and confirm that no undocumented stable identifier links a user's communication graph.
 
 ### Identifier Audit
 
 1. **Stellar Public Key / G-Address**:
    - _Status_: Stable, long-lived identifier.
    - _Threat_: If reused, it directly maps the user's communication graph on the public blockchain ledger.
-   - _Documentation & Mitigation_: Fully documented. Mitigated by Stealth Address (S-prefix) derivation, which generates one-time public keys for each recipient.
+   - _Documentation & Mitigation_: Fully documented. Mitigated by Hush Address (S-prefix) derivation, which generates one-time public keys for each recipient.
 2. **Message ID**:
    - _Status_: Ephemeral random identifier (SHA-256 hash).
    - _Threat_: Could link delivery receipts to postage escrows.
@@ -158,4 +158,4 @@ A threat modeling review was conducted to trace all identifiers used throughout 
 
 ### Threat Review Conclusion
 
-**The threat review confirms that no undocumented stable identifier exists in the Stealth protocol that can link a user's communication graph.** All stable identifiers are either public infrastructure markers, opt-in local caches, or are mitigated through cryptographic blinding and stealth address derivation techniques.
+**The threat review confirms that no undocumented stable identifier exists in the Hush protocol that can link a user's communication graph.** All stable identifiers are either public infrastructure markers, opt-in local caches, or are mitigated through cryptographic blinding and stealth address derivation techniques.

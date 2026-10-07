@@ -60,7 +60,7 @@ Expiry language may appear in the surrounding email body (see demo fixtures in [
 - **Copy failure** — silent fallback; the button stays on “Copy code”. Clipboard permissions or browser blocks are not surfaced to the user today.
 - **Motion** — the card uses a short entrance animation via `framer-motion`. Respect existing reduced-motion patterns elsewhere in the app when changing animation.
 
-The card copy states that the code was “auto-detected from message body”. Keep that wording honest: detection is a convenience helper for the currently open message, not proof that Stealth Mail verified the sender or relay.
+The card copy states that the code was “auto-detected from message body”. Keep that wording honest: detection is a convenience helper for the currently open message, not proof that Hush Mail verified the sender or relay.
 
 ## Safety And Privacy Notes
 
@@ -91,7 +91,7 @@ The card copy states that the code was “auto-detected from message body”. Ke
 
 ## Contributor Checklist
 
-- Keep copy aligned with Stealth Mail's safety, speed, and sender-control positioning.
+- Keep copy aligned with Hush Mail's safety, speed, and sender-control positioning.
 - Update [`detectOtp.ts`](./detectOtp.ts) and [`tests/unit/otp/detectOtp.test.ts`](../../../tests/unit/otp/detectOtp.test.ts) together when changing detection rules.
 - Keep `OTPCard` presentational: it should receive a `code` string from the caller, not fetch mailbox data or inspect private keys on its own.
 - Preserve keyboard and pointer access for the copy action; avoid color-only success states.

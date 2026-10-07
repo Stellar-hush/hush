@@ -10,7 +10,7 @@ export const WATCHLIST_FIXTURES: WatchlistEntry[] = [
   {
     id: "watch-001",
     senderEmail: "noreply@phishing-stealth-alert.example.com",
-    senderName: "Stealth Security Alert",
+    senderName: "Hush Security Alert",
     reason: "Known phishing domain impersonating security vendors",
     riskLevel: "high",
     status: "active",

@@ -1,4 +1,4 @@
-# Stealth Mail API
+# Hush Mail API
 
 The TanStack Start worker exposes versioned endpoints under `/api/v1`.
 

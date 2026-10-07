@@ -17,7 +17,7 @@ function AdminLayout() {
               <Shield className="size-5" />
             </div>
             <div>
-              <h1 className="font-bold text-sm tracking-wider uppercase">Stealth Console</h1>
+              <h1 className="font-bold text-sm tracking-wider uppercase">Hush Console</h1>
               <p className="text-xs text-muted-foreground dark:text-neutral-500">
                 Beta Administrator
               </p>

@@ -8,7 +8,7 @@ Related: `contracts/soroban` workspace, `docs/protocol/README.md`
 ## 1. Motivation
 
 Immutable bugs are unacceptable, but unconstrained upgrades undermine protocol
-trust. This document defines how Stealth contracts may be upgraded: who may
+trust. This document defines how Hush contracts may be upgraded: who may
 authorize an upgrade, how long a delay protects users, how on-chain state is
 migrated without loss, and which emergency powers exist.
 

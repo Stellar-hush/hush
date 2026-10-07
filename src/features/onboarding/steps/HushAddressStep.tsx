@@ -8,13 +8,13 @@ type Props = {
 };
 
 /**
- * Step 2: Stealth address (BETA-013)
+ * Step 2: Hush address (BETA-013)
  *
  * The account's mailbox address is issued by the server — it is not a
  * wallet extension address. Provides a copy button so the address can be
  * shared with contacts.
  */
-export function StealthAddressStep({ mailboxAddress, onAdvance, onRetreat }: Props) {
+export function HushAddressStep({ mailboxAddress, onAdvance, onRetreat }: Props) {
   const [copied, setCopied] = useState(false);
 
   function handleCopy() {
@@ -32,7 +32,7 @@ export function StealthAddressStep({ mailboxAddress, onAdvance, onRetreat }: Pro
       <div className="space-y-1">
         <h2 className="text-base font-semibold text-foreground">Your mailbox address</h2>
         <p className="text-sm text-muted-foreground">
-          Your Stealth address is issued with your account. Share it with senders so they can
+          Your Hush address is issued with your account. Share it with senders so they can
           deliver mail to you on-chain.
         </p>
       </div>
@@ -40,7 +40,7 @@ export function StealthAddressStep({ mailboxAddress, onAdvance, onRetreat }: Pro
       <div className="rounded-xl border border-surface-tint/10 bg-surface-tint/[0.03] p-4 space-y-3">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Mail className="h-3.5 w-3.5" />
-          <span className="text-xs uppercase tracking-wide">Stealth address</span>
+          <span className="text-xs uppercase tracking-wide">Hush address</span>
         </div>
         <p className="font-mono text-sm text-foreground break-all leading-relaxed">
           {mailboxAddress}

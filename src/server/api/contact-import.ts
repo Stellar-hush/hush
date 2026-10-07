@@ -32,7 +32,7 @@ function validateAddress(address: string): string | null {
   if (/^[GS][A-Z2-7]{55}$/.test(trimmed)) return null;
   if (trimmed.includes("*")) return null;
   if (contactSchema.shape.address.safeParse(trimmed).success) return null;
-  return "Not a valid Stealth/Stellar address or federation address (name*domain).";
+  return "Not a valid Hush/Stellar address or federation address (name*domain).";
 }
 
 function validateName(name: string): string {
@@ -204,7 +204,7 @@ export function parseVCard(raw: string): ParsedImportRow[] {
       }
     }
 
-    // Prefer a Stealth/Stellar-shaped field, then any email.
+    // Prefer a Hush/Stellar-shaped field, then any email.
     const stellarish = emailAddresses.find((email) => /^[GS][A-Z2-7]{55}$/.test(email.trim()));
     address = (stellarish ?? emailAddresses[0] ?? "").trim();
 

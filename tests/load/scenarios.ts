@@ -97,7 +97,7 @@ async function scenarioRegistrationBurst() {
       headers: {
         "Content-Type": "application/json",
         "x-forwarded-for": `198.51.100.${(index % 10) + 1}`,
-        "user-agent": "Stealth-Beta-083-Load",
+        "user-agent": "Hush-Beta-083-Load",
       },
       body: registrationBody(index),
     }),
@@ -193,7 +193,7 @@ async function scenarioConcurrentTransitions() {
   const requestHeaders = {
     "x-stealth-address": sender,
     "x-forwarded-for": "192.0.2.1",
-    "user-agent": "Stealth-Beta-083-Load",
+    "user-agent": "Hush-Beta-083-Load",
     "Content-Type": "application/json",
   };
   const quoteRes = await fetch(`${API_URL}/api/v1/postage/quote`, {

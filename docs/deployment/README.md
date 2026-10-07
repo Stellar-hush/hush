@@ -12,7 +12,7 @@ Deployment runbooks, environment setup, Cloudflare notes, network configuration,
 
 ## Beta Runtime Configuration Contract (BETA-001)
 
-The Stealth Mail beta deployment requires a unified configuration contract across six core domains. Secret parameters are strictly separated from client-facing public parameters and scrubbed (`[REDACTED]`) from logs.
+The Hush Mail beta deployment requires a unified configuration contract across six core domains. Secret parameters are strictly separated from client-facing public parameters and scrubbed (`[REDACTED]`) from logs.
 
 ### Redacted Configuration Matrix
 
@@ -32,7 +32,7 @@ The Stealth Mail beta deployment requires a unified configuration contract acros
 | `STEALTH_AUTH_CLOCK_SKEW_MS`         | Session  | Public     | All              | `30000` (30 secs)                                          | Allowed client/server clock skew in ms                              |
 | `STEALTH_AUTH_NONCE_TTL_MS`          | Session  | Public     | All              | `300000` (5 mins)                                          | Signed authentication nonce TTL in ms                               |
 | `STEALTH_QUOTE_LIFETIME_MS`          | Session  | Public     | All              | `300000` (5 mins)                                          | Postage quote lifetime in ms                                        |
-| `STEALTH_RELAY_URL`                  | Relay    | Public     | All              | `https://relay-testnet.stealth.mail`                       | Stealth message relay endpoint                                      |
+| `STEALTH_RELAY_URL`                  | Relay    | Public     | All              | `https://relay-testnet.stealth.mail`                       | Hush message relay endpoint                                      |
 | `STEALTH_RELAY_API_KEY`              | Relay    | **Secret** | Optional         | `[REDACTED]`                                               | Optional secret API key for relay authentication                    |
 | `STEALTH_RELAY_TIMEOUT_MS`           | Relay    | Public     | All              | `10000` (10 secs)                                          | Relay request timeout in ms                                         |
 | `STEALTH_REGISTRY_CONTRACT_ID`       | Contract | Public     | Production       | `CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA` | Soroban Identity Registry contract ID                               |

@@ -20,7 +20,7 @@ Created 5-state system for recipient verification:
 
 Supports all required formats:
 
-- Stealth addresses (S-prefix, 56 chars)
+- Hush addresses (S-prefix, 56 chars)
 - Stellar G-addresses (G-prefix, 56 chars)
 - Federation addresses (name\*domain)
 - Contact aliases (alphanumeric, hyphen, underscore, dot)
@@ -60,7 +60,7 @@ type RecipientReadiness = {
   state: RecipientResolutionState;
   postage: "ready" | "required";
   message: string;
-  resolvedAccount?: string; // Stealth/Stellar address
+  resolvedAccount?: string; // Hush/Stellar address
   policyType?: "allow" | "block" | "default";
   encryptionKey?: string; // Public key
 };
@@ -125,7 +125,7 @@ src/features/demo-admin-dashboard/
 - Multiple recipients via comma or semicolon
 - Handles whitespace normalization
 - Case-insensitive address matching
-- Works with aliases, federation, Stealth, Stellar
+- Works with aliases, federation, Hush, Stellar
 
 ## Acceptance Criteria Met
 

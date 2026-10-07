@@ -10,7 +10,7 @@ PMB is designed to run entirely as an **isolated sub-product**. It holds strict 
 
 ```mermaid
 graph TD
-  CoreApp[Core Stealth App] -->|Reads Core Email Type| PMBService[PMB Binder Service]
+  CoreApp[Core Hush App] -->|Reads Core Email Type| PMBService[PMB Binder Service]
   PMBService -->|Local Memory Cache| PMBState[useProjectBinder Hook]
   PMBState -->|Renders isolated UIs| PMBComponents[PMB UI Components]
 

@@ -343,10 +343,10 @@ const issues = [
     problem:
       "The same signed bytes could be misinterpreted by another feature or protocol context.",
     implementation:
-      "Define a versioned signature preimage containing a fixed Stealth domain tag, network identifier, operation type, and canonical payload bytes.",
+      "Define a versioned signature preimage containing a fixed Hush domain tag, network identifier, operation type, and canonical payload bytes.",
     area: "src/services/crypto/signing-preimage.ts",
     criteria: [
-      "Signatures are bound to the Stealth envelope operation.",
+      "Signatures are bound to the Hush envelope operation.",
       "Network and protocol version are included.",
       "Changing the domain tag invalidates verification.",
       "Preimage vectors are deterministic.",

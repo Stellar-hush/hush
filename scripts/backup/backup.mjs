@@ -84,7 +84,7 @@ const runOptions = {
   wipeFirst: options.wipeFirst,
 };
 
-console.log(`✦ Stealth backups — command: ${command}`);
+console.log(`✦ Hush backups — command: ${command}`);
 if (options.archiveFile) console.log(`  archive:           ${options.archiveFile}`);
 if (options.stores) console.log(`  stores:            ${options.stores.join(", ")}`);
 

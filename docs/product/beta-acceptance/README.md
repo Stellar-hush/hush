@@ -5,7 +5,7 @@ Issue **#2005** · Structured first-time-user sessions on phone and desktop befo
 ## Session protocol
 
 1. **Consent** — Participants use synthetic test accounts only; diagnostic consent is recorded before the session (`informedConsent: true` on feedback payloads).
-2. **Personas** — First-time beta user (no prior Stealth exposure); facilitator observes without coaching unless blocked >3 minutes.
+2. **Personas** — First-time beta user (no prior Hush exposure); facilitator observes without coaching unless blocked >3 minutes.
 3. **Devices** — Run the same task list on desktop (1280×720) and mobile (390×844).
 4. **Tasks** — Signup/onboarding, address sharing, send, requests triage, proof inspection, recovery, in-app feedback.
 5. **Metrics** — Task completion, errors, confusion notes, elapsed time, accessibility barriers, support requests.

@@ -96,15 +96,14 @@ async function renderAt(initialUrl: string) {
 describe("RouteGate — component-level navigation coverage", () => {
   afterEach(() => vi.unstubAllEnvs());
 
-  it("redirects an anonymous visitor to sign-in", async () => {
+  it("renders the public homepage for an anonymous visitor", async () => {
     vi.stubEnv("DEV", false);
     mock.setBranch("unauthorized");
     mock.setData(null);
     const router = await renderAt("/");
 
-    await vi.waitFor(() => expect(router.state.location.pathname).toBe(SIGN_IN_ROUTE));
-    expect((router.state.location.search as { next?: string }).next).toBe("/");
-    expect(await screen.findByText("Sign In Page")).toBeTruthy();
+    await vi.waitFor(() => expect(router.state.location.pathname).toBe("/"));
+    expect(await screen.findByText("Protected App Page")).toBeTruthy();
   });
 
   it("lets an anonymous visitor stay on the public sign-in page (no redirect loop)", async () => {

@@ -161,7 +161,7 @@ export function AuthModal({ open, onClose, onSuccess }: AuthModalProps) {
             </div>
             <div>
               <h2 id="auth-modal-title" className="text-xl font-bold tracking-tight">
-                {registering ? "Create your Stealth account" : "Sign in to Stealth"}
+                {registering ? "Create your Hush account" : "Sign in to Hush"}
               </h2>
               <p className="text-xs text-muted-foreground">
                 {registering
@@ -228,7 +228,7 @@ export function AuthModal({ open, onClose, onSuccess }: AuthModalProps) {
                 </div>
                 <div>
                   <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
-                    Stealth username
+                    Hush username
                   </label>
                   <input
                     value={username}
@@ -337,7 +337,7 @@ export function AuthModal({ open, onClose, onSuccess }: AuthModalProps) {
             >
               {registering
                 ? "Already have an account? Sign in"
-                : "New to Stealth? Create an account"}
+                : "New to Hush? Create an account"}
             </button>
           </form>
         </motion.div>

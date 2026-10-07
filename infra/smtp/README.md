@@ -14,7 +14,7 @@ docker compose -f infra/docker-compose.smtp.yml up -d
 | `127.0.0.1:1025`        | SMTP submission (cleartext lab only) |
 | `http://127.0.0.1:8025` | Mailpit UI                           |
 
-Wire Stealth with the env vars listed in `docs/deployment/smtp-email-setup.md`.
+Wire Hush with the env vars listed in `docs/deployment/smtp-email-setup.md`.
 
 ## Health probe (no AUTH)
 

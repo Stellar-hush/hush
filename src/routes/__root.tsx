@@ -32,22 +32,22 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Stealth" },
+      { title: "Hush — Private Mail on Stellar" },
       {
         name: "description",
         content: "Cryptographic mail identities, postage, and delivery proofs on Stellar.",
       },
-      { name: "author", content: "Stealth" },
-      { property: "og:title", content: "Stealth" },
+      { name: "author", content: "Hush" },
+      { property: "og:title", content: "Hush — Private Mail on Stellar" },
       {
         property: "og:description",
         content: "Cryptographic mail identities, postage, and delivery proofs on Stellar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@stealthmail" },
     ],
     links: [
+      { rel: "icon", type: "image/svg+xml", href: "/brand/hush-mark.svg" },
       {
         rel: "stylesheet",
         href: appCss,

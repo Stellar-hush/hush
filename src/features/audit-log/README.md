@@ -1,6 +1,6 @@
 # Audit Log Contributor Handoff
 
-This module renders the existing Stealth Mail audit timeline for protocol event review. It is a local app surface, not a new tool folder, and changes here should preserve the current safety promise: reviewers can inspect sender-control and delivery metadata without exposing message bodies, secrets, or live customer mail.
+This module renders the existing Hush Mail audit timeline for protocol event review. It is a local app surface, not a new tool folder, and changes here should preserve the current safety promise: reviewers can inspect sender-control and delivery metadata without exposing message bodies, secrets, or live customer mail.
 
 ## Local Files
 
@@ -50,7 +50,7 @@ Filtering, copying, and exporting are read-only from the app's perspective. They
 
 ## Contributor Checklist
 
-- Keep new copy aligned with Stealth Mail's safety, speed, and sender-control positioning.
+- Keep new copy aligned with Hush Mail's safety, speed, and sender-control positioning.
 - Add event kinds to `types.ts` before rendering them, and map each kind to exactly one category.
 - Keep row summaries short enough to truncate cleanly in the current layout.
 - Preserve keyboard access for the search input and action buttons.

@@ -84,7 +84,7 @@ export function RecoveryCodesSection() {
   const downloadCodes = () => {
     if (!codes) return;
     const content = [
-      "Stealth Mail - one-time recovery codes",
+      "Hush Mail - one-time recovery codes",
       `Generated: ${new Date().toISOString()}`,
       "",
       ...codes.map((code, index) => `${index + 1}. ${code}`),

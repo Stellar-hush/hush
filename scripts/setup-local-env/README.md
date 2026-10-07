@@ -1,6 +1,6 @@
 # One‑Command Local Stellar & Relay Environment
 
-This directory contains scripts to **set up** and **tear down** a complete local development environment for the Stealth project.
+This directory contains scripts to **set up** and **tear down** a complete local development environment for the Hush project.
 
 - `setup.ps1` / `setup.sh` – install dependencies, build contracts, start Docker services, fund accounts, deploy contracts, generate `client-config.json`.
 - `teardown.ps1` / `teardown.sh` – stop Docker containers and clean generated artifacts.

@@ -7,7 +7,7 @@ import type { CreateDraftInput } from "./types";
 /** Valid create input (success path). */
 export const VALID_CREATE: CreateDraftInput = {
   title: "Launch Announcement",
-  subject: "Stealth v1 launch",
+  subject: "Hush v1 launch",
   collaborators: 2,
 };
 

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "StealthEnvelope",
-  "description": "Cryptographic signature envelope for Stealth messages. Includes ciphertext and an immutable message_id for durable persistence (BETA-029 / Issue #1936).",
+  "description": "Cryptographic signature envelope for Hush messages. Includes ciphertext and an immutable message_id for durable persistence (BETA-029 / Issue #1936).",
   "type": "object",
   "required": ["message_id", "ciphertext", "payload", "signature"],
   "additionalProperties": false,

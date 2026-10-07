@@ -143,7 +143,7 @@ describe("BETA-026 (Issue #1933): Production Stealth-Address & Stellar-Federatio
     });
   });
 
-  describe("2. Local Stealth Identity Resolution", () => {
+  describe("2. Local Hush Identity Resolution", () => {
     it("resolves active user across email, federation asterisk, and bare username formats", async () => {
       const formats = [
         "alice@betasmail.com",

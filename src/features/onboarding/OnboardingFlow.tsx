@@ -3,7 +3,7 @@ import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { AlertTriangle, CheckCircle2, Loader2 } from "lucide-react";
 import { useOnboarding } from "./useOnboarding";
 import { ProfileStep } from "./steps/ProfileStep";
-import { StealthAddressStep } from "./steps/StealthAddressStep";
+import { HushAddressStep } from "./steps/HushAddressStep";
 import { RecoveryStep } from "./steps/RecoveryStep";
 import { UnknownSenderRulesStep } from "./steps/UnknownSenderRulesStep";
 import { MinimumPostageStep } from "./steps/MinimumPostageStep";
@@ -77,7 +77,7 @@ function renderStep(step: OnboardingStep, props: StepProps): React.ReactNode {
       );
     case "stealth-address":
       return (
-        <StealthAddressStep
+        <HushAddressStep
           mailboxAddress={props.mailboxAddress}
           onAdvance={props.onAdvance}
           onRetreat={props.onRetreat}

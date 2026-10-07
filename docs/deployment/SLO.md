@@ -1,12 +1,12 @@
 # Service-Level Objectives (SLOs) and Service-Level Indicators (SLIs)
 
-This document defines the Service-Level Indicators (SLIs), Service-Level Objectives (SLO targets), measurement windows, traffic exclusion policies, error budget management, RED/USE metrics taxonomy, and privacy-safe observability implementation for the Stealth API.
+This document defines the Service-Level Indicators (SLIs), Service-Level Objectives (SLO targets), measurement windows, traffic exclusion policies, error budget management, RED/USE metrics taxonomy, and privacy-safe observability implementation for the Hush API.
 
 ---
 
 ## Overview & Reliability Targets
 
-The Stealth API enforces high-reliability targets tied directly to user-visible outcomes (mailbox policies, postage quotes/settlements, relay delivery receipts, account provisioning, storage, sync, and authentication).
+The Hush API enforces high-reliability targets tied directly to user-visible outcomes (mailbox policies, postage quotes/settlements, relay delivery receipts, account provisioning, storage, sync, and authentication).
 
 ### Primary Target Summary
 
@@ -181,7 +181,7 @@ Measures envelope polling, checkpoint advancing, and receipt indexing availabili
 
 ## RED / USE Metrics Taxonomy & Trace Boundaries
 
-To guarantee complete observability across all workflow stages, Stealth implements the **RED** (Rate, Errors, Duration) and **USE** (Utilization, Saturation, Errors) frameworks with strict privacy constraints:
+To guarantee complete observability across all workflow stages, Hush implements the **RED** (Rate, Errors, Duration) and **USE** (Utilization, Saturation, Errors) frameworks with strict privacy constraints:
 
 ### 1. Stage Definitions & Trace Boundaries
 

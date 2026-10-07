@@ -14,7 +14,7 @@ tool or unrelated delivery architecture.
 - `src/components/mail/composeValidation.ts` defines compose draft/submission
   types, recipient parsing, initial recipient readiness, blocked-recipient
   handling, policy-aware postage validation, and basic required-field errors.
-- `src/features/compose/recipientResolver.ts` resolves Stealth, Stellar, and
+- `src/features/compose/recipientResolver.ts` resolves Hush, Stellar, and
   federation-style recipient inputs into readiness states.
 - `src/features/compose/usePostageQuote.ts` and
   `src/features/compose/RecipientPolicyBanner.tsx` surface sender policy,

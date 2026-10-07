@@ -1,6 +1,6 @@
 # Secrets Inventory & Operational Procedures
 
-This document defines the secrets inventory for the Stealth Beta release, outlining their required environment ownership, rotation cadence, and emergency revocation procedures in accordance with the principle of least privilege.
+This document defines the secrets inventory for the Hush Beta release, outlining their required environment ownership, rotation cadence, and emergency revocation procedures in accordance with the principle of least privilege.
 
 ## Secret Inventory
 

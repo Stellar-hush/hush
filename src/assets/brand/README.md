@@ -1,3 +1,3 @@
-# Brand Assets
+# Hush brand assets
 
-Client-imported brand assets used by React components.
+Client-imported Hush brand assets used by React components. Shared product colors and theme variants are defined by the design system tokens; avoid introducing a second palette in feature code.

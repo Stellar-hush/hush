@@ -2,7 +2,7 @@
 
 # Usage:
 #   docker compose -f infra/docker-compose.smtp.yml up -d
-# Point Stealth at Mailpit SMTP (1025) and open http://127.0.0.1:8025
+# Point Hush at Mailpit SMTP (1025) and open http://127.0.0.1:8025
 
 services:
   mailpit:

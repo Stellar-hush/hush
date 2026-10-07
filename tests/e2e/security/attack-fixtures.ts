@@ -1,5 +1,5 @@
 /**
- * Stable fixture factory for the Stealth security regression suite.
+ * Stable fixture factory for the Hush security regression suite.
  *
  * All actors use deterministic fake Stellar public-key-shaped addresses so that
  * fixtures are stable across CI runs and no live credentials are required.

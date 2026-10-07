@@ -7,7 +7,7 @@ const OPENAPI_ERROR_CODES = API_ERROR_CODES.filter(
 export const openApiDocument = {
   openapi: "3.1.0",
   info: {
-    title: "Stealth Mail API",
+    title: "Hush Mail API",
     version: "2.0.0",
     description:
       "Development API for mailbox policy, Stellar postage proofs, and delivery receipts.",
@@ -903,7 +903,7 @@ export const openApiDocument = {
           app: { type: "string", enum: ["stealth-relay"] },
           apiVersion: {
             type: "string",
-            description: "Stealth Mail API version.",
+            description: "Hush Mail API version.",
           },
           protocolVersion: { type: "string", description: "Protocol version." },
           build: { type: "string", description: "Build version string." },

@@ -3,7 +3,7 @@ import { startOfDay } from "date-fns";
 /**
  * Shared date handling for the mock app.
  *
- * Stealth's seed data is pinned to a fixed moment so the calendar, reminders,
+ * Hush's seed data is pinned to a fixed moment so the calendar, reminders,
  * and "today" markers all agree. This module is the single source of truth for
  * that reference clock — features that need "now" (calendar, snooze) import it
  * here instead of sprinkling `new Date(2026, 5, 13)` literals around.

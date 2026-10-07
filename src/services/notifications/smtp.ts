@@ -307,8 +307,8 @@ export class SmtpNotificationAdapter implements NotificationAdapter {
 
       const isPasswordReset = message.purpose === "password_reset";
       const subject = isPasswordReset
-        ? "Reset your Stealth Mail password"
-        : "Verify your Stealth Mail account";
+        ? "Reset your Hush Mail password"
+        : "Verify your Hush Mail account";
       const actionText = isPasswordReset
         ? "Open the link below to reset your password. The link expires on"
         : "Open the link below to verify your account. The link expires on";
@@ -324,7 +324,7 @@ export class SmtpNotificationAdapter implements NotificationAdapter {
           `MIME-Version: 1.0`,
           `Content-Type: text/plain; charset=utf-8`,
           ``,
-          `Welcome to Stealth Mail.`,
+          `Welcome to Hush Mail.`,
           ``,
           actionText,
           `${message.expiresAt.toUTCString()}.`,

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This specification defines how Stealth supports organization mailboxes: shared addresses a team can operate without sharing private keys or creating ambiguous attribution. It covers organization ownership, member roles, policy administration, message access, delegation, offboarding, recovery, and audit history.
+This specification defines how Hush supports organization mailboxes: shared addresses a team can operate without sharing private keys or creating ambiguous attribution. It covers organization ownership, member roles, policy administration, message access, delegation, offboarding, recovery, and audit history.
 
 The goal is that a small team can operate one mailbox with clear accountability for every action, while keeping each member's personal identity separate from the organization identity.
 

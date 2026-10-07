@@ -1,6 +1,6 @@
 # Receipts API Contributor Handoff
 
-This folder owns the existing read-receipt API surface for Stealth Mail. It is a narrow API module, not a new tool surface, and changes here should keep receipt state metadata-only, participant-scoped, and easy to validate alongside the provenance UI.
+This folder owns the existing read-receipt API surface for Hush Mail. It is a narrow API module, not a new tool surface, and changes here should keep receipt state metadata-only, participant-scoped, and easy to validate alongside the provenance UI.
 
 ## Local Files
 
@@ -158,7 +158,7 @@ After the message is marked read, the same record carries a `readAt` timestamp:
 - Keep route schemas aligned with `receiptSchema` in `src/server/api/domain.ts`.
 - Add or update service tests when changing duplicate, not-found, forbidden, or read-state behavior.
 - Keep repository changes compatible with both the interface in `repository.ts` and the in-memory implementation.
-- Keep UI copy aligned with Stealth Mail's safety, speed, and sender-control positioning.
+- Keep UI copy aligned with Hush Mail's safety, speed, and sender-control positioning.
 - Avoid creating a new V1/V2 tool folder or unrelated product surface for receipt work.
 - Link docs to existing local files and tests instead of describing architecture that does not exist.
 

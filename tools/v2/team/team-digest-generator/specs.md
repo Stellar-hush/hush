@@ -4,7 +4,7 @@
 
 Generate daily summaries of team emails for quick review and digest.
 
-Generate a daily team digest that summarizes email activity, pending items, completed work, and team member contributions — all within an isolated workspace, with no dependency on the main Stealth Mail application.
+Generate a daily team digest that summarizes email activity, pending items, completed work, and team member contributions — all within an isolated workspace, with no dependency on the main Hush Mail application.
 
 - **Release tier:** V2 (later-release)
 - **Audience:** Team

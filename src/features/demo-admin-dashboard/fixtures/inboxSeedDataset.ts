@@ -134,7 +134,7 @@ const senderDeleted: DemoSender = {
 
 const senderSecurity: DemoSender = {
   address: "security@stealth.network",
-  name: "Stealth Security",
+  name: "Hush Security",
   isTrusted: true,
 };
 
@@ -403,9 +403,9 @@ export const inboxSeedMessages: DemoMessage[] = [
   {
     id: "seed-msg-05c",
     threadId: "thread-05c",
-    subject: "OTC offer for STEALTH tokens",
-    snippet: "I'm looking to buy 50k STEALTH tokens at $0.15...",
-    body: "I'm looking to buy 50k STEALTH tokens at $0.15. Can settle immediately via smart contract. Let me know if you have liquidity available.",
+    subject: "OTC offer for USDC on Stellar",
+    snippet: "I'm looking to buy 50,000 USDC at $0.15...",
+    body: "I'm looking to buy 50,000 USDC at $0.15. Can settle immediately via smart contract. Let me know if you have liquidity available.",
     sender: senderAnonTrader,
     recipients: ["eve@stealth.xyz"],
     date: "2026-06-18T11:00:00",
@@ -662,7 +662,7 @@ export const inboxSeedMessages: DemoMessage[] = [
     threadId: "thread-16",
     subject: "Your sign-in passkey",
     snippet: "Use the one-time code below to finish signing in to your account...",
-    body: "Hi Eve,\n\nWe received a sign-in request from a new device. Use the one-time passkey below to complete verification.\n\nYour OTP code: 371 400\n\nThis code expires in 10 minutes. If you didn't request this, you can safely ignore the message.\n\n— Stealth Security",
+    body: "Hi Eve,\n\nWe received a sign-in request from a new device. Use the one-time passkey below to complete verification.\n\nYour OTP code: 371 400\n\nThis code expires in 10 minutes. If you didn't request this, you can safely ignore the message.\n\n— Hush Security",
     sender: senderSecurity,
     recipients: ["eve@stealth.xyz"],
     date: "2026-06-19T10:00:00",

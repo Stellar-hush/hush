@@ -3,7 +3,7 @@
 ## Purpose
 
 Create a team task board model from action-oriented emails while keeping the
-tool isolated from the main Stealth Mail application.
+tool isolated from the main Hush Mail application.
 
 ## Release Scope
 

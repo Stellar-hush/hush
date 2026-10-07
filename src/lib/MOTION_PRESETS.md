@@ -1,6 +1,6 @@
 # Motion Presets System
 
-A centralized, tested animation system for consistent motion across the Stealth application. All presets respect `prefers-reduced-motion` preferences for accessibility.
+A centralized, tested animation system for consistent motion across the Hush application. All presets respect `prefers-reduced-motion` preferences for accessibility.
 
 ## Overview
 

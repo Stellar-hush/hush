@@ -371,7 +371,7 @@ describe("Workflow 3 — Live Two-User Web Experience (BETA-075)", () => {
     // Search query matching
     const searchIndex = [
       { id: "msg-1", subject: "Invoice Review", body: "Quarterly report attached" },
-      { id: "msg-2", subject: "Welcome", body: "Getting started on Stealth Mail" },
+      { id: "msg-2", subject: "Welcome", body: "Getting started on Hush Mail" },
     ];
     const match = searchIndex.filter((m) => m.body.toLowerCase().includes("quarterly"));
     expect(match).toHaveLength(1);

@@ -138,7 +138,7 @@ export function NotificationsPanel({
                             {n.title}
                           </p>
                           {!n.read && (
-                            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-silver" />
+                            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-highlight" />
                           )}
                         </div>
                         <p className="truncate text-xs text-muted-foreground">{n.message}</p>

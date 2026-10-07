@@ -779,7 +779,7 @@ export function AttachmentPreviewDrawer({
                   <>
                     This file extension{" "}
                     <span className="font-semibold text-foreground font-mono">.{type}</span> is not
-                    supported for interactive previews in Stealth.
+                    supported for interactive previews in Hush.
                   </>
                 )}
               </p>

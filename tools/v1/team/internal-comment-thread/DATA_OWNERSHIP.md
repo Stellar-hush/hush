@@ -13,7 +13,7 @@ The core structures are declared in `types/index.ts`:
     export interface InternalComment {
       id: string;
       target: CommentTarget;
-      author: string;        // Stealth address of team member
+      author: string;        // Hush address of team member
       body: string;
       createdAt: string;
       updatedAt?: string;
@@ -32,7 +32,7 @@ The core structures are declared in `types/index.ts`:
 - A team member opens a message (or thread) inside a shared inbox context.
 - The `useInternalComments` hook requests existing comments for the target.
 - The comment service returns the list filtered to the current team (enforced at storage layer).
-- A new comment is created with author = current team member's Stealth address, body, and timestamp.
+- A new comment is created with author = current team member's Hush address, body, and timestamp.
 - The hook stores the updated list in React state; the comment list re-renders.
 - Edit and delete operations are restricted to the original author.
 
@@ -63,5 +63,5 @@ Mutable:
 
 - Team-only visibility (firm rule): comment bodies are never included in any payload, header, log, or delivery mechanism that could reach an external sender address. This invariant is enforced in services, hooks, and any future storage adapters.
 - Fake demo data only: all sample authors, targets, and comment bodies are fake, deterministic, and safe for public repository review.
-- No real recipients or secrets: no real Stealth addresses (outside the declared team roster), private keys, or live network calls are ever included in fixtures or default state.
+- No real recipients or secrets: no real Hush addresses (outside the declared team roster), private keys, or live network calls are ever included in fixtures or default state.
 - Safe authoring: the service rejects any attempt to create a comment for a target the current author is not authorized to see.

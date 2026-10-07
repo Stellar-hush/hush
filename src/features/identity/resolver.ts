@@ -79,7 +79,7 @@ export function parseIdentifier(rawInput: string): ParsedIdentifier {
     return { type: "stellar_address", address: normalized.toUpperCase() };
   }
 
-  // 2. Stealth S-address (56 chars starting with S)
+  // 2. Hush S-address (56 chars starting with S)
   if (/^s[a-z2-7]{55}$/i.test(normalized)) {
     return { type: "stealth_address", address: normalized.toUpperCase() };
   }
@@ -129,7 +129,7 @@ export function parseIdentifier(rawInput: string): ParsedIdentifier {
 }
 
 /**
- * Production-ready Stealth Address and Stellar Federation Resolver.
+ * Production-ready Hush Address and Stellar Federation Resolver.
  */
 export class IdentityResolverService {
   private positiveCache = new Map<string, CacheEntry>();
@@ -355,7 +355,7 @@ export class IdentityResolverService {
   }
 
   /**
-   * Resolves direct Stellar or Stealth public address (G... or S...).
+   * Resolves direct Stellar or Hush public address (G... or S...).
    */
   private async resolveDirectAddress(
     address: string,
@@ -464,7 +464,7 @@ export class IdentityResolverService {
   }
 
   /**
-   * Resolves local Stealth handle: username@stealth.me or username*stealth.me.
+   * Resolves local Hush handle: username@stealth.me or username*stealth.me.
    */
   private async resolveLocalHandle(
     username: string,

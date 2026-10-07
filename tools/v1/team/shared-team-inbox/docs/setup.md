@@ -6,7 +6,7 @@
 | ----------------------- | ------- | --------------------------------- |
 | Node.js                 | 20+     | JavaScript runtime                |
 | Bun                     | 1.1+    | Package manager and dev server    |
-| Stealth dev environment | latest  | Relay API, Stellar testnet access |
+| Hush dev environment | latest  | Relay API, Stellar testnet access |
 
 ## Local Setup
 
@@ -25,9 +25,9 @@ cp .env.example .env
 
 | Variable                | Required | Description                                                |
 | ----------------------- | -------- | ---------------------------------------------------------- |
-| `STEALTH_API_URL`       | Yes      | Stealth relay API base URL (e.g., `http://localhost:8080`) |
+| `STEALTH_API_URL`       | Yes      | Hush relay API base URL (e.g., `http://localhost:8080`) |
 | `SHARED_INBOX_ID`       | Yes      | Unique identifier for this shared inbox deployment         |
-| `SHARED_INBOX_MEMBERS`  | No       | Comma-separated Stealth addresses of team members          |
+| `SHARED_INBOX_MEMBERS`  | No       | Comma-separated Hush addresses of team members          |
 | `SHARED_INBOX_STORAGE`  | No       | Storage backend: `memory` (default) or `file`              |
 | `SHARED_INBOX_DATA_DIR` | No       | Directory for file-based storage (defaults to `./data/`)   |
 | `LOG_LEVEL`             | No       | `debug`, `info`, `warn`, `error` (defaults to `info`)      |
@@ -46,7 +46,7 @@ bun run lint     # Lint
 
 | Problem                                    | Likely cause                                        | Fix                                                       |
 | ------------------------------------------ | --------------------------------------------------- | --------------------------------------------------------- |
-| Relay connection refused                   | Stealth dev server not running                      | Start from repo root: `bun run dev`                       |
+| Relay connection refused                   | Hush dev server not running                      | Start from repo root: `bun run dev`                       |
 | Empty feed                                 | Wrong inbox identity or no messages addressed to it | Verify `SHARED_INBOX_ID` and that messages are sent to it |
 | Identity resolution fails                  | Member addresses not registered with relay          | Confirm addresses in `SHARED_INBOX_MEMBERS`               |
 | Changes not reflected after editing `.env` | Values read at startup                              | Restart the dev server                                    |

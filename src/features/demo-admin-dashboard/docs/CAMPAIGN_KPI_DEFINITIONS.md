@@ -19,7 +19,7 @@ interface CampaignKpiDefinition {
   campaignId: string; // Parent campaign identifier
   metric: KpiMetricKind;
   label: string; // Human-readable metric name
-  description: string; // What this metric tracks in the Stealth demo context
+  description: string; // What this metric tracks in the Hush demo context
   unit: KpiUnit; // "count" | "percent" | "rate"
   target: number; // Goal value (must be > 0)
   currentValue: number; // Current demo value (must be >= 0)
@@ -33,10 +33,10 @@ interface CampaignKpiDefinition {
 
 ## Metric Kinds
 
-| `KpiMetricKind`     | What it measures in the Stealth demo context                                         |
+| `KpiMetricKind`     | What it measures in the Hush demo context                                         |
 | ------------------- | ------------------------------------------------------------------------------------ |
 | `opens`             | Recipients who opened the campaign message at least once                             |
-| `approvals`         | Recipients who approved the sender identity in their Stealth policy                  |
+| `approvals`         | Recipients who approved the sender identity in their Hush policy                  |
 | `replies`           | Recipients who replied to the campaign message thread                                |
 | `refunds`           | Postage refund requests submitted against the campaign's sends                       |
 | `proof_inspections` | Times a recipient opened the cryptographic proof inspector for a campaign message    |

@@ -41,14 +41,14 @@ export function RecoveryStep({ draft, onUpdate, onAdvance, onRetreat }: Props) {
       <div className="space-y-1">
         <h2 className="text-base font-semibold text-foreground">Secure your recovery</h2>
         <p className="text-sm text-muted-foreground">
-          Recovery access protects your Stealth mailbox. Anyone who gains it can impersonate you.
+          Recovery access protects your Hush mailbox. Anyone who gains it can impersonate you.
         </p>
       </div>
 
       <div className="flex items-start gap-3 rounded-xl border border-amber-400/20 bg-amber-400/[0.06] p-4">
         <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-status-warning dark:text-amber-300" />
         <p className="text-xs text-status-warning dark:text-amber-200">
-          Stealth has no account recovery system. If you lose your recovery access, your mailbox
+          Hush has no account recovery system. If you lose your recovery access, your mailbox
           address and all associated mail history become permanently inaccessible.
         </p>
       </div>

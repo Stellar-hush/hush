@@ -45,7 +45,7 @@ The contract must not include message bodies, recipient lists, attachment conten
 - Clipboard bundles are trust-sensitive because operators may paste them into support threads. Keep exported fields bounded to `RelayDiagnosticsResponse` and avoid adding opaque payloads.
 - Do not add real queue payloads, live mail content, secrets, private keys, auth tokens, payment account numbers, or production logs to examples, tests, or docs.
 - Status thresholds are product copy as much as logic. Avoid claiming a relay is safe, verified, or recovered unless the service data proves that state.
-- Keep copy aligned with Stealth Mail's safety, speed, and sender-control positioning.
+- Keep copy aligned with Hush Mail's safety, speed, and sender-control positioning.
 
 ## Contributor Checklist
 

@@ -42,7 +42,7 @@ export default {
       }
 
       const tomlContent = [
-        `# Stellar TOML Configuration for Stealth Mail`,
+        `# Stellar TOML Configuration for Hush Mail`,
         `FEDERATION_SERVER="${fedServer}"`,
       ].join("\n");
 

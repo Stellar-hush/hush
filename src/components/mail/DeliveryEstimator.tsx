@@ -71,7 +71,7 @@ export function DeliveryEstimator({
         : hasUnresolved
           ? "Resolving addresses…"
           : hasUnknown
-            ? "Unverified — no Stealth account found"
+            ? "Unverified — no Hush account found"
             : `${recipients.length} recipient${recipients.length > 1 ? "s" : ""} verified`,
       cta:
         hasUnknown && onResolveIdentity

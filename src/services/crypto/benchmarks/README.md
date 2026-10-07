@@ -1,6 +1,6 @@
 # Cryptographic Benchmarks
 
-This directory contains performance benchmarks for the Stealth crypto service
+This directory contains performance benchmarks for the Hush crypto service
 operations: key generation, key wrapping, message sealing/opening, hashing,
 and canonicalization.
 

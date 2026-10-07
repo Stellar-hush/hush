@@ -18,7 +18,7 @@ const FIXTURES = [
   {
     id: "watch-001",
     senderEmail: "noreply@phishing-stealth-alert.example.com",
-    senderName: "Stealth Security Alert",
+    senderName: "Hush Security Alert",
     reason: "Known phishing domain",
     riskLevel: "high",
     status: "active",

@@ -30,7 +30,7 @@ function AddressStep({
           Who would you like to send a message to?
         </h3>
         <p className="text-xs text-muted-foreground">
-          Enter a Stealth address, Stellar address, or federation address (name*domain)
+          Enter a Hush address, Stellar address, or federation address (name*domain)
         </p>
       </div>
       <div className="space-y-2">

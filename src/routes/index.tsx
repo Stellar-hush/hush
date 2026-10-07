@@ -2,16 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { useBootstrap } from "@/features/identity";
 import { MailApp } from "@/features/mail";
+import { HushShowcase } from "@/components/landing/HushShowcase";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Stealth" },
+      { title: "Hush" },
       {
         name: "description",
-        content: "Stealth is a cryptographic mail client built on Stellar.",
+        content: "Private programmable mail with encrypted messages and verifiable delivery on Stellar.",
       },
-      { property: "og:title", content: "Stealth" },
+      { property: "og:title", content: "Hush" },
       {
         property: "og:description",
         content: "Cryptographic mail identities, postage, and delivery proofs on Stellar.",
@@ -22,14 +23,7 @@ export const Route = createFileRoute("/")({
 });
 
 function IndexPage() {
-  // BETA-053: this file is only the composition entrypoint. Mailbox
-  // orchestration lives in `src/features/mail/shell`.
-  //
-  // In development builds the backend bindings are absent, so bootstrap never
-  // resolves an active session. Rather than bouncing to sign-in, render the
-  // mailbox with demo data so the UI is editable; auth routes stay reachable
-  // by URL. In production this is statically false.
   const { branch } = useBootstrap();
-  const useDemo = import.meta.env.DEV && branch !== "active";
-  return <MailApp isDemoMode={useDemo} />;
+  if (branch === "active") return <MailApp />;
+  return <HushShowcase />;
 }

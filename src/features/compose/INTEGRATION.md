@@ -89,7 +89,7 @@ export function MailUI() {
 
 ✅ **Valid inputs:**
 
-- Stealth addresses: `SBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA`
+- Hush addresses: `SBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA`
 - Stellar G-addresses: `GBRPYHIL2CI3WHZDTOOQFC6EB4KJJGUJGU7XYBNBNQ2LMCAKLKZ6DXA`
 - Federation: `alice*stellar.org`, `bob*example.com`
 - Contact aliases: `alice_smith`, `bob-jones`, `charlie.brown`

@@ -1,6 +1,6 @@
 # Workflow 2 — Live Protocol, Relay & Testnet Delivery
 
-This document outlines the step-by-step process for deploying the Stealth Soroban contracts (Policies, Postage, Receipts, Lifecycle) to a live Stellar network (Testnet or Mainnet) and ensuring the application runtime configuration is perfectly synced with the on-chain deployment.
+This document outlines the step-by-step process for deploying the Hush Soroban contracts (Policies, Postage, Receipts, Lifecycle) to a live Stellar network (Testnet or Mainnet) and ensuring the application runtime configuration is perfectly synced with the on-chain deployment.
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ If successful, you will see output indicating that all contracts (Policies, Post
 
 ## Step 4: Application Runtime
 
-The Stealth web application enforces **Runtime Drift Validation**.
+The Hush web application enforces **Runtime Drift Validation**.
 When the application starts, `src/config/loader.ts` will parse your environment variables and compare them against `src/config/contract-manifest.json`.
 
 If your `.env` (or environment variables in your deployment environment) defines a `STEALTH_POSTAGE_CONTRACT_ID` or `STEALTH_REGISTRY_CONTRACT_ID` that does _not_ match the manifest, the application will refuse to start in `preview` and `production` environments to prevent drift.

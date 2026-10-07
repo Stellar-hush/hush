@@ -1,10 +1,10 @@
 # Encryption Key Management
 
-Stealth Protocol key discovery, rotation, revocation, and device key management specification.
+Hush Protocol key discovery, rotation, revocation, and device key management specification.
 
 ## Overview
 
-This specification defines how Stealth manages cryptographic keys for end-to-end encryption, including account identity keys, device-specific keys, key publication, rotation, revocation, and historical message access.
+This specification defines how Hush manages cryptographic keys for end-to-end encryption, including account identity keys, device-specific keys, key publication, rotation, revocation, and historical message access.
 
 ## Key Components
 
@@ -23,7 +23,7 @@ This specification defines how Stealth manages cryptographic keys for end-to-end
 
 ### Definition
 
-Account keys are the long-lived cryptographic identity of a Stealth user, tied to their Stellar account.
+Account keys are the long-lived cryptographic identity of a Hush user, tied to their Stellar account.
 
 ### Key Types
 
@@ -57,7 +57,7 @@ Device keys are ephemeral encryption keys specific to a single user agent/device
 
 ### Key Lifecycle
 
-1. **Generation**: Created when first accessing Stealth on a new device
+1. **Generation**: Created when first accessing Hush on a new device
 2. **Publication**: Announced to the account's key catalog
 3. **Active Use**: Primary encryption target for incoming mail
 4. **Rotation**: Periodically rotated (recommended: every 30 days or on user request)
@@ -203,7 +203,7 @@ stealth:key-directory
 
 **Process**:
 
-1. User initiates rotation through Stealth UI
+1. User initiates rotation through Hush UI
 2. New account signing/encryption key pair generated
 3. Rotation announcement signed by **old** account signing key, containing **new** public key
 4. Rotation announcement published to key catalog
@@ -248,7 +248,7 @@ A device is compromised or lost. The user must prevent it from receiving new mai
 ### Revocation Process
 
 1. User initiates revocation (e.g., "I lost my phone")
-2. Stealth client generates revocation announcement:
+2. Hush client generates revocation announcement:
    - Signed by account signing key
    - Contains revoked key ID and reason
    - Timestamped
@@ -292,7 +292,7 @@ A device is compromised or lost. The user must prevent it from receiving new mai
 
 ### Client-Side Key Cache
 
-Stealth clients cache public keys to reduce latency and improve offline support.
+Hush clients cache public keys to reduce latency and improve offline support.
 
 ### Cache Validation
 

@@ -35,7 +35,7 @@ export const calendarEventFixtures: DemoCalendarEvent[] = [
   },
   {
     id: "evt-conference-call",
-    title: "Stealth Demo Roundtable",
+    title: "Hush Demo Roundtable",
     startTime: "2026-07-09T15:00",
     endTime: "2026-07-09T16:00",
     location: "Demo room",

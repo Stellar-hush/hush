@@ -51,7 +51,7 @@ export const CAMPAIGN_TEMPLATES: CampaignTemplate[] = [
       {
         id: "v-3",
         label: "Policy Compliance",
-        description: "Ensure content abides by Stealth network rules.",
+        description: "Ensure content abides by Hush network rules.",
         required: true,
         completed: false,
       },

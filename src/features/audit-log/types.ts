@@ -1,5 +1,5 @@
 /**
- * Audit log types for Stealth protocol events.
+ * Audit log types for Hush protocol events.
  * Message body content is intentionally excluded.
  */
 

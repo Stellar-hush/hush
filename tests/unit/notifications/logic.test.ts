@@ -7,7 +7,7 @@ describe("notification privacy and quiet hours", () => {
   it("uses metadata-minimal browser copy for locked screens", () => {
     for (const copy of Object.values(safeBrowserCopy)) {
       expect(copy.title).not.toMatch(/subject|from|message body/i);
-      expect(copy.body).toContain("Open Stealth");
+      expect(copy.body).toContain("Open Hush");
     }
   });
 
@@ -33,7 +33,7 @@ describe("notification privacy and quiet hours", () => {
       id: "mail:abc",
       category: "mail",
       title: "New encrypted mail",
-      message: "Open Stealth to view it.",
+      message: "Open Hush to view it.",
       createdAt: "2026-08-20T10:00:00.000Z",
       read: false,
     });

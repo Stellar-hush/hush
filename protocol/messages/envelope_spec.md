@@ -1,6 +1,6 @@
 # Cryptographic Message Envelope Specification
 
-To ensure interoperability across independent client implementations, the Stealth protocol defines a single normative envelope and signature scheme.
+To ensure interoperability across independent client implementations, the Hush protocol defines a single normative envelope and signature scheme.
 
 ## 1. Envelope Structure
 
@@ -109,7 +109,7 @@ Future envelope versions MAY introduce additional algorithm suites (e.g., post-q
 
 ## 3. Canonical Serialization (JCS)
 
-To verify the signature, the `payload` object must be serialized to an unambiguous, canonical byte representation. Stealth uses the **JSON Canonicalization Scheme (JCS)** as defined in [RFC 8785](https://tools.ietf.org/html/rfc8785).
+To verify the signature, the `payload` object must be serialized to an unambiguous, canonical byte representation. Hush uses the **JSON Canonicalization Scheme (JCS)** as defined in [RFC 8785](https://tools.ietf.org/html/rfc8785).
 
 Key JCS rules:
 

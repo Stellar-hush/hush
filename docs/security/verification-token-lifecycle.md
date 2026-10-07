@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary & Architectural Overview
 
-Account verification is a foundational gate for the Stealth Mail ecosystem. To ensure uncompromised privacy, cryptographic isolation, and zero third-party vendor lock-in (such as proprietary email SaaS APIs), Stealth Mail provides a self-contained, high-assurance verification token lifecycle coupled with a pluggable notification delivery system.
+Account verification is a foundational gate for the Hush Mail ecosystem. To ensure uncompromised privacy, cryptographic isolation, and zero third-party vendor lock-in (such as proprietary email SaaS APIs), Hush Mail provides a self-contained, high-assurance verification token lifecycle coupled with a pluggable notification delivery system.
 
 ```mermaid
 sequenceDiagram

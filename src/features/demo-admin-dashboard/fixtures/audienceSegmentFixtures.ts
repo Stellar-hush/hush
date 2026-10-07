@@ -5,7 +5,7 @@ export const defaultAudienceSegments: AudienceSegment[] = [
   {
     id: "investors",
     label: "Investors",
-    description: "Accredited investors and VC partners who have expressed interest in Stealth.",
+    description: "Accredited investors and VC partners who have expressed interest in Hush.",
     icon: "💼",
     estimatedSize: 340,
     criteria: [
@@ -17,7 +17,7 @@ export const defaultAudienceSegments: AudienceSegment[] = [
   {
     id: "founders",
     label: "Founders",
-    description: "Startup founders and builders building on top of the Stealth protocol.",
+    description: "Startup founders and builders building on top of the Hush protocol.",
     icon: "🚀",
     estimatedSize: 210,
     criteria: [
@@ -29,7 +29,7 @@ export const defaultAudienceSegments: AudienceSegment[] = [
   {
     id: "events",
     label: "Event Attendees",
-    description: "Attendees of Stellar ecosystem events who opted into Stealth communications.",
+    description: "Attendees of Stellar ecosystem events who opted into Hush communications.",
     icon: "🎟️",
     estimatedSize: 580,
     criteria: [
@@ -41,7 +41,7 @@ export const defaultAudienceSegments: AudienceSegment[] = [
   {
     id: "relay-operators",
     label: "Relay Operators",
-    description: "Node operators running registered Stealth relay infrastructure on-chain.",
+    description: "Node operators running registered Hush relay infrastructure on-chain.",
     icon: "🔗",
     estimatedSize: 95,
     criteria: [
@@ -83,8 +83,8 @@ export const audienceSegmentSnapshots: CampaignSnapshot[] = [
     drafts: [
       {
         id: "draft-investors-1",
-        subject: "Stealth Q3 2026 Protocol Update",
-        body: "Dear Investor,\n\nWe are excited to share our Q3 2026 progress report.\n\nHighlights this quarter:\n- Mainnet relay network expanded to 12 nodes\n- Postage settlement latency reduced by 40%\n- 3,200 new registered mailboxes\n\nFull report attached.\n\nBest regards,\nThe Stealth Team",
+        subject: "Hush Q3 2026 Protocol Update",
+        body: "Dear Investor,\n\nWe are excited to share our Q3 2026 progress report.\n\nHighlights this quarter:\n- Mainnet relay network expanded to 12 nodes\n- Postage settlement latency reduced by 40%\n- 3,200 new registered mailboxes\n\nFull report attached.\n\nBest regards,\nThe Hush Team",
         recipients: ["investors@stealth.demo"],
       },
     ],
@@ -93,7 +93,7 @@ export const audienceSegmentSnapshots: CampaignSnapshot[] = [
     id: "snap-founders",
     name: "Founder Onboarding Kit",
     description:
-      "Two-part welcome sequence for founders building applications on the Stealth protocol.",
+      "Two-part welcome sequence for founders building applications on the Hush protocol.",
     targetAudience: "founders",
     tags: ["onboarding", "welcome", "stellar"],
     timestamp: "2026-06-17T11:00:00Z",
@@ -101,14 +101,14 @@ export const audienceSegmentSnapshots: CampaignSnapshot[] = [
     drafts: [
       {
         id: "draft-founders-1",
-        subject: "Welcome to the Stealth Builder Program",
-        body: "Hi there,\n\nWelcome to the Stealth Builder Program! You now have access to testnet relay nodes and our developer sandbox.\n\nGet started: https://docs.stealth.demo\n\nCheers,\nStealth DevRel",
+        subject: "Welcome to the Hush Builder Program",
+        body: "Hi there,\n\nWelcome to the Hush Builder Program! You now have access to testnet relay nodes and our developer sandbox.\n\nGet started: https://docs.stealth.demo\n\nCheers,\nHush DevRel",
         recipients: ["founders@stealth.demo"],
       },
       {
         id: "draft-founders-2",
-        subject: "Your Stealth API credentials are ready",
-        body: "Hello,\n\nYour sandbox API credentials have been provisioned. You can find them in the developer portal.\n\nRemember: testnet XLM only — do not use real Stellar keys.\n\nHappy building,\nStealth DevRel",
+        subject: "Your Hush API credentials are ready",
+        body: "Hello,\n\nYour sandbox API credentials have been provisioned. You can find them in the developer portal.\n\nRemember: testnet XLM only — do not use real Stellar keys.\n\nHappy building,\nHush DevRel",
         recipients: ["founders@stealth.demo"],
       },
     ],
@@ -125,8 +125,8 @@ export const audienceSegmentSnapshots: CampaignSnapshot[] = [
     drafts: [
       {
         id: "draft-events-1",
-        subject: "You're invited: Stealth at Stellar Summit 2026",
-        body: "Hello,\n\nWe will be hosting a live demo of Stealth at Stellar Summit 2026 on July 15th.\n\nJoin us at Booth 14 for a walkthrough of private postage and relay verification.\n\nSee you there,\nStealth Team",
+        subject: "You're invited: Hush at Stellar Summit 2026",
+        body: "Hello,\n\nWe will be hosting a live demo of Hush at Stellar Summit 2026 on July 15th.\n\nJoin us at Booth 14 for a walkthrough of private postage and relay verification.\n\nSee you there,\nHush Team",
         recipients: ["events@stealth.demo"],
       },
     ],
@@ -144,7 +144,7 @@ export const audienceSegmentSnapshots: CampaignSnapshot[] = [
       {
         id: "draft-relay-ops-1",
         subject: "Relay Operator Digest — June 2026",
-        body: "Hello Operator,\n\nYour node stats for June:\n- Messages relayed: 4,821\n- Uptime: 98.7%\n- Postage earned: 12.4 XLM\n\nUpcoming: relay protocol upgrade scheduled for July 1st. Please review the changelog before updating.\n\nStealth Infrastructure Team",
+        body: "Hello Operator,\n\nYour node stats for June:\n- Messages relayed: 4,821\n- Uptime: 98.7%\n- Postage earned: 12.4 XLM\n\nUpcoming: relay protocol upgrade scheduled for July 1st. Please review the changelog before updating.\n\nHush Infrastructure Team",
         recipients: ["relay-ops@stealth.demo"],
       },
     ],
@@ -162,7 +162,7 @@ export const audienceSegmentSnapshots: CampaignSnapshot[] = [
       {
         id: "draft-unknown-1",
         subject: "Your message requires postage verification",
-        body: "Hello,\n\nThe recipient has enabled postage verification for unknown senders. To deliver your message, please attach a postage commitment of at least 0.1 XLM.\n\nLearn more about Stealth postage at https://stealth.demo/postage\n\nStealth Policy Engine",
+        body: "Hello,\n\nThe recipient has enabled postage verification for unknown senders. To deliver your message, please attach a postage commitment of at least 0.1 XLM.\n\nLearn more about Hush postage at https://stealth.demo/postage\n\nHush Policy Engine",
         recipients: ["unknown@stealth.demo"],
       },
     ],

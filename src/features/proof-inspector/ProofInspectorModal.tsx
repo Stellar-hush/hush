@@ -211,9 +211,9 @@ export function ProofInspectorModal({
             {/* Header */}
             <div className="flex items-start justify-between border-b border-surface-tint/[0.08] px-6 py-4 bg-surface-tint/[0.01]">
               <div className="flex items-center gap-2">
-                <Database className="h-4 w-4 text-silver" />
+                <Database className="h-4 w-4 text-brand-highlight" />
                 <div>
-                  <h3 className="text-sm font-bold text-foreground">Stealth Proof Inspector</h3>
+                  <h3 className="text-sm font-bold text-foreground">Hush Proof Inspector</h3>
                   <p className="text-[11px] text-muted-foreground mt-0.5">
                     Audit smart contract ledger proofs and payment preimages.
                   </p>
@@ -489,7 +489,7 @@ export function ProofInspectorModal({
 
                         {/* Security Alert: Sensitive payload notice */}
                         <div className="flex items-start gap-2.5 rounded-lg bg-surface-tint/[0.02] border border-surface-tint/[0.04] p-3 text-xs text-muted-foreground leading-normal">
-                          <Info className="h-3.5 w-3.5 text-silver shrink-0 mt-0.5" />
+                          <Info className="h-3.5 w-3.5 text-brand-highlight shrink-0 mt-0.5" />
                           <p>
                             <span className="font-semibold text-foreground/80">
                               Diagnostic Mode:

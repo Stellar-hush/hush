@@ -86,7 +86,7 @@ minimumPostage }` to `/api/v1/policy`. They are **not** the same model — if yo
 - **These controls decide who can reach the user.** Changing `unknownSenders` to
   `block`, or turning Allow Unknown Senders off, can stop legitimate mail from
   arriving. Review copy and defaults with that blast radius in mind, and keep
-  language aligned with Stealth Mail's safety / sender-control positioning.
+  language aligned with Hush Mail's safety / sender-control positioning.
 - **The UI previews; the backend enforces.** The standalone route's
   `simulateSender` is an **illustrative local approximation**, not the real
   admission engine — the authoritative decision is server-side via

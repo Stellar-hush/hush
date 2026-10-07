@@ -15,7 +15,7 @@
     },
     {
       "id": "address-sharing",
-      "label": "Copy/share Stealth address",
+      "label": "Copy/share Hush address",
       "viewport": ["desktop", "mobile"]
     },
     {

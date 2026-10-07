@@ -1,6 +1,6 @@
 # Release Stage Gates
 
-This runbook defines the mandatory go/no-go criteria for promoting Stealth protocol
+This runbook defines the mandatory go/no-go criteria for promoting Hush protocol
 contracts, the client, and the API through testnet and production environments. A
 release reviewer must be able to make a defensible decision from the evidence linked
 here. Promotion is blocked when any critical gate is unmet.

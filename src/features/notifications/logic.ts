@@ -10,10 +10,10 @@ export type InAppNotification = {
 };
 
 export const safeBrowserCopy: Record<NotificationCategory, { title: string; body: string }> = {
-  mail: { title: "New encrypted mail", body: "Open Stealth to view it." },
-  requests: { title: "New sender request", body: "Open Stealth to review it." },
-  failures: { title: "Delivery needs attention", body: "Open Stealth to review the status." },
-  receipts: { title: "Receipt updated", body: "Open Stealth to view the status." },
+  mail: { title: "New encrypted mail", body: "Open Hush to view it." },
+  requests: { title: "New sender request", body: "Open Hush to review it." },
+  failures: { title: "Delivery needs attention", body: "Open Hush to review the status." },
+  receipts: { title: "Receipt updated", body: "Open Hush to view the status." },
 };
 
 export function isWithinQuietHours(now: Date, quietHours: NotificationPreferences["quietHours"]) {

@@ -3,11 +3,11 @@ import { OTPFixture } from "../types/otp";
 export const OTP_FIXTURES: OTPFixture[] = [
   {
     id: "otp-001",
-    senderLabel: "Stealth Auth",
+    senderLabel: "Hush Auth",
     senderDomain: "auth.stealth.xyz",
     type: "passkey",
     safeCode: "PASSKEY-AUTH",
-    messagePreview: "Sign in to your Stealth account using passkey...",
+    messagePreview: "Sign in to your Hush account using passkey...",
     status: "delivered",
     timestamp: "2026-06-16T10:00:00Z",
   },

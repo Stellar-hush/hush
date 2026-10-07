@@ -234,7 +234,7 @@ function AdminDashboard() {
           </div>
           <div className="space-y-1.5 font-mono text-xs">
             <div className="flex justify-between">
-              <span className="text-muted-foreground dark:text-neutral-500">Stealth version:</span>
+              <span className="text-muted-foreground dark:text-neutral-500">Hush version:</span>
               <span className="text-status-neutral dark:text-neutral-300">
                 {health?.versions?.api || "1.0.0"}
               </span>

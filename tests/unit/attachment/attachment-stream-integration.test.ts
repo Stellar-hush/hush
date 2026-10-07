@@ -18,7 +18,7 @@ describe("attachment-stream integration", () => {
 
   it("encrypts and decrypts a small file round-trip", async () => {
     const key = await generateAttachmentKey();
-    const plaintext = new TextEncoder().encode("Hello, Stealth attachment!");
+    const plaintext = new TextEncoder().encode("Hello, Hush attachment!");
     const source = [plaintext];
 
     const encrypted = encryptAttachmentStream(key, toAsyncSource(source), {

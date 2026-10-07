@@ -61,7 +61,7 @@ journal campaign status, review readiness, and task context.
 
 ### Demo message example
 
-Subject: Stealth demo digest — what's new
+Subject: Hush demo digest — what's new
 
 Body:
 

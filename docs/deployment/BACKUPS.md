@@ -1,6 +1,6 @@
 # Encrypted Backups & Restore Procedures
 
-This document defines the backup and restore runbook for the Stealth beta data
+This document defines the backup and restore runbook for the Hush beta data
 stores, as required by **BETA-081 (Issue #1988)**. It covers backup scope,
 encryption, schedules, retention, access control, restoration order, measured
 RTO/RPO, and the documented isolated restore rehearsal.

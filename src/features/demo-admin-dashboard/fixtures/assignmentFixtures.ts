@@ -5,10 +5,10 @@ import { CampaignSnapshot } from "../types/campaignSnapshot";
 export const messagePool: AssignableMessage[] = [
   {
     id: "msg-pool-001",
-    subject: "Welcome to Stealth",
+    subject: "Welcome to Hush",
     preview:
       "Your mailbox is ready. You decide who can reach you — trusted contacts arrive instantly.",
-    body: "Your mailbox is ready. You decide who can reach you — trusted contacts arrive instantly, everyone else follows the policy you choose.\n\n— The Stealth Team",
+    body: "Your mailbox is ready. You decide who can reach you — trusted contacts arrive instantly, everyone else follows the policy you choose.\n\n— The Hush Team",
     recipients: ["newuser@stealth.demo"],
     tags: ["welcome", "onboarding"],
     folderHint: "inbox",
@@ -18,7 +18,7 @@ export const messagePool: AssignableMessage[] = [
     subject: "Set up your Stellar wallet",
     preview:
       "To start receiving postage refunds, connect your Stellar account address in settings.",
-    body: "To start receiving postage refunds, connect your Stellar account address in settings. This lets the postage contract route credits directly back to you.\n\n— Stealth Finance",
+    body: "To start receiving postage refunds, connect your Stellar account address in settings. This lets the postage contract route credits directly back to you.\n\n— Hush Finance",
     recipients: ["newuser@stealth.demo"],
     tags: ["stellar", "onboarding"],
     folderHint: "inbox",
@@ -46,14 +46,14 @@ export const messagePool: AssignableMessage[] = [
     subject: "Action required: confirm backup passphrase",
     preview:
       "We detected a sign-in from a new device. Verify your 24-word recovery phrase to continue.",
-    body: "We detected a sign-in from a new device. Please verify your 24-word recovery phrase to confirm this was you and protect your account.\n\n— Stealth Security",
+    body: "We detected a sign-in from a new device. Please verify your 24-word recovery phrase to confirm this was you and protect your account.\n\n— Hush Security",
     recipients: ["sec-audit@stealth.demo"],
     tags: ["security", "alert"],
     folderHint: "priority",
   },
   {
     id: "msg-pool-006",
-    subject: "Stealth Digest — June 2026",
+    subject: "Hush Digest — June 2026",
     preview:
       "Two new regional relays online. Postage routing latency down 18%. Read the full update.",
     body: "This month we brought two new regional relays online, cutting median routing latency by 18%. The postage contract upgrade shipped on testnet — mainnet follows next sprint.\n\nRead more on the blog.",
@@ -63,9 +63,9 @@ export const messagePool: AssignableMessage[] = [
   },
   {
     id: "msg-pool-007",
-    subject: "You're invited: Stealth demo roundtable",
-    preview: "Join us on July 9 at 3 PM for a live walkthrough of the Stealth protocol and Q&A.",
-    body: "Join us on July 9 at 3 PM (virtual) for a live walkthrough of the Stealth protocol and an open Q&A session. RSVP by replying to this message.",
+    subject: "You're invited: Hush demo roundtable",
+    preview: "Join us on July 9 at 3 PM for a live walkthrough of the Hush protocol and Q&A.",
+    body: "Join us on July 9 at 3 PM (virtual) for a live walkthrough of the Hush protocol and an open Q&A session. RSVP by replying to this message.",
     recipients: ["invitee@stealth.demo"],
     tags: ["announcement", "onboarding"],
     folderHint: "inbox",

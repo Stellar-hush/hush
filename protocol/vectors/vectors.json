@@ -1,6 +1,6 @@
 {
   "$schema": "stealth-protocol-vectors@1",
-  "description": "Canonical interoperability test vectors for the Stealth protocol. No production secrets are included — all addresses and hashes are placeholder values.",
+  "description": "Canonical interoperability test vectors for the Hush protocol. No production secrets are included — all addresses and hashes are placeholder values.",
   "version": "1",
   "notes": {
     "addresses": "Placeholder Stellar G-addresses use repeated characters (GAAA…, GBBB…, GCCC…). They satisfy the format regex G[A-Z2-7]{55} but are not derived from real keys.",

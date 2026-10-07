@@ -2,7 +2,7 @@
  * Algorithm Suite Definition and Documentation
  *
  * This module serves as the normative reference for the cryptographic
- * algorithm suite used in Stealth v1 envelopes. It centralizes the
+ * algorithm suite used in Hush v1 envelopes. It centralizes the
  * documentation and rationale for the chosen primitives, ensuring
  * consistency between code, specification, and external implementations.
  *
@@ -36,7 +36,7 @@
  *
  * 2. **Why not X25519-XSalsa20-Poly1305?**
  *    - While X25519-XSalsa20-Poly1305 is excellent for public-key encryption,
- *      Stealth's architecture uses symmetric encryption with out-of-band
+ *      Hush's architecture uses symmetric encryption with out-of-band
  *      key agreement (via Stellar identity keys and capability delegation).
  *    - AES-GCM provides equivalent security with better platform support.
  *

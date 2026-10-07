@@ -56,7 +56,7 @@ export const defaultCalendarEvents: CalendarEvent[] = [
     date: "2026-06-16",
     time: "09:00",
     endTime: "10:30",
-    location: "Stealth operations",
+    location: "Hush operations",
     note: "Finalize launch sequence, sender policy defaults, and proof messaging.",
     calendarId: "protocol",
     cadence: "One time",

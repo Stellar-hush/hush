@@ -8,7 +8,7 @@ test.describe("proof inspector", () => {
   test("opens from the toolbar button and shows the modal", async ({ page }) => {
     await page.getByRole("button", { name: "Proof Inspector" }).click();
     await expect(page.getByRole("dialog", { name: "Cryptographic proof inspector" })).toBeVisible();
-    await expect(page.getByText("Stealth Proof Inspector")).toBeVisible();
+    await expect(page.getByText("Hush Proof Inspector")).toBeVisible();
     await expect(page.getByPlaceholder("Enter Message Hash, Payment")).toBeVisible();
   });
 

@@ -14,7 +14,7 @@ Captured with `node scripts/security/beta-evidence.mjs` at verification time:
 
 | Item                     | Value                                                                                  |
 | :----------------------- | :------------------------------------------------------------------------------------- |
-| Repository               | stealth-mail (private, unversioned package)                                            |
+| Product / package        | Hush / `stellar-hush` (private, unversioned package)                                   |
 | Base commit              | `d6a9ccaed896b571a04e25e8828fb512ac24ba2f` (main)                                      |
 | Branch                   | `beta-076-threat-model-ownership-map`                                                  |
 | Node.js                  | 24.15.0                                                                                |

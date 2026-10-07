@@ -335,7 +335,7 @@ export function FeedbackDialog({ onClose, initialRoute }: FeedbackDialogProps) {
                   <span className="text-xs text-status-neutral dark:text-neutral-300">
                     I consent to including a screenshot of the current screen.
                     <span className="block text-[11px] text-muted-foreground dark:text-neutral-500 mt-0.5">
-                      The screenshot will be reviewed by the Stealth team only.
+                      The screenshot will be reviewed by the Hush team only.
                     </span>
                   </span>
                 </label>

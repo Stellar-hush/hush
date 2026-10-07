@@ -6,7 +6,7 @@
 
 ## Overview
 
-The Attachment Extractor is an isolated tool designed to parse and extract file attachments and metadata from raw email payloads within the Stealth protocol ecosystem. This module is built independently and remains completely isolated from the main application shell until a formal integration issue is created.
+The Attachment Extractor is an isolated tool designed to parse and extract file attachments and metadata from raw email payloads within the Hush protocol ecosystem. This module is built independently and remains completely isolated from the main application shell until a formal integration issue is created.
 
 ## Setup
 

@@ -17,7 +17,7 @@ Public API:
     export interface InternalComment {
       id: string;
       target: CommentTarget;
-      author: string;        // Stealth address of team member
+      author: string;        // Hush address of team member
       body: string;
       createdAt: string;
       updatedAt?: string;

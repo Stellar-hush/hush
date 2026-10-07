@@ -1,5 +1,5 @@
 /**
- * Cryptographic performance benchmarks for Stealth message sealing and opening.
+ * Cryptographic performance benchmarks for Hush message sealing and opening.
  *
  * Run with: npx tsx src/services/crypto/benchmarks.ts
  *
@@ -398,7 +398,7 @@ function printResults(results: BenchmarkResult[]): void {
 /* ------------------------------------------------------------------ */
 
 async function runBenchmarks(): Promise<void> {
-  console.log("Stealth Crypto Benchmarks");
+  console.log("Hush Crypto Benchmarks");
   console.log("=".repeat(40));
   console.log(`Node.js ${process.version} — ${process.arch}`);
   console.log(`Date: ${new Date().toISOString()}`);

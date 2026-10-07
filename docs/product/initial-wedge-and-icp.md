@@ -3,7 +3,7 @@
 ## Why this matters
 
 Building for every email user produces an unfocused product and a diluted
-security story. Stealth is strongest where a single spoofed or unpriced message
+security story. Hush is strongest where a single spoofed or unpriced message
 can cause real, immediate loss, and where senders already carry a cryptographic
 identity. This document selects one painful, frequent workflow as the launch
 wedge, names the ideal customer profile (ICP), and records the assumptions we
@@ -18,7 +18,7 @@ teams**.
 
 These teams coordinate money movements, contract addresses, signer approvals,
 and partner deals over channels where impersonation is trivial and expensive.
-Stealth's core promise - access is earned, not assumed, backed by verifiable
+Hush's core promise - access is earned, not assumed, backed by verifiable
 Stellar identity, priced access for unknown senders, and tamper-evident
 delivery proof - maps directly onto their most feared failure mode: a single
 convincing spoof that drains a treasury or misleads the community.
@@ -119,7 +119,7 @@ coordination begins.
   test comparing an identity badge against domain-only. Keep signal: the
   identity badge measurably raises the trust rating.
 - **A5 - Counterparty acceptance.** Assumption: external counterparties will
-  accept an invite to receive or verify a Stealth message. Test: outbound invite
+  accept an invite to receive or verify a Hush message. Test: outbound invite
   test to real counterparties. Keep signal: at least 40% of invited
   counterparties complete verification.
 

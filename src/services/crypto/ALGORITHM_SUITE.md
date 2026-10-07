@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides the normative specification for the cryptographic algorithm suite used in Stealth v1 message envelopes. It serves as the authoritative reference for:
+This document provides the normative specification for the cryptographic algorithm suite used in Hush v1 message envelopes. It serves as the authoritative reference for:
 
 - Independent client implementations
 - Security audits
@@ -13,7 +13,7 @@ This document provides the normative specification for the cryptographic algorit
 
 ### Primary Algorithm: AES-256-GCM
 
-Stealth v1 envelopes use **AES-256-GCM** (Advanced Encryption Standard, 256-bit key, Galois/Counter Mode) as the sole supported encryption algorithm.
+Hush v1 envelopes use **AES-256-GCM** (Advanced Encryption Standard, 256-bit key, Galois/Counter Mode) as the sole supported encryption algorithm.
 
 #### Parameters
 
@@ -99,7 +99,7 @@ The initial specification draft mentioned **X25519-XSalsa20-Poly1305**, but this
 
 1. **Architecture Mismatch**
    - X25519-XSalsa20-Poly1305 is designed for **public-key encryption** with ephemeral key exchange
-   - Stealth uses **symmetric encryption** with out-of-band key agreement via Stellar identity keys
+   - Hush uses **symmetric encryption** with out-of-band key agreement via Stellar identity keys
    - Forcing X25519 into a symmetric-only flow would add complexity without security benefits
 
 2. **Web Crypto API Limitations**
@@ -111,7 +111,7 @@ The initial specification draft mentioned **X25519-XSalsa20-Poly1305**, but this
 3. **No Security Advantage**
    - Both AES-256-GCM and XSalsa20-Poly1305 provide equivalent security levels (256-bit keys)
    - Both provide AEAD properties
-   - Stealth's threat model doesn't require the specific properties of X25519 ephemeral keys
+   - Hush's threat model doesn't require the specific properties of X25519 ephemeral keys
 
 4. **Future-Proofing**
    - If ephemeral key exchange is needed in the future, it can be added as a separate v2 suite

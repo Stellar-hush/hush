@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This specification defines how a Stealth account can be recovered when a device
+This specification defines how a Hush account can be recovered when a device
 is lost or compromised, **without allowing an attacker to silently inherit the
 user's identity or message history**. Recovery must be explainable: any
 independent reviewer must be able to state exactly _who_ can recover _what_, and
@@ -125,7 +125,7 @@ capability from the signing/control capability.
 
 ## Past-message access separated from future control (T5)
 
-Stealth encrypts messages so that **decryption keys** (for reading history) and
+Hush encrypts messages so that **decryption keys** (for reading history) and
 **signing/control keys** (for sending, receiving-forward, rotating) are
 cryptographically distinct:
 

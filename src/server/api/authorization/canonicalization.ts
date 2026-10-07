@@ -1,5 +1,5 @@
 /**
- * Address canonicalization helpers for the Stealth authorization layer.
+ * Address canonicalization helpers for the Hush authorization layer.
  *
  * Stellar addresses are case-sensitive by the protocol but user-supplied input
  * may contain leading/trailing whitespace or lowercase characters that an

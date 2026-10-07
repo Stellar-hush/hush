@@ -5,7 +5,7 @@ mailbox: the fixed bottom tab bar, the sidebar collapse behavior, the topbar
 action cluster, and the responsive switch that drives all three. It is scoped to
 the current app surface and intentionally does **not** describe a separate mobile
 app, a new navigation framework, or any tool folder. Keep changes aligned with
-the Stealth Mail positioning around safety, speed, and sender control.
+the Hush Mail positioning around safety, speed, and sender control.
 
 Read this alongside [`README.md`](./README.md) (the mail list handoff), since the
 bottom bar and sidebar select folders that the list then renders.
@@ -122,7 +122,7 @@ one hook rather than adding a third.
 - **All identities and counts in these surfaces are fake demo data.**
   Specifically: the sidebar account row (`Uthaimin` / `kryputh@stealth.me`), the
   topbar account identities (`Eve Navarro` / `eve*stealth.xyz`,
-  `Stealth Protocol` / `team*stealth.network`), the default custom folders
+  `Hush Protocol` / `team*stealth.network`), the default custom folders
   (Clients / Investors / Personal), and the quick-action numbers (`2` / `5` /
   `9`) are all hardcoded placeholders. Do not replace them with real users, real
   addresses, real unread counts, wallet secrets, private keys, access tokens, or

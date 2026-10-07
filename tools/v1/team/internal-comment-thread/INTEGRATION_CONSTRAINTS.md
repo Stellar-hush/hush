@@ -14,7 +14,7 @@ This document records the boundaries that keep the Internal Comment Thread tool 
 - Only folder-local imports are allowed: no file outside this folder may be imported, and the main app must not import this folder yet.
 - Allowed external dependencies are limited to the existing project runtime (React and TypeScript) and presentational asset libraries already used in the repository.
 - No new runtime services, network clients, or persistence layers are introduced.
-- The tool may reference the Stealth protocol for team identity concepts but must not depend on any core mail engine or inbox state.
+- The tool may reference the Hush protocol for team identity concepts but must not depend on any core mail engine or inbox state.
 
 ## 3. Data and safety constraints
 

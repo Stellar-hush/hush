@@ -26,14 +26,14 @@ function isHeaderLine(line: string): boolean {
 
 /**
  * Validate a single address field.
- * Accepts Stellar G-address, Stealth S-address, or federation (name*domain).
+ * Accepts Stellar G-address, Hush S-address, or federation (name*domain).
  */
 export function validateImportAddress(address: string): string | null {
   const trimmed = address.trim();
   if (!trimmed) return "Address is required.";
   if (/^[GS][A-Z2-7]{55}$/.test(trimmed)) return null;
   if (trimmed.includes("*")) return null;
-  return "Not a valid Stellar/Stealth address or federation address (name*domain).";
+  return "Not a valid Stellar/Hush address or federation address (name*domain).";
 }
 
 /**

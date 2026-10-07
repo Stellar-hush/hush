@@ -1,6 +1,6 @@
 # Operational Alerts and Operator Runbooks
 
-This guide defines the authoritative alert definitions, investigation procedures, safe non-destructive mitigation workflows, rollback stop conditions, and recovery verification checklists for responding to beta failure modes across the Stealth Mail platform.
+This guide defines the authoritative alert definitions, investigation procedures, safe non-destructive mitigation workflows, rollback stop conditions, and recovery verification checklists for responding to beta failure modes across the Hush Mail platform.
 
 For formal Service-Level Objectives (SLOs), mathematical SLI formulations, and error budget burn rate targets, see [Service-Level Objectives](SLO.md). For alert configuration rules, see [alerts.yaml](alerts.yaml).
 

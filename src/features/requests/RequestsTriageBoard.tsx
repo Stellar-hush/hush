@@ -330,7 +330,7 @@ export function RequestsTriageBoard({
       <div className="relative z-10 flex flex-col justify-between gap-3 border-b border-surface-tint/10 bg-surface-tint/2.5 px-4 py-4 md:flex-row md:items-center">
         <div>
           <div className="flex items-center gap-2">
-            <Users className="h-4 w-4 text-silver" />
+            <Users className="h-4 w-4 text-brand-highlight" />
             <h2 className="text-sm font-semibold tracking-normal text-foreground">
               Request Triage Board
             </h2>

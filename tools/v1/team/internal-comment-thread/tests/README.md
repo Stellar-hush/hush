@@ -103,7 +103,7 @@ Folder-local test strategy for the Internal Comment Thread tool.
 ### Comment list
 
 - [ ] Comments appear in chronological order (or reverse, per spec).
-- [ ] Each comment displays author (Stealth address or display name), body, and timestamp.
+- [ ] Each comment displays author (Hush address or display name), body, and timestamp.
 - [ ] Only the current user's comments show edit/delete controls.
 
 ### Composer

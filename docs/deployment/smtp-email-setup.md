@@ -1,6 +1,6 @@
 # Self-hosted verification delivery (BETA-091)
 
-Verification and password-reset messages must leave Stealth through an **administrator-owned SMTP** endpoint. Do not configure Resend or another paid sending API as the production transport.
+Verification and password-reset messages must leave Hush through an **administrator-owned SMTP** endpoint. Do not configure Resend or another paid sending API as the production transport.
 
 ## Vendor-neutral configuration
 
@@ -31,7 +31,7 @@ node scripts/verify-smtp-delivery.mjs --probe-only
 
 ## DKIM / SPF / DMARC (repository-side checklist)
 
-These controls live on your DNS + MTA. Stealth does not embed private DKIM keys. Record redacted evidence in the PR; never paste private keys.
+These controls live on your DNS + MTA. Hush does not embed private DKIM keys. Record redacted evidence in the PR; never paste private keys.
 
 ### SPF
 

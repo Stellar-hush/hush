@@ -1,6 +1,6 @@
 # Postage Contract
 
-Records sender-authorized token escrow for Stealth messages and tracks whether
+Records sender-authorized token escrow for Hush messages and tracks whether
 each escrow is pending, expired, disputed, settled, refunded, or reclaimed.
 
 The contract is initialized with one accepted SEP-41/Stellar Asset Contract

@@ -50,7 +50,7 @@ export function ProfileStep({ account, draft, onUpdate, onAdvance }: Props) {
       <div className="space-y-1">
         <h2 className="text-base font-semibold text-foreground">Your profile</h2>
         <p className="text-sm text-muted-foreground">
-          This is the account Stealth uses for your mailbox. No wallet connection is needed.
+          This is the account Hush uses for your mailbox. No wallet connection is needed.
         </p>
       </div>
 

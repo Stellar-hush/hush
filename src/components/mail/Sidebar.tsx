@@ -120,15 +120,15 @@ export function Sidebar({
         {!collapsed && (
           <div
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-            style={{ background: "var(--gradient-silver)" }}
+            style={{ background: "var(--gradient-brand)" }}
           >
             <Sparkles className="h-4 w-4 text-primary-foreground" />
           </div>
         )}
         {!collapsed && (
           <div className="flex flex-col leading-tight">
-            <span className="mail-preview-heading text-sm font-semibold tracking-tight silver-text">
-              STEALTH
+            <span className="mail-preview-heading text-sm font-semibold tracking-tight brand-gradient-text">
+              HUSH
             </span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               mail protocol
@@ -270,7 +270,7 @@ export function Sidebar({
             </div>
           </div>
         )}
-        {!collapsed && <span className="pulse-dot ml-auto h-1.5 w-1.5 rounded-full bg-silver" />}
+        {!collapsed && <span className="pulse-dot ml-auto h-1.5 w-1.5 rounded-full bg-brand-highlight" />}
       </div>
     </motion.aside>
   );

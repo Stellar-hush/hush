@@ -1,7 +1,7 @@
 import fc from "fast-check";
 
 /**
- * Shared fast-check arbitraries for the Stealth API domain: Stellar
+ * Shared fast-check arbitraries for the Hush API domain: Stellar
  * addresses, 32-byte hashes, stroop/i128 amount strings, timestamps,
  * mailbox policies, postage, and receipts. Mirrors the exact validation
  * rules in `src/server/api/domain.ts` so "valid" arbitraries always parse

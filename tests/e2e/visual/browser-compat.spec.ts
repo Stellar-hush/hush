@@ -116,7 +116,7 @@ test.describe("web beta — browser compatibility & visual regression", () => {
   test("auth renders the sign-in modal", async ({ page }) => {
     await page.getByRole("button", { name: "Account menu" }).click();
     await page.getByRole("menuitem", { name: "Sign in with password" }).click();
-    await expect(page.getByText("Sign in to Stealth")).toBeVisible();
+    await expect(page.getByText("Sign in to Hush")).toBeVisible();
     await expect(page).toHaveScreenshot("auth-sign-in.png");
   });
 });

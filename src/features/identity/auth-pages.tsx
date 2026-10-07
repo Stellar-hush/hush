@@ -187,7 +187,7 @@ export function SignInPage({ destination }: { destination?: string }) {
           </Button>
         </form>
         <p className="mt-5 text-center text-sm text-muted-foreground">
-          New to Stealth?{" "}
+          New to Hush?{" "}
           <Link
             className="text-primary underline-offset-4 hover:underline"
             to="/auth/sign-up"

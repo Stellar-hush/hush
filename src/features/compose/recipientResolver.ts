@@ -35,9 +35,9 @@ export type RecipientResolutionContext = {
 /**
  * Resolves a single recipient address to determine if it's valid, verified, unknown, or blocked.
  * Supports:
- * - Stealth addresses (S...)
+ * - Hush addresses (S...)
  * - Stellar G-addresses (G...)
- * - Stealth email handles (username@stealth.me, username@stealth.xyz)
+ * - Hush email handles (username@stealth.me, username@stealth.xyz)
  * - Federation addresses (name*domain)
  * - Aliases
  * - Contacts
@@ -285,7 +285,7 @@ export function validateRecipientFormat(address: string): {
     return { valid: false, error: "Address is required" };
   }
 
-  // Stealth address (S...)
+  // Hush address (S...)
   if (/^s[a-z0-9]{55}$/i.test(trimmed)) {
     return { valid: true };
   }
@@ -300,7 +300,7 @@ export function validateRecipientFormat(address: string): {
     return { valid: true };
   }
 
-  // Stealth email format (name@stealth.me, name@stealth.xyz, etc.)
+  // Hush email format (name@stealth.me, name@stealth.xyz, etc.)
   const email = /^([a-z0-9._%+-]+)@([^@]+)$/i.exec(trimmed);
   if (email && LOCAL_STEALTH_DOMAINS.has(email[2])) {
     return { valid: true };
@@ -314,6 +314,6 @@ export function validateRecipientFormat(address: string): {
   return {
     valid: false,
     error:
-      "Enter a Stealth address, Stellar address, federation address (name*domain), or contact alias",
+      "Enter a Hush address, Stellar address, federation address (name*domain), or contact alias",
   };
 }

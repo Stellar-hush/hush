@@ -332,7 +332,7 @@ export function Topbar({
           >
             <span className="relative">
               <Bell className="h-4 w-4" />
-              <span className="pulse-dot absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-silver" />
+              <span className="pulse-dot absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-brand-highlight" />
             </span>
           </IconBtn>
         </div>
@@ -491,7 +491,7 @@ export function Topbar({
                         </div>
                         <div className="min-w-0 flex-1">
                           <p className="truncate text-sm font-medium text-foreground">
-                            {account === "personal" ? "Eve Navarro" : "Stealth Protocol"}
+                            {account === "personal" ? "Eve Navarro" : "Hush Protocol"}
                           </p>
                           <p className="truncate text-xs text-muted-foreground">
                             {account === "personal" ? "eve*stealth.xyz" : "team*stealth.network"}

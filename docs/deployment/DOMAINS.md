@@ -1,6 +1,6 @@
 # Beta Domains, DNS, TLS, CORS & Federation Setup Guide (BETA-090)
 
-This guide documents the DNS records, TLS requirements, redirects, CORS configurations, and operator verification procedures for the Stealth domain plan.
+This guide documents the DNS records, TLS requirements, redirects, CORS configurations, and operator verification procedures for the Hush domain plan.
 
 ---
 

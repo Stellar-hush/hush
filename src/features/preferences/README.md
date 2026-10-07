@@ -1,7 +1,7 @@
 # Preferences Handoff
 
 This module owns local UI and layout preference persistence for the existing
-Stealth Mail app shell. Keep changes scoped to the files in this directory
+Hush Mail app shell. Keep changes scoped to the files in this directory
 unless a future issue explicitly widens the integration surface.
 
 ## Files To Review

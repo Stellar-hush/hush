@@ -15,7 +15,7 @@ export type RecipientReadiness = {
   state: RecipientResolutionState;
   postage: "ready" | "required";
   message: string;
-  resolvedAccount?: string; // Stealth address if resolved
+  resolvedAccount?: string; // Hush address if resolved
   policyType?: "allow" | "block" | "default"; // Trust policy
   encryptionKey?: string; // Public key for encryption
   provenance?: string; // cache source

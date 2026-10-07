@@ -522,7 +522,7 @@ export function getRedactedConfig(config: BetaRuntimeConfig): Record<string, unk
 export function formatConfigMatrix(config: BetaRuntimeConfig): string {
   const redacted = getRedactedConfig(config) as any;
   const lines: string[] = [
-    `=== Stealth Mail Beta Runtime Configuration Matrix ===`,
+    `=== Hush Mail Beta Runtime Configuration Matrix ===`,
     `Profile:                 ${config.profile}`,
     `Role:                    ${config.role}`,
     `[Network]`,
