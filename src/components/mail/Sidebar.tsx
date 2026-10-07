@@ -270,7 +270,9 @@ export function Sidebar({
             </div>
           </div>
         )}
-        {!collapsed && <span className="pulse-dot ml-auto h-1.5 w-1.5 rounded-full bg-brand-highlight" />}
+        {!collapsed && (
+          <span className="pulse-dot ml-auto h-1.5 w-1.5 rounded-full bg-brand-highlight" />
+        )}
       </div>
     </motion.aside>
   );

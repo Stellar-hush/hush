@@ -1,4 +1,4 @@
-# Hush Mail API
+# Hush API guide
 
 The TanStack Start worker exposes versioned endpoints under `/api/v1`.
 
@@ -96,11 +96,17 @@ curl -X PUT http://localhost:8080/api/v1/policies/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 ## Persistence and chain integration
 
-The current repository adapter is process-memory storage for local endpoint development. Before
-production deployment, replace it with a Cloudflare Durable Object, D1, or another durable adapter.
-The production postage adapter must verify `paymentHash` against Stellar before accepting a proof,
-and mutations must submit or reconcile with the Soroban contracts rather than treating memory state
-as chain truth.
+Local API development uses an in-memory repository. The production Worker path selects the
+Cloudflare-backed hybrid repository and requires KV, Durable Object, and object-storage bindings.
+This describes the code path only: a deployment is usable only when its bindings, secrets,
+contract IDs, migrations, health checks, and release gates have been verified. See the
+[deployment status](../deployment/README.md) before treating any environment as live.
 
-Rate limiting, replay-resistant signed authentication, idempotency keys, durable persistence, and
-contract event reconciliation remain required production gates.
+Postage and receipt state can involve both off-chain records and Soroban contract evidence. A
+successful local adapter call is not proof of on-chain settlement. Production must validate
+payment evidence and reconcile contract state; the relevant release gates and limitations are
+tracked in the [security risk register](../security/beta-risk-register.md).
+
+Rate limiting, replay-resistant signed authentication, idempotency keys, durable persistence,
+backup/restore, and contract event reconciliation are production requirements. Use the [signed
+authentication v1 protocol](../security/api-authentication-v1.md) for the exact wire contract.

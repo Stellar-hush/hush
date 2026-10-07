@@ -6,12 +6,52 @@ Hush Mail handles identity, encrypted mail, managed testnet wallets, and on-chai
 
 Use **Hush** for the product and `stellar-hush` for the package/project slug in new UI, docs, examples, and filenames. The repository owner/name, deployed resource names, federation domains, signed protocol strings, and persisted storage keys still contain the previous project name. Do not rename those in isolation: follow [the brand migration guide](docs/product/brand-migration.md) and preserve their compatibility until the relevant external or data migration is complete. When editing one of those interfaces, label the old identifier as legacy and document its replacement plan.
 
+## Repository map
+
+| Path                    | Responsibility                                                         |
+| ----------------------- | ---------------------------------------------------------------------- |
+| `src/routes/`           | Web routes and versioned API endpoints                                 |
+| `src/features/`         | User-facing identity, mail, compose, policy, proof, and settings flows |
+| `src/server/api/`       | API authorization, domain services, validation, and repositories       |
+| `src/services/crypto/`  | Envelope, key, signature, and attachment cryptography                  |
+| `src/services/relay/`   | Relay transport, authentication, admission, and delivery persistence   |
+| `src/services/stellar/` | Stellar RPC, identity, wallet, and Soroban adapters                    |
+| `contracts/soroban/`    | Rust smart contracts and contract tests                                |
+| `protocol/`             | Wire formats, schemas, synthetic vectors, and interoperability notes   |
+| `docs/`                 | Product, architecture, API, security, and deployment guides            |
+
+Start with the root [README](README.md), then the [architecture map](docs/architecture/README.md). Prefer a feature-local README and tests for module-specific behavior.
+
 ## Before Starting
 
 1. Link the work to an accepted issue with clear acceptance criteria.
 2. Confirm dependencies and ownership of external deployment or provider steps.
 3. Keep the change inside the issue's stated modules and non-goals.
 4. Never place credentials, wallet seeds, private keys, tokens, or real message content in code, fixtures, logs, screenshots, issues, or pull requests.
+
+### Local setup
+
+Use Node.js 24 or newer and Bun 1.3.14. Rust and the `wasm32v1-none` target are needed for Soroban contract work; the repository pins the Rust toolchain in `rust-toolchain.toml`.
+
+```bash
+git clone https://github.com/Stellar-hush/hush.git
+cd hush
+bun install --frozen-lockfile
+cp .env.example .env
+bun run dev
+```
+
+The default profile is for local development. Use synthetic identities and messages. Testnet paths
+may require a funded test account and configured endpoint, but never commit real seeds or API
+credentials. See [runtime configuration](src/config/README.md) and the [deployment guide](docs/deployment/README.md) before changing an environment boundary.
+
+### Picking and scoping work
+
+Good starter work includes documentation, focused protocol vectors, accessibility fixes, and
+bounded failure-path tests. Before starting a Wave issue, confirm it is still open and unassigned,
+then state the expected behavior, touched modules, acceptance criteria, and validation command in
+the issue or pull request. Do not begin production migrations, change live domains, or modify
+contract deployment IDs as an incidental part of a feature.
 
 ## Pull Requests
 

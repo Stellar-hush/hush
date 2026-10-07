@@ -1,58 +1,114 @@
-# Stellar Wave repository readiness
+# Hush and the Stellar Wave
 
-This page is a maintainer brief for applying the Hush repository to the [Stellar Wave Program](https://www.drips.network/wave/stellar). Repository admission is decided by the program organizers; this document does not imply acceptance or an active listing.
+This maintainer brief gives reviewers a direct path to understand the product, inspect its public documentation, and identify useful contribution areas without first navigating the source tree. It is preparation material, not an application or a claim that the repository has been accepted into the program.
 
-## Prerequisite to resolve
+## At a glance
 
-There is currently no root `LICENSE` file. Confirm the applicable open-source license with the project owners and add it before describing the repository as open source or submitting it for a contributor program. Drips terms require contributions to follow the applicable license communicated by the repository or Wave app.
+- **Project:** Hush, an open-source beta exploring private, programmable email with Stellar identity and Soroban-backed protocol actions.
+- **Repository:** [Stellar-hush/hush](https://github.com/Stellar-hush/hush)
+- **License:** MIT, in the repository’s root [`LICENSE`](../../LICENSE).
+- **Stage:** beta. Local and testnet development paths exist; production service readiness has not been established by the project documentation.
+- **Hosted demo:** no verified Hush demo URL is currently published in this repository. A public showcase page is present in the app, but reviewers need a deployed URL before they can try it without installing the project.
+- **Program:** [Stellar Wave](https://www.drips.network/wave/stellar). Repository admission and issue selection are decided by the program organizers.
 
-## Project summary
+## What Hush does
 
-Hush is a private programmable mail client and protocol built on Stellar. It lets mailbox owners define sender access rules and gives senders a verifiable delivery path. Message bodies and attachments are encrypted and stored off-chain. Stellar accounts and Soroban contracts support identity, postage, policy, receipts, and message lifecycle proofs. The public repository includes the React and TypeScript application, API and relay services, protocol specifications and vectors, Rust Soroban contracts, deployment tooling, and unit, integration, contract, and browser tests. Hush is in beta, with local and testnet development paths. Its open work can be divided into reviewable tasks across Stellar integration, protocol interoperability, contract verification, relay reliability, accessibility, and contributor documentation.
+Most email systems let unknown senders attempt delivery before the recipient has much say. Hush explores recipient-controlled admission: the mailbox owner can define how an unfamiliar sender is handled, including identity checks, explicit approval, optional postage, or rejection. The sender’s message body and attachments are encrypted and carried off-chain; Stellar is used for identities and verifiable actions such as policy, postage, receipts, and message lifecycle state.
 
-## Stellar integration in the repository
+Hush is a mail client and protocol experiment, not a wallet, token, or yield product. It does not claim that every workflow is live in a public environment. Feature availability depends on the configured runtime, relay, storage, and contract adapters.
 
-| Capability | Implementation |
-| --- | --- |
-| Stellar identity and address resolution | `src/features/identity/`, `src/services/stellar/`, `src/routes/api/v1/federation.ts` |
-| Sender policy and admission | `contracts/soroban/policies/`, `src/server/api/policy-service.ts` |
-| Postage quote, escrow, and settlement | `contracts/soroban/postage/`, `src/services/stellar/postage-escrow.ts`, `src/server/api/postage-service.ts` |
-| Delivery receipts | `contracts/soroban/receipts/`, `src/services/stellar/contracts/receipts.ts` |
-| Message lifecycle | `contracts/soroban/lifecycle/`, `src/server/api/lifecycle-service.ts` |
-| Private payload and attachment storage | `src/services/crypto/`, `src/services/storage/`, `src/services/attachment/` |
+### Reviewer path
 
-The application is not a wallet, token, or yield product. Stellar is used for identity and verifiable protocol actions; encrypted message content remains off-chain.
+1. Read the [root README](../../README.md) for the product model, beta boundaries, and local setup.
+2. Use the app’s landing page or hosted demo when a verified preview URL is available; demo content must be synthetic.
+3. Follow the [architecture overview](../architecture/README.md) to understand client, API, relay, storage, and Stellar responsibilities.
+4. Check the [security overview](../security/README.md) and its threat model and risk register for privacy boundaries and known limitations.
+5. Use the [contributor guide](../../CONTRIBUTING.md) and live GitHub issues to select bounded work.
 
-## Candidate contributor areas
+## How Stellar is used
 
-Use the live issue backlog to choose work. The areas below are places to identify and scope issues; they are not claims that matching issues are currently open.
+| Concern          | Role of Stellar / Soroban                                                     | Repository map                                                              |
+| ---------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Identity         | Resolve Stellar accounts and federation handles to keys and sender provenance | `src/features/identity/`, `src/services/stellar/`                           |
+| Admission policy | Represent and evaluate recipient rules for unknown senders                    | `contracts/soroban/policies/`, `src/server/api/policy-service.ts`           |
+| Postage          | Quote and account for sender-authorized postage when a mailbox requires it    | `contracts/soroban/postage/`, `src/services/stellar/postage-escrow.ts`      |
+| Receipts         | Record delivery and participant acknowledgement state                         | `contracts/soroban/receipts/`, `src/services/stellar/contracts/receipts.ts` |
+| Lifecycle        | Track message protocol state without publishing message content               | `contracts/soroban/lifecycle/`, `src/server/api/lifecycle-service.ts`       |
+| Private payload  | Encrypt and transport message bodies and attachments off-chain                | `src/services/crypto/`, `src/services/storage/`, `src/services/attachment/` |
 
-- **Soroban contracts:** add focused failure-path tests, improve event and storage documentation, or tighten contract interoperability checks.
-- **Protocol interoperability:** add synthetic envelope, federation, or relay vectors and document how independent clients can run them.
-- **Stellar service reliability:** improve retry, idempotency, or reconciliation behavior around RPC and contract interactions.
-- **Mailbox accessibility:** improve keyboard and screen-reader support in policy, receipt, and sender request workflows.
-- **Contributor experience:** clarify local contract development, testnet setup, and service boundaries in the relevant module guides.
+On-chain actions are public and can reveal account relationships, timing, payment amounts, and contract interactions. “Private mail” does not mean every aspect of network activity is private. See the [metadata policy](../security/metadata-policy.md) and [beta threat model](../security/beta-threat-model.md).
 
-For each Wave issue, provide a single outcome, relevant modules, expected behavior, acceptance criteria, and a bounded validation command. Keep separate workstreams in separate issues so contributors can make progress inside a short cycle.
+## Current review and deployment status
 
-## Maintainer preparation
+The repository has an MIT license and is public under the Hush organization. The main branch’s current CI and staging workflows are the source of truth for build and deployment status. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records the current verified state and the release gates.
 
-After resolving the license prerequisite, maintainers should:
+The staging pipeline only deploys after CI for the exact commit succeeds and the release-gate summary marks it releasable. Cloudflare resources, secrets, old federation domains, and persisted state are still tied to legacy identifiers. A Hush-branded URL must not be advertised until DNS, bindings, secrets, health checks, and the deployed app are verified together.
 
-1. Confirm the GitHub organization and repository are public and that maintainers can install the Drips Wave GitHub App.
-2. Read the official [maintainer participation guide](https://docs.drips.network/wave/maintainers/participating-in-a-wave/) and submit the repository through the Drips Wave app.
-3. Review the open backlog and select only issues that are still relevant, unblocked, and safe to work on without production access or secrets.
-4. Give each selected issue a concrete complexity estimate and acceptance criteria. Do not make contributors depend on private keys, production data, or unreviewable external changes.
-5. Keep review capacity available during a Wave so pull requests can be reviewed and issues resolved before the cycle closes.
+## Contribution opportunities
 
-The Wave guide says maintainers onboard their GitHub organization, apply public repositories to the relevant program, and wait for organizer approval before adding issues. The Wave app and official documentation are authoritative for current requirements and timing.
+These areas are intended to produce reviewable, self-contained issues. They are themes, not statements that a matching issue is currently open; use the [live issue tracker](https://github.com/Stellar-hush/hush/issues) for current assignments.
 
-## Local setup and verification
+### Protocol interoperability
 
-See [`CONTRIBUTING.md`](../../CONTRIBUTING.md) for supported runtimes and repository checks. Contract changes belong under `contracts/soroban/`; client and service integration changes belong under `src/`. Use synthetic accounts, local adapters, and testnet only. Never put real seeds or production credentials in an issue, test fixture, log, or pull request.
+- Add synthetic test vectors for envelope encoding, relay authentication, federation resolution, or proof verification.
+- Document how an independent client can produce and verify a message envelope.
+- Improve versioning and compatibility guidance without silently changing existing signature bytes.
+
+### Soroban contracts
+
+- Add focused authorization, boundary, and failure-path tests.
+- Improve event, storage, and upgrade documentation for one contract at a time.
+- Strengthen reproducible build and artifact-hash checks. Contract artifacts must match the repository’s pinned toolchain and manifest expectations.
+
+### Relay and storage reliability
+
+- Improve retry, idempotency, timeout, and reconciliation behavior using local adapters and synthetic requests.
+- Add bounded observability that does not log payload content, credentials, or stable identifiers unnecessarily.
+- Clarify backup, retention, and object integrity behavior.
+
+### Product quality and accessibility
+
+- Improve keyboard, screen-reader, and small-screen behavior in inbox, sender-review, policy, and proof-inspection flows.
+- Clarify sender requirements and policy outcomes in UI copy.
+- Add tests for user-visible loading, empty, error, and recovery states.
+
+### Contributor experience
+
+- Make a single module’s local setup easier to reproduce.
+- Add architecture notes, examples, or scripts for testnet adapters without requiring production secrets.
+- Turn large work into smaller issues with explicit ownership and acceptance criteria.
+
+## Issue quality bar
+
+Every candidate issue should state:
+
+- the user or maintainer problem and why it matters to Hush;
+- the expected result, including concrete acceptance criteria;
+- relevant modules and likely owners;
+- a bounded validation command or review artifact;
+- known blockers and dependencies;
+- whether the work uses local fakes, testnet, or an external service.
+
+Do not assign issues that need private keys, production credentials, real user mail, unreviewable deployment changes, or an unspecified product/domain decision. Keep each issue sized so a contributor can complete and a maintainer can review it during the Wave cycle.
+
+## Applying to the Stellar Wave
+
+The current [Drips maintainer guide](https://docs.drips.network/wave/maintainers/participating-in-a-wave/) describes organization onboarding, installing the Drips Wave GitHub App, syncing public repositories, and applying to a program. Repository applications require organizer approval. Issues should be added to the program only after approval; maintainers then assign complexity and keep enough review capacity to close accepted work during the active cycle.
+
+Before applying, maintainers should:
+
+1. Confirm the organization has the authority and account access to manage the public repository and install the Drips app.
+2. Publish a verified hosted demo or clearly state that reviewers must run the app locally.
+3. Ensure the README, license, contributor guide, security documentation, and deployment status agree with one another.
+4. Curate current, unblocked, testable issues and identify maintainers who can respond during the Wave.
+5. Check the [program page](https://www.drips.network/wave/stellar) and [current terms](https://docs.drips.network/wave/terms-and-rules/) for current timing and participation rules.
+
+Wave timing and acceptance criteria can change. The Drips app and official documentation are authoritative; this repository page is not an application, endorsement, or guarantee of acceptance or rewards.
 
 ## Links
 
-- [Stellar Wave Program](https://www.drips.network/wave/stellar)
+- [Hush repository](https://github.com/Stellar-hush/hush)
+- [Live issues](https://github.com/Stellar-hush/hush/issues)
+- [Stellar Wave program](https://www.drips.network/wave/stellar)
 - [Drips Wave maintainer participation](https://docs.drips.network/wave/maintainers/participating-in-a-wave/)
-- [Drips Wave overview](https://docs.drips.network/wave/)
+- [Drips Wave terms and rules](https://docs.drips.network/wave/terms-and-rules/)

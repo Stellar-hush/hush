@@ -180,8 +180,7 @@ describe("recipient-pipeline processInboundEnvelope", () => {
       "decrypt",
     ]);
 
-    const unicodeBody =
-      "🚀 Hush Network - Secure Mail 🔐\n\nGreeting: こんにちは / Bonjour / 🔒";
+    const unicodeBody = "🚀 Hush Network - Secure Mail 🔐\n\nGreeting: こんにちは / Bonjour / 🔒";
     const { input } = await buildTestEnvelope(unicodeBody, key, senderKp, recipient);
 
     const result = await processInboundEnvelope({

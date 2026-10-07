@@ -335,9 +335,7 @@ export function AuthModal({ open, onClose, onSuccess }: AuthModalProps) {
               }}
               className="w-full text-center text-xs text-primary hover:underline"
             >
-              {registering
-                ? "Already have an account? Sign in"
-                : "New to Hush? Create an account"}
+              {registering ? "Already have an account? Sign in" : "New to Hush? Create an account"}
             </button>
           </form>
         </motion.div>

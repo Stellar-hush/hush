@@ -174,7 +174,11 @@ describe("resolveRouteGuard — five required states", () => {
 
     it("are redirected to sign-in with a sanitized return-to for hostile paths", () => {
       const decision = resolveRouteGuard({ state: "anonymous", pathname: "/mail/123", search: "" });
-      expect(decision).toEqual({ kind: "redirect", to: SIGN_IN_ROUTE, search: { next: "/mail/123" } });
+      expect(decision).toEqual({
+        kind: "redirect",
+        to: SIGN_IN_ROUTE,
+        search: { next: "/mail/123" },
+      });
 
       // A hostile pathname must never propagate raw: the emitted return-to
       // always passes open-redirect validation (here it is sanitized to "/").

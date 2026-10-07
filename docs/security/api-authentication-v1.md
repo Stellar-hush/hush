@@ -16,15 +16,15 @@ unknown versions rather than attempting a compatible interpretation.
 
 ## Required headers
 
-| Header                | Requirement                                                                                                                                          |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Host`                | Authority of the intended API server, without surrounding whitespace.                                                                                |
+| Header             | Requirement                                                                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Host`             | Authority of the intended API server, without surrounding whitespace.                                                                                |
 | `X-Hush-Address`   | Valid Stellar G-address whose authorized public key verifies the signature.                                                                          |
 | `X-Hush-Nonce`     | Lowercase hexadecimal encoding of 32 cryptographically random bytes.                                                                                 |
 | `X-Hush-Timestamp` | UTC RFC 3339 timestamp with millisecond precision, for example `2026-07-22T12:00:00.000Z`.                                                           |
 | `X-Hush-Audience`  | Identifier of the deployment the signature is scoped to, for example `stealth-api.example.test`. Checked against the server's accepted audience set. |
 | `X-Hush-Signature` | Base64 encoding of the 64-byte Ed25519 signature over the canonical request. It is transported but omitted from the canonical request.               |
-| `Content-Type`        | Required by an endpoint when it has a body; use `application/json`. It is not signed in v1.                                                          |
+| `Content-Type`     | Required by an endpoint when it has a body; use `application/json`. It is not signed in v1.                                                          |
 
 Header names are case-insensitive on the wire. Signed header values are trimmed and internal runs of
 ASCII space or tab become one space. Duplicate required headers are invalid and must be rejected

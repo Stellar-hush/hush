@@ -16,14 +16,14 @@ Mark `informedConsent: true` on feedback payloads only after verbal yes.
 
 ## Desktop tasks (1280×720)
 
-| #   | Task                                                  | Success signal                             | Block if                    |
-| --- | ----------------------------------------------------- | ------------------------------------------ | --------------------------- |
+| #   | Task                                               | Success signal                             | Block if                    |
+| --- | -------------------------------------------------- | ------------------------------------------ | --------------------------- |
 | 1   | Find your Hush address and explain how to share it | Copies or describes G-address within 2 min | Cannot locate address       |
-| 2   | Send a message to a new recipient                     | Compose opens, pipeline visible            | Cannot open compose         |
-| 3   | Approve an unknown sender                             | Request moves to inbox                     | Cannot find Requests        |
-| 4   | Inspect a proof for a message                         | Proof sections visible                     | Cannot open Proof Inspector |
-| 5   | Recover after sign-out                                | Returns to sign-in with return path        | Lost with no recovery path  |
-| 6   | Submit session feedback                               | Rating + category submitted                | Consent not recorded        |
+| 2   | Send a message to a new recipient                  | Compose opens, pipeline visible            | Cannot open compose         |
+| 3   | Approve an unknown sender                          | Request moves to inbox                     | Cannot find Requests        |
+| 4   | Inspect a proof for a message                      | Proof sections visible                     | Cannot open Proof Inspector |
+| 5   | Recover after sign-out                             | Returns to sign-in with return path        | Lost with no recovery path  |
+| 6   | Submit session feedback                            | Rating + category submitted                | Consent not recorded        |
 
 ## Mobile tasks (390×844)
 

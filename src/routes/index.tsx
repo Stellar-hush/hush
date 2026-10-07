@@ -10,7 +10,8 @@ export const Route = createFileRoute("/")({
       { title: "Hush" },
       {
         name: "description",
-        content: "Private programmable mail with encrypted messages and verifiable delivery on Stellar.",
+        content:
+          "Private programmable mail with encrypted messages and verifiable delivery on Stellar.",
       },
       { property: "og:title", content: "Hush" },
       {

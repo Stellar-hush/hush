@@ -2,6 +2,37 @@
 
 Deployment runbooks, environment setup, Cloudflare notes, network configuration, and release checklists.
 
+## Current public status
+
+Hush's main branch is configured for Cloudflare Workers, but a main-branch push is not by itself a
+deployment. The staging workflow waits for CI on the exact commit and deploys only when the beta
+release-gate summary is successful. The last verified deployment attempt was gated off after CI
+failed formatting and the Soroban postage Wasm hash check; no public Hush demo URL was verified by
+that run. Follow the current [GitHub Actions runs](https://github.com/Stellar-hush/hush/actions)
+before sharing a hosted URL.
+
+The web application is server-rendered through the Cloudflare Vite integration. Preview and
+staging require configured Cloudflare account credentials, environment secrets, resource IDs,
+testnet contract configuration, and health checks. Never publish a placeholder origin as a demo.
+
+The deployed service, Worker, bindings, buckets, environment variables, custom domains, and some
+runbook examples still carry legacy `stealth` identifiers. They are kept to avoid breaking existing
+resources and stored data. Domain and resource cutover must follow the [brand migration plan](../product/brand-migration.md).
+
+### Deployment path
+
+1. Push changes to `main`; CI builds the client and contracts and runs the required checks.
+2. CI writes per-gate evidence and a release-gate summary for that commit.
+3. The staging workflow waits for that exact CI run and stops if any required gate fails or is
+   missing.
+4. After passing gates, staging verifies its secrets, runs configured migrations, deploys the
+   preview/staging Worker, and performs health checks.
+5. Production is a separate release workflow that requires an approved release commit and explicit
+   release-manager input. A documentation push never deploys production.
+
+Deployment workflows may need repository/environment secrets and a successfully enabled GitHub
+Actions environment. Secret values must never be copied into this document or repository.
+
 - [Operational Alerts and Runbooks](ALERTS.md) - System alerts, investigation guides, and runbooks.
 - [Prometheus Alert Rules](alerts.yaml) - Prometheus alerting rules configuration for anomalies.
 - [Service-Level Objectives & SLIs](SLO.md) - Service-level indicators, targets, formulas, traffic exclusions, and alerting guidance.
@@ -32,7 +63,7 @@ The Hush Mail beta deployment requires a unified configuration contract across s
 | `STEALTH_AUTH_CLOCK_SKEW_MS`         | Session  | Public     | All              | `30000` (30 secs)                                          | Allowed client/server clock skew in ms                              |
 | `STEALTH_AUTH_NONCE_TTL_MS`          | Session  | Public     | All              | `300000` (5 mins)                                          | Signed authentication nonce TTL in ms                               |
 | `STEALTH_QUOTE_LIFETIME_MS`          | Session  | Public     | All              | `300000` (5 mins)                                          | Postage quote lifetime in ms                                        |
-| `STEALTH_RELAY_URL`                  | Relay    | Public     | All              | `https://relay-testnet.stealth.mail`                       | Hush message relay endpoint                                      |
+| `STEALTH_RELAY_URL`                  | Relay    | Public     | All              | `https://relay-testnet.stealth.mail`                       | Hush message relay endpoint                                         |
 | `STEALTH_RELAY_API_KEY`              | Relay    | **Secret** | Optional         | `[REDACTED]`                                               | Optional secret API key for relay authentication                    |
 | `STEALTH_RELAY_TIMEOUT_MS`           | Relay    | Public     | All              | `10000` (10 secs)                                          | Relay request timeout in ms                                         |
 | `STEALTH_REGISTRY_CONTRACT_ID`       | Contract | Public     | Production       | `CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA` | Soroban Identity Registry contract ID                               |

@@ -32,8 +32,8 @@ export function HushAddressStep({ mailboxAddress, onAdvance, onRetreat }: Props)
       <div className="space-y-1">
         <h2 className="text-base font-semibold text-foreground">Your mailbox address</h2>
         <p className="text-sm text-muted-foreground">
-          Your Hush address is issued with your account. Share it with senders so they can
-          deliver mail to you on-chain.
+          Your Hush address is issued with your account. Share it with senders so they can deliver
+          mail to you on-chain.
         </p>
       </div>
 
