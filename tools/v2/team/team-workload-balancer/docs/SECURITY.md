@@ -1,7 +1,7 @@
 # Security and Performance Hardening — Team Workload Balancer
 
 Tool: `tools/v2/team/team-workload-balancer/`
-Issue: [#712](https://github.com/Stellar-Mail/stealth/issues/712) — Security and
+Issue: [#712](https://github.com/Stellar-hush/hush/issues/712) — Security and
 performance hardening (V2 team tool).
 
 This document records the threat assumptions, unsafe inputs, and performance
