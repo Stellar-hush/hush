@@ -52,7 +52,16 @@ reviewed (never blindly updated):
 1. Run `bun run test:visual` to see the diff.
 2. Inspect the HTML report (`playwright-report/`) to confirm the change is
    intended and not a regression.
-3. Only then run `bun run test:visual:update` and commit the changed baselines.
+3. For canonical Linux screenshots, run the repository's **Refresh Visual
+   Snapshots** workflow from GitHub Actions, download the `linux-visual-snapshots`
+   artifact, and copy only the reviewed image changes into this directory. The
+   workflow is manual and does not update the branch itself.
+4. Commit only the reviewed baselines. Do not commit screenshots generated on
+   another OS as Linux baselines.
+
+`bun run test:visual:update` remains available for local iteration, but the
+resulting captures are not canonical unless generated on the same Linux image
+and pinned Playwright version used by CI.
 
 The local-font and Compose-button refresh uses 24 reviewed Linux captures from
 [CI run 37190528807](https://github.com/Stellar-Mail/stealth/actions/runs/37190528807)

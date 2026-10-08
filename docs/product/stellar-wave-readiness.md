@@ -40,13 +40,22 @@ On-chain actions are public and can reveal account relationships, timing, paymen
 
 ## Current review and deployment status
 
-The repository has an MIT license and is public under the Hush organization. The latest reviewed main commit (`7ea2db2`) passed contract checks and the security/dependency review, but one client unit test failed: the light-theme warning token missed WCAG AA contrast on a preview surface. Staging was correctly gated off. The color has since been adjusted; the next CI run must verify the correction. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records current evidence and release gates.
+The repository has an MIT license and is public under the Hush organization. On the latest reviewed main commit (`0dc4702`), client, contract, security, accessibility, and other required checks passed, but the visual browser check failed because its sign-in screenshot baseline still showed the former product name, “Stealth.” Staging was correctly gated off. A canonical Linux snapshot refresh and a green CI run on the updated baseline are still required. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records current evidence and release gates.
 
 The staging pipeline only deploys after CI for the exact commit succeeds and the release-gate summary marks it releasable. Cloudflare resources, secrets, old federation domains, and persisted state are still tied to legacy identifiers. A Hush-branded URL must not be advertised until DNS, bindings, secrets, health checks, and the deployed app are verified together.
 
 ## Contribution opportunities
 
 These areas are intended to produce reviewable, self-contained issues. They are themes, not statements that a matching issue is currently open; use the [live issue tracker](https://github.com/Stellar-hush/hush/issues) for current assignments.
+
+### Initial candidate shortlist
+
+Two existing issues have been reviewed as possible future Wave tasks. They are labeled `Wave Candidate` for internal curation only; they have not been submitted to Drips, and should only be added after repository admission. The rest of the generated campaign backlog is not treated as Wave-ready until its evidence and scope are individually checked.
+
+- [#39: Add crypto round-trip tests for Unicode and binary edge cases](https://github.com/Stellar-hush/hush/issues/39) is a bounded test task covering exact plaintext round trips, Unicode edge cases, deterministic commitments, and supported test environments.
+- [#128: Reject overlong postage amount strings before integer parsing](https://github.com/Stellar-hush/hush/issues/128) is limited to an early input-length guard and boundary tests. It must preserve the existing non-negative Soroban `i128` limit; it must not invent a product-specific postage maximum without a maintainer decision.
+
+Previously published drafts that duplicate behavior already present in the code have been closed with links to the implementation and tests. They can be reopened if a concrete acceptance gap remains.
 
 ### Protocol interoperability
 

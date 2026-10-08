@@ -6,12 +6,12 @@ Deployment runbooks, environment setup, Cloudflare notes, network configuration,
 
 Hush's main branch is configured for Cloudflare Workers, but a main-branch push is not by itself a
 deployment. The staging workflow waits for CI on the exact commit and deploys only when the beta
-release-gate summary is successful. The latest reviewed main commit, `7ea2db2`, passed formatting,
-lint, reproducible-build, type, OpenAPI, configuration, contract, and security/dependency checks.
-Its client unit suite reported **3,641 passed and 1 failed**: `--status-warning` did not reach WCAG
-AA contrast on `--preview-active`. This release gate failed, so staging was not deployed. The
-contrast token has since been darkened; the next CI run is the verification record. See the
-[failed CI run](https://github.com/Stellar-hush/hush/actions/runs/37697634018) and check the
+release-gate summary is successful. The latest reviewed main commit, `0dc4702`, passed client
+checks, contract checks, security/dependency review, accessibility acceptance, and the other
+required gates. The visual browser check failed because the canonical sign-in screenshot still
+contains the old “Stealth” name. The release gate failed, so staging was not deployed. A Linux
+snapshot refresh and a successful CI run are still needed. See the
+[failed CI run](https://github.com/Stellar-hush/hush/actions/runs/37699618269) and check the
 [current Actions runs](https://github.com/Stellar-hush/hush/actions) before sharing an endpoint.
 No verified public Hush demo URL is currently published.
 

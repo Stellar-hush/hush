@@ -1,11 +1,18 @@
 name: Publish API issue drafts
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/publish-api-issue-drafts.yml"
   workflow_dispatch:
+    inputs:
+      confirm_publish:
+        description: Confirm publishing only the listed API drafts
+        type: choice
+        options: ["no", "yes"]
+        default: "no"
+        required: true
+      reviewed_draft_ids:
+        description: Comma-separated API-### draft IDs revalidated against current main
+        type: string
+        required: true
 
 permissions:
   contents: read
@@ -17,6 +24,7 @@ concurrency:
 
 jobs:
   publish:
+    if: inputs.confirm_publish == 'yes'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -44,6 +52,10 @@ jobs:
             const data = JSON.parse(fs.readFileSync('stellar-hush-api-100-issue-drafts.json', 'utf8'));
             const owner = context.repo.owner;
             const repo = context.repo.repo;
+            const selectedIds = new Set((process.env.REVIEWED_DRAFT_IDS ?? '').split(',').map((id) => id.trim()).filter(Boolean));
+            if (selectedIds.size === 0) throw new Error('Select at least one reviewed draft ID.');
+            const knownIds = new Set(data.issues.map((issue) => issue.draft_id));
+            for (const id of selectedIds) if (!knownIds.has(id)) throw new Error(`Unknown draft ID: ${id}`);
             const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
             const existingItems = await github.paginate(github.rest.issues.listForRepo, { owner, repo, state: 'all', per_page: 100 });
@@ -81,7 +93,7 @@ jobs:
             let created = 0;
             let skipped = 0;
             const createdIssues = [];
-            for (const draft of data.issues) {
+            for (const draft of data.issues.filter((issue) => selectedIds.has(issue.draft_id))) {
               const title = draft.title.trim();
               if (existingTitles.has(title)) {
                 core.info(`Skipping existing issue: ${title}`);
@@ -106,3 +118,5 @@ jobs:
               .addHeading('Created issues', 2)
               .addList(createdIssues.length ? createdIssues : ['No new issues were required.'])
               .write();
+        env:
+          REVIEWED_DRAFT_IDS: ${{ inputs.reviewed_draft_ids }}

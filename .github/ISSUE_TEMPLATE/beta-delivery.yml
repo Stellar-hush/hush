@@ -2,11 +2,7 @@ name: BETA campaign delivery
 description: Define a reviewable BETA implementation or release-readiness slice.
 title: "BETA-000 :: "
 labels:
-  - GrantFox OSS
-  - Maybe Rewarded
-  - Official Campaign
-  - Campaign
-  - Third Campaign
+  - enhancement
 body:
   - type: input
     id: beta-id
