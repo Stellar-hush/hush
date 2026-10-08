@@ -104,8 +104,8 @@
   >
     PRIVATE, PROGRAMMABLE MAIL ON STELLAR
   </text>
-  <text class="ui body" x="334" y="238">
-    Recipient-controlled inbox access, encrypted message content, and verifiable protocol actions.
+  <text class="ui body" x="334" y="238" font-size="16">
+    Recipient-controlled inboxes · encrypted messages · Stellar actions.
   </text>
   <line x1="910" y1="78" x2="910" y2="259" stroke="#29395d" />
   <text class="label" x="950" y="103">PRODUCT STATUS</text>
@@ -176,7 +176,7 @@
       01 · RECIPIENT
     </text>
     <text x="104" y="836" fill="#f1f4ff" font-size="20" font-weight="650">Sets inbox policy</text>
-    <text class="body" x="104" y="866" font-size="15">Allow · review · require postage</text>
+    <text class="body" x="104" y="866" font-size="14">Allow · review · require postage</text>
 
     <path class="line" d="M324 831h54m-12-10 12 10-12 10" />
 
@@ -194,7 +194,7 @@
       03 · PRIVATE PAYLOAD
     </text>
     <text x="732" y="836" fill="#f1f4ff" font-size="20" font-weight="650">Encrypted off-chain</text>
-    <text class="body" x="732" y="866" font-size="15">Message body is not placed on-ledger</text>
+    <text class="body" x="732" y="866" font-size="14">Message content stays off-ledger</text>
 
     <path class="line" d="M998 831h54m-12-10 12 10-12 10" />
 
