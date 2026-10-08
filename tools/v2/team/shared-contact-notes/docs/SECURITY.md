@@ -1,7 +1,7 @@
 # Security and Performance Hardening — Shared Contact Notes
 
 Tool: `tools/v2/team/shared-contact-notes/`
-Issue: [#657](https://github.com/Stellar-Mail/stealth/issues/657) — Security and
+Issue: [#657](https://github.com/Stellar-hush/hush/issues/657) — Security and
 performance hardening (V2 team tool).
 
 This document records the threat assumptions, unsafe inputs, and performance

@@ -9,9 +9,9 @@
     "bun": "1.3.14"
   },
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "dev": "node init && vite dev",
+    "build": "node init && vite build",
+    "build:dev": "node init && vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
     "test": "vitest run tests/unit",

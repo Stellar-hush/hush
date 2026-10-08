@@ -37,7 +37,6 @@ SHA256SUMS
 artifact-hashes.json
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -52,3 +51,7 @@ plan.md
 ASSUMPTIONS.md
 issues.md
 PR_SUMMARY.md
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat

@@ -47,7 +47,7 @@ export const CHANGELOG_ENTRIES: ChangelogEntry[] = [
       "XLM postage is now settled atomically with delivery confirmation, eliminating a race condition where refunds could be delayed.",
     link: {
       label: "Protocol spec",
-      href: "https://github.com/Stellar-Mail/stealth/issues/138",
+      href: "https://github.com/Stellar-hush/hush/issues/138",
     },
   },
   {

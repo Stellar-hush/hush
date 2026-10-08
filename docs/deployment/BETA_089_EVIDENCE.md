@@ -16,11 +16,11 @@ This document provides evidence that the deployment workflows meet all release a
 **Verification Commands:**
 
 ```bash
-gh pr list --repo Stellar-Mail/stealth --state merged --search "BETA-077 OR BETA-081 OR BETA-087 OR BETA-088 in:title"
-gh issue view 1984 --repo Stellar-Mail/stealth --json state,title,closedAt
-gh issue view 1988 --repo Stellar-Mail/stealth --json state,title,closedAt
-gh issue view 1994 --repo Stellar-Mail/stealth --json state,title,closedAt
-gh issue view 1995 --repo Stellar-Mail/stealth --json state,title,closedAt
+gh pr list --repo Stellar-hush/hush --state merged --search "BETA-077 OR BETA-081 OR BETA-087 OR BETA-088 in:title"
+gh issue view 1984 --repo Stellar-hush/hush --json state,title,closedAt
+gh issue view 1988 --repo Stellar-hush/hush --json state,title,closedAt
+gh issue view 1994 --repo Stellar-hush/hush --json state,title,closedAt
+gh issue view 1995 --repo Stellar-hush/hush --json state,title,closedAt
 ```
 
 **All four dependencies are complete and merged. Full implementation proceeds.**
@@ -307,11 +307,11 @@ tail -3 docs/deployment/deployment-log.txt
 ### Dependency Verification
 
 ```bash
-gh pr list --repo Stellar-Mail/stealth --state merged --search "BETA-077 OR BETA-081 OR BETA-087 OR BETA-088 in:title"
-gh issue view 1984 --repo Stellar-Mail/stealth --json state,title,closedAt
-gh issue view 1988 --repo Stellar-Mail/stealth --json state,title,closedAt
-gh issue view 1994 --repo Stellar-Mail/stealth --json state,title,closedAt
-gh issue view 1995 --repo Stellar-Mail/stealth --json state,title,closedAt
+gh pr list --repo Stellar-hush/hush --state merged --search "BETA-077 OR BETA-081 OR BETA-087 OR BETA-088 in:title"
+gh issue view 1984 --repo Stellar-hush/hush --json state,title,closedAt
+gh issue view 1988 --repo Stellar-hush/hush --json state,title,closedAt
+gh issue view 1994 --repo Stellar-hush/hush --json state,title,closedAt
+gh issue view 1995 --repo Stellar-hush/hush --json state,title,closedAt
 ```
 
 ### Gate System Testing

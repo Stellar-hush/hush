@@ -82,4 +82,3 @@ Reviewers and contributors can use this order:
 - [Legacy email interoperability roadmap](legacy-email-interoperability-roadmap.md)
 - [Organization mailboxes and role-based access](organization-mailboxes-and-rbac.md)
 - [Stellar Wave repository readiness](stellar-wave-readiness.md)
-- [Hush brand migration and compatibility plan](brand-migration.md)
