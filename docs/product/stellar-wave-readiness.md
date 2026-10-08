@@ -40,7 +40,7 @@ On-chain actions are public and can reveal account relationships, timing, paymen
 
 ## Current review and deployment status
 
-The repository has an MIT license and is public under the Hush organization. On the latest reviewed main commit (`0dc4702`), client, contract, security, accessibility, and other required checks passed, but the visual browser check failed because its sign-in screenshot baseline still showed the former product name, “Stealth.” Staging was correctly gated off. A canonical Linux snapshot refresh and a green CI run on the updated baseline are still required. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records current evidence and release gates.
+The repository has an MIT license and is public under the Hush organization. Commit `0bdcd3ad` passed all required CI gates, including client, contract, security, accessibility, end-to-end, and cross-browser visual checks. The visual mismatch was a stale sign-in screenshot and has been replaced with reviewed Linux captures that show “Hush.” The staging workflow now reads the release-gate result correctly, but deployment stopped at its secret check because the required staging credentials are not configured. Migrations and deployment did not run. A pushed commit alone does not mean a staging deployment succeeded. The [deployment guide](../deployment/README.md) records current evidence and release gates.
 
 The staging pipeline only deploys after CI for the exact commit succeeds and the release-gate summary marks it releasable. Cloudflare resources, secrets, old federation domains, and persisted state are still tied to legacy identifiers. A Hush-branded URL must not be advertised until DNS, bindings, secrets, health checks, and the deployed app are verified together.
 
@@ -55,7 +55,7 @@ Two existing issues have been reviewed as possible future Wave tasks. They are l
 - [#39: Add crypto round-trip tests for Unicode and binary edge cases](https://github.com/Stellar-hush/hush/issues/39) is a bounded test task covering exact plaintext round trips, Unicode edge cases, deterministic commitments, and supported test environments.
 - [#128: Reject overlong postage amount strings before integer parsing](https://github.com/Stellar-hush/hush/issues/128) is limited to an early input-length guard and boundary tests. It must preserve the existing non-negative Soroban `i128` limit; it must not invent a product-specific postage maximum without a maintainer decision.
 
-Previously published drafts that duplicate behavior already present in the code have been closed with links to the implementation and tests. They can be reopened if a concrete acceptance gap remains.
+The automatically published batch originally put 150 unreviewed drafts in the open tracker with labels that implied reward and campaign status. To keep contributors from mistaking those drafts for approved, verified work, 146 have been closed with a note explaining how maintainers can revalidate and reopen them. Four remain open: #39 and #128 are possible future Wave candidates; #42 and #125 are labeled `needs triage` and are not Wave candidates yet.
 
 ### Protocol interoperability
 
@@ -103,6 +103,8 @@ Do not assign issues that need private keys, production credentials, real user m
 ## Applying to the Stellar Wave
 
 The current [Drips maintainer guide](https://docs.drips.network/wave/maintainers/participating-in-a-wave/) describes organization onboarding, installing the Drips Wave GitHub App, syncing public repositories, and applying to a program. Repository applications require organizer approval. Issues should be added to the program only after approval; maintainers then assign complexity and keep enough review capacity to close accepted work during the active cycle.
+
+As checked on October 8, 2026, the [Stellar Wave page](https://www.drips.network/wave/stellar) lists Wave 10 for October 15 at 1:00 PM through October 22 at 1:00 PM. Confirm the dates and application status in Drips before relying on this schedule.
 
 Before applying, maintainers should:
 
