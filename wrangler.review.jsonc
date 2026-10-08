@@ -3,7 +3,7 @@
   "name": "hush-review",
   "main": "dist/server/index.js",
   "compatibility_date": "2025-09-24",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "workers_dev": true,
   "assets": {
     "directory": "dist/client",
@@ -11,5 +11,13 @@
   },
   "observability": {
     "enabled": true,
+  },
+  "vars": {
+    "STEALTH_ENV": "development",
+    "STEALTH_STELLAR_NETWORK": "testnet",
+    "STEALTH_APP_URL": "https://hush-review.hip-fir.workers.dev",
+    "STEALTH_CORS_ALLOWED_ORIGINS": "https://hush-review.hip-fir.workers.dev",
+    "STEALTH_STORAGE_DRIVER": "memory",
+    "STEALTH_NOTIFICATION_TRANSPORT": "sink",
   },
 }

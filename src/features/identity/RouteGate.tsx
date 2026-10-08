@@ -18,6 +18,20 @@ export function RouteGate({ children }: { children: ReactNode }) {
   const { branch, data } = useBootstrap();
   const location = useLocation();
 
+  // The home route doubles as Hush's public product page until a mailbox
+  // session is active. Keep that showcase visible while bootstrap resolves
+  // or when the API is unavailable; the index route switches to MailApp only
+  // for an active session.
+  if (
+    location.pathname === "/" &&
+    (branch === "loading" ||
+      branch === "unauthorized" ||
+      branch === "outage" ||
+      branch === "maintenance")
+  ) {
+    return children;
+  }
+
   const isTest = typeof window !== "undefined" && !!window.navigator.webdriver;
   const decision = resolveRouteGuard({
     state: deriveGateState(branch, data),
