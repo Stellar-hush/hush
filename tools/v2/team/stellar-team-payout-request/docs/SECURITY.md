@@ -1,7 +1,7 @@
 # Security and Performance Hardening — Stellar Team Payout Request
 
 Tool: `tools/v2/team/stellar-team-payout-request/`
-Issue: [#667](https://github.com/Stellar-Mail/stealth/issues/667) — Security and
+Issue: [#667](https://github.com/Stellar-hush/hush/issues/667) — Security and
 performance hardening (V2 team tool).
 
 This document records the threat assumptions, unsafe inputs, and performance

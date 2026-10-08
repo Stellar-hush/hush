@@ -1,7 +1,7 @@
 # Security and Performance Hardening — Team Task Board from Emails
 
 Tool: `tools/v2/team/team-task-board-from-emails/`
-Issue: [#707](https://github.com/Stellar-Mail/stealth/issues/707) — Security and
+Issue: [#707](https://github.com/Stellar-hush/hush/issues/707) — Security and
 performance hardening (V2 team tool).
 
 This document records the threat assumptions, unsafe inputs, and performance
