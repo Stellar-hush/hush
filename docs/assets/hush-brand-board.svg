@@ -108,15 +108,13 @@
     Recipient-controlled inboxes · encrypted messages · Stellar actions.
   </text>
   <line x1="910" y1="78" x2="910" y2="259" stroke="#29395d" />
-  <text class="label" x="950" y="103">PRODUCT STATUS</text>
+  <text class="label" x="950" y="103">THE HUSH MODEL</text>
   <text class="display" x="950" y="151" fill="#53e0d0" font-size="25" font-weight="600">
-    OPEN-SOURCE BETA
+    RECIPIENT-FIRST MAIL
   </text>
-  <text class="ui body" x="950" y="187">Implementation availability depends on</text>
-  <text class="ui body" x="950" y="213">runtime configuration and active adapters.</text>
-  <text class="ui small" x="950" y="249">
-    Concept overview — not a screenshot of a hosted service.
-  </text>
+  <text class="ui body" x="950" y="187">Your inbox. Your rules. Proof for delivery.</text>
+  <text class="ui body" x="950" y="213">Private content stays off-chain.</text>
+  <text class="ui small" x="950" y="249">Identity · policy · delivery on Stellar.</text>
 
   <!-- Palette -->
   <rect class="card" x="48" y="320" width="650" height="305" rx="22" />
@@ -167,7 +165,7 @@
   <rect class="card" x="48" y="651" width="1344" height="319" rx="22" />
   <text class="label" x="80" y="698">HOW HUSH MODELS A MESSAGE</text>
   <text class="ui small" x="80" y="725">
-    Conceptual flow. Live behavior depends on the selected adapters and environment.
+    Recipient rules shape admission, private delivery, and verifiable evidence.
   </text>
 
   <g class="ui">

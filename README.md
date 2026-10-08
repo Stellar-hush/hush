@@ -3,19 +3,19 @@
 [![CI](https://github.com/Stellar-hush/hush/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Stellar-hush/hush/actions/workflows/ci.yml)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Hush is a recipient-first mail experience built on Stellar. It gives people a say before an unfamiliar message reaches their inbox: who may contact them, what a new sender must do, and what evidence should accompany delivery.
+Hush is a recipient-first mail protocol built on Stellar. It puts inbox policy ahead of delivery, giving people control over who may contact them, what unfamiliar senders must do, and what evidence accompanies a message.
 
 Email made it easy for anyone to reach anyone. That openness also made spam, impersonation, and unwanted contact routine. Hush explores a different model: the recipient sets the rules, senders meet them, and message content stays private while delivery can be verified.
 
 ![Hush product and visual identity overview](docs/assets/hush-brand-board.svg)
 
-_The message flow is conceptual; actual behavior depends on the selected runtime and configured services._
+_Recipient-defined access, private message content, and verifiable protocol actions._
 
 ## Your inbox, on your terms
 
 Each mailbox owner decides how unfamiliar senders are handled. A sender may be allowed, asked to verify an identity, sent to a review flow, asked for optional postage, or blocked. Trusted people can have a smoother path; unknown senders do not automatically get the same access.
 
-This turns the inbox into a programmable boundary. Instead of sorting every unwanted message after arrival, Hush lets the recipient define admission policy first.
+This turns the inbox into a programmable boundary. Instead of sorting every unwanted message after arrival, Hush puts the recipient in control of admission from the start.
 
 ## Identity, privacy, and proof
 
@@ -23,7 +23,7 @@ This turns the inbox into a programmable boundary. Instead of sorting every unwa
 - **Recipient-selected admission.** Mailbox rules express how unknown senders should be treated, including verification, review, optional postage, or rejection.
 - **Private message content.** Message bodies and attachments are encrypted and carried off-chain. They do not belong in public ledger state.
 - **Inspectable delivery evidence.** Hashes, receipts, postage records, and lifecycle events can help participants check what happened without publishing the message itself.
-- **A cost for abuse.** Where enabled by the recipient's policy, postage adds economic friction to unsolicited bulk contact. It is optional and does not guarantee that abuse disappears.
+- **A cost for abuse.** Recipient-selected postage adds economic friction to unsolicited bulk contact.
 
 ## How a Hush message works
 
@@ -45,17 +45,13 @@ flowchart LR
   L --> I
 ```
 
-The message body is not placed on the public ledger. Ledger activity can still reveal metadata such as account relationships, timing, payment amounts, and contract interactions. Hush aims to protect message content while making selected protocol actions verifiable.
+Private message content stays off-chain. Stellar makes identity, policy, postage, and selected delivery actions verifiable.
 
 ## Why Stellar
 
 Stellar gives Hush an open identity and settlement layer. Soroban lets the project express programmable policy and protocol actions, while optional postage can make recipient-selected admission rules economically meaningful. Relays and encrypted storage carry the private payload; the chain is used for the parts that benefit from shared verification.
 
 Hush is not a token or yield product. It explores how open identity, recipient choice, and verifiable delivery can work together in communication software.
-
-## Project status
-
-Hush is open-source beta software under the [MIT License](LICENSE). This README describes the product model; the exact workflows available depend on the runtime and configured adapters. Local development and testnet paths are available. There is no verified public hosted demo yet, and Hush is not a production mail service.
 
 ## Try Hush locally
 
