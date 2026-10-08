@@ -2,7 +2,7 @@
 
 ## Reporting A Vulnerability
 
-Report vulnerabilities through [GitHub private vulnerability reporting](https://github.com/Stellar-Mail/stealth/security/advisories/new). Do not open a public issue with exploit details, credentials, private keys, wallet seeds, tokens, personal data, or message content.
+Report vulnerabilities through [GitHub private vulnerability reporting](https://github.com/Stellar-hush/hush/security/advisories/new). Do not open a public issue with exploit details, credentials, private keys, wallet seeds, tokens, personal data, or message content.
 
 Include the affected commit or release, impact, reproducible sanitized steps, and any known mitigation. Maintainers will acknowledge the report, establish severity and ownership, and coordinate disclosure after a fix is available.
 

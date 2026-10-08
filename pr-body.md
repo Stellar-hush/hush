@@ -90,19 +90,19 @@ Closes #1996
 
 ```bash
 # Dependency verification
-gh pr list --repo Stellar-Mail/stealth --state merged --search "BETA-077 OR BETA-081 OR BETA-087 OR BETA-088 in:title"
+gh pr list --repo Stellar-hush/hush --state merged --search "BETA-077 OR BETA-081 OR BETA-087 OR BETA-088 in:title"
 # Output: All four dependencies merged
 
-gh issue view 1984 --repo Stellar-Mail/stealth --json state,title,closedAt
+gh issue view 1984 --repo Stellar-hush/hush --json state,title,closedAt
 # Output: {"closedAt":"2026-08-17T04:42:47Z","state":"CLOSED","title":"[BETA-077/100 · W4] Centralize production secrets, rotation, and least-privilege access"}
 
-gh issue view 1988 --repo Stellar-Mail/stealth --json state,title,closedAt
+gh issue view 1988 --repo Stellar-hush/hush --json state,title,closedAt
 # Output: {"closedAt":"2026-08-18T13:56:21Z","state":"CLOSED","title":"BETA-081 :: Add encrypted backups and tested restore procedures for beta data stores"}
 
-gh issue view 1994 --repo Stellar-Mail/stealth --json state,title,closedAt
+gh issue view 1994 --repo Stellar-hush/hush --json state,title,closedAt
 # Output: {"closedAt":"2026-08-21T20:59:47Z","state":"CLOSED","title":"BETA-087 :: Add browser compatibility and visual regression coverage for the web beta"}
 
-gh issue view 1995 --repo Stellar-Mail/stealth --json state,title,closedAt
+gh issue view 1995 --repo Stellar-hush/hush --json state,title,closedAt
 # Output: {"closedAt":"2026-08-25T18:09:24Z","state":"CLOSED","title":"BETA-088 :: Make CI a required beta release gate with deterministic artifacts"}
 ```
 

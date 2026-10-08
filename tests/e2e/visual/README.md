@@ -64,7 +64,7 @@ resulting captures are not canonical unless generated on the same Linux image
 and pinned Playwright version used by CI.
 
 The local-font and Compose-button refresh uses 24 reviewed Linux captures from
-[CI run 37190528807](https://github.com/Stellar-Mail/stealth/actions/runs/37190528807)
+[CI run 37190528807](https://github.com/Stellar-hush/hush/actions/runs/37190528807)
 at source commit `2d997b37`. The differences cover the original Inter, Space
 Grotesk and Newsreader families now loading under the app's CSP, the new Compose
 launcher, and the previously added custom icons. Other baselines and the strict

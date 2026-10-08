@@ -88,7 +88,6 @@ Contract contributors should also run the relevant checks in [`contracts/soroban
 - [Security overview](docs/security/README.md) — threat model, controls, and privacy boundaries.
 - [Deployment guide](docs/deployment/README.md) — runtime configuration, release gates, and verified deployment status.
 - [Stellar Wave maintainer brief](docs/product/stellar-wave-readiness.md) — project fit and contribution candidates.
-- [Brand migration plan](docs/product/brand-migration.md) — compatibility work for legacy identifiers and services.
 
 ## Contribute
 
