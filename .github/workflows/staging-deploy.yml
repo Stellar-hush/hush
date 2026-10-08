@@ -88,6 +88,8 @@ jobs:
           name: release-gate-summary
           path: gate-artifacts
           run-id: ${{ steps.ci-run.outputs.ci_run_id }}
+          repository: ${{ github.repository }}
+          github-token: ${{ github.token }}
         continue-on-error: true
 
       - name: Download individual gate results from CI run
@@ -98,6 +100,8 @@ jobs:
           pattern: gate-*
           merge-multiple: true
           run-id: ${{ steps.ci-run.outputs.ci_run_id }}
+          repository: ${{ github.repository }}
+          github-token: ${{ github.token }}
         continue-on-error: true
 
       - name: Check release gate status
