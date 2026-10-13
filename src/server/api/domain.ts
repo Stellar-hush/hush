@@ -21,6 +21,9 @@ export const stroopAmountSchema = z
   .string()
   .trim()
   .regex(/^(0|[1-9]\d*)$/, "Expected a non-negative integer string")
+  // Reject overlong inputs before BigInt conversion: 2^127 - 1 has 39 digits,
+  // so anything longer is out of range without parsing (#128).
+  .refine((value) => value.length <= 39, "Amount exceeds Soroban i128")
   .refine((value) => {
     try {
       return BigInt(value) <= 2n ** 127n - 1n;
