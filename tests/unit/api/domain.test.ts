@@ -43,6 +43,28 @@ describe("API domain schemas", () => {
     expect(() => stroopAmountSchema.parse("-1")).toThrow();
   });
 
+  it("rejects overlong amount strings before integer parsing (#128)", () => {
+    const maxI128 = (2n ** 127n - 1n).toString();
+    expect(maxI128).toHaveLength(39);
+    // Boundary: max i128 accepted, max + 1 rejected.
+    expect(stroopAmountSchema.parse(maxI128)).toBe(maxI128);
+    expect(() => stroopAmountSchema.parse((2n ** 127n).toString())).toThrow(
+      "Amount exceeds Soroban i128",
+    );
+    // More than 39 digits can never fit i128: rejected without BigInt.
+    expect(() => stroopAmountSchema.parse("9".repeat(40))).toThrow(
+      "Amount exceeds Soroban i128",
+    );
+    expect(() => stroopAmountSchema.parse("1".repeat(1000))).toThrow(
+      "Amount exceeds Soroban i128",
+    );
+    // Existing rules preserved: zero, canonical form, trimming, non-digits.
+    expect(stroopAmountSchema.parse("0")).toBe("0");
+    expect(() => stroopAmountSchema.parse("007")).toThrow();
+    expect(stroopAmountSchema.parse("  100  ")).toBe("100");
+    expect(() => stroopAmountSchema.parse("12a34")).toThrow();
+  });
+
   describe("receiptSchema timestamp ordering and future bounds", () => {
     const baseReceipt = {
       messageId: validMessageId,
