@@ -532,9 +532,9 @@ export const openApiDocument = {
           },
         },
         example: {
-          owner: "GA2CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+          owner: "GA2CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
           postage: "1000",
-          sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+          sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
           verified: true,
         },
       },
@@ -2256,9 +2256,9 @@ export const openApiDocument = {
                 validEvaluation: {
                   summary: "Valid policy evaluation request",
                   value: {
-                    owner: "GA2CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+                    owner: "GA2CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
                     postage: "1000",
-                    sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+                    sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
                     verified: true,
                   },
                 },
@@ -2267,16 +2267,16 @@ export const openApiDocument = {
                   value: {
                     owner: "INVALID_STELLAR_ADDRESS",
                     postage: "1000",
-                    sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+                    sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
                     verified: true,
                   },
                 },
                 malformedPostage: {
                   summary: "Malformed request with negative postage amount",
                   value: {
-                    owner: "GA2CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+                    owner: "GA2CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
                     postage: "-500",
-                    sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY8Q5M1K9X3L6R7T0W4V8N2M5K8J0H",
+                    sender: "GB4CAB2A57RNDJ3Y4P75C2V6ZNGY4Q5M3K5X3L6R7T2W4V4N2M5K4J2H",
                     verified: true,
                   },
                 },
